@@ -34,9 +34,11 @@ ifconfig em0 inet 192.168.1.1 netmask 255.255.255.0 up
 route add default 192.168.1.254
 </shell>
 
+<shell>
 pkg_add dynfi-agent
 rcctl enable dynfi-agent
 rcctl start dynfi-agent
+</shell>
 
 ### Register firewall on your DynFi Manager.
 
