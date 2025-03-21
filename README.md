@@ -27,24 +27,4 @@ Software:
 
 ZeroTrustBSD Custom ISO
 DynFi Manager (Community or Commercial)
-# 🚀 Installation Steps
-Install ZeroTrustBSD from ISO.
-Configure Initial Networking:
-shell
-Copier
-Modifier
-ifconfig em0 (can be ix or ixl if SuperMicro) inet 192.168.1.1 netmask 255.255.255.0 up
-route add default 192.168.1.254
-Install and Enable DynFi Agent:
-shell
-Copier
-Modifier
-pkg_add dynfi-agent
-rcctl enable dynfi-agent
-rcctl start dynfi-agent
-Register Device in DynFi Manager:
-Log into DynFi Manager and authorize your firewall.
-# 📖 Documentation
-Introduction
-Getting Started Guide
-Configuration Guide
+
