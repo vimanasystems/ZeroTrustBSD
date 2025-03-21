@@ -60,6 +60,7 @@ pfctl -f /etc/pf.conf
 pfctl -e
 </shell>
 🔐 Quantum-Safe SSH Configuration
+<shell>
 Edit /etc/ssh/sshd_config:
 
 ini
@@ -67,7 +68,7 @@ Copier
 Modifier
 KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256@libssh.org
 Restart SSH:
-
+</shell>
 <shell>
 Copier
 Modifier
