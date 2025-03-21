@@ -15,3 +15,36 @@ ZeroTrustBSD is a highly secure, enterprise-class firewall solution based on Ope
 * Identity Management Integration: LDAP, Active Directory, Azure Entra ID, and RCDevs OpenOTP MFA.
 * Optimized MPLS Connectivity: Integration with service provider MPLS networks.
 * Tier IV Data Center Ready: Built to leverage Luxembourg’s top-tier data centers.
+ Getting Started
+📌 Prerequisites
+Hardware:
+
+CPU: Quad-core 64-bit processor
+RAM: 8GB+
+Storage: SSD 128GB+
+Network: Dual Gigabit Ethernet
+Software:
+
+ZeroTrustBSD Custom ISO
+DynFi Manager (Community or Commercial)
+# 🚀 Installation Steps
+Install ZeroTrustBSD from ISO.
+Configure Initial Networking:
+shell
+Copier
+Modifier
+ifconfig em0 (can be ix or ixl if SuperMicro) inet 192.168.1.1 netmask 255.255.255.0 up
+route add default 192.168.1.254
+Install and Enable DynFi Agent:
+shell
+Copier
+Modifier
+pkg_add dynfi-agent
+rcctl enable dynfi-agent
+rcctl start dynfi-agent
+Register Device in DynFi Manager:
+Log into DynFi Manager and authorize your firewall.
+# 📖 Documentation
+Introduction
+Getting Started Guide
+Configuration Guide
