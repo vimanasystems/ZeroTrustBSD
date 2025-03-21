@@ -154,12 +154,12 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
     -*Endpoint Detection and Response (EDR)*
 # 📊 Advanced Security Capabilities Table
 ## Capability	Benefit
-🛡️ **Enterprise Firewall	High-performance filtering (>45 Gbps throughput).**
-- **🌐 Secure VPN	Secure remote connections (12+ Gbps with WireGuard).**
-- **📈 Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).**
-**🤖 AI-driven Security	Rapid, real-time threat detection and mitigation.***
-**🔍 Threat Hunting	Identify advanced persistent threats proactively.**
-**📧 Secure Email & Web	Protection from email phishing and web threats.**
+🛡️ - **Enterprise Firewall	High-performance filtering (>45 Gbps throughput).**
+- 🌐 **Secure VPN	Secure remote connections (12+ Gbps with WireGuard).**
+- 📈 **Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).**
+- 🤖 **AI-driven Security	Rapid, real-time threat detection and mitigation.**
+- 🔍 **Threat Hunting	Identify advanced persistent threats proactively.**
+📧 **Secure Email & Web	Protection from email phishing and web threats.**
 **☁️ CASB & API Security	Secure management of cloud apps and APIs.**
 **💻 Endpoint Protection	Advanced endpoint threat detection (EDR).**
 **🔒 Data Loss Prevention	Prevent unauthorized access and data leakage.**
