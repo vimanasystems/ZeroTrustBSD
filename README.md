@@ -109,36 +109,34 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 | 🔑 **Quantum-Resistant Encryption** | Future-proof data protection against quantum threats.|
 | 🤖 **AI-Enhanced Security**     | Real-time threat detection and analytics.     |
 
----
-
 ## 🚀 Platform Architecture (Simplified YAML)
 
 # YAML
 - **ZeroTrustBSD:**
   Core Infrastructure:
-    - OpenBSD Secure Foundation
-    - Quantum-Resistant Cryptography
-    - Luxembourg-Based Tier IV Data Centers (EU Sovereignty)
+    - *OpenBSD Secure Foundation*
+    - *Quantum-Resistant Cryptography*
+    - *Luxembourg-Based Tier IV Data Centers (EU Sovereignty)*
 
 **Management & Operations:**
-    - DynFi Centralized Firewall Management
-    - Multi-Tenancy:
-        - Virtual Machines (OpenBSD VMM)
-        - Containers (OpenBSD Jails)
-        - Role-Based Access Control (RBAC)
+    - *DynFi Centralized Firewall Management*
+    - **Multi-Tenancy:**
+        - *Virtual Machines (OpenBSD VMM)*
+        - *Containers (OpenBSD Jails)*
+        - *Role-Based Access Control (RBAC)*
 
  **Cybersecurity Capabilities:**
-    - AI-Driven Threat Intelligence & Analytics
-    - Security Automation & Response (SOAR)
-    - Proactive Threat Hunting
+    - *AI-Driven Threat Intelligence & Analytics*
+    - *Security Automation & Response (SOAR)*
+    - *Proactive Threat Hunting*
 
 **Compliance & Governance**
-    - Automated Compliance (CISO Assistant)
-    - Regulatory Frameworks Supported:
-        - GDPR
-        - NIS2
-        - ISO27001
-        - CIS Controls
+    - *Automated Compliance (CISO Assistant)*
+    - **Regulatory Frameworks Supported:*
+        - *GDPR*
+        - *NIS2*
+        - *ISO27001*
+        - *CIS Controls*
 
 **Identity & Access Management:**
     - *Advanced IAM Integration*
@@ -152,17 +150,18 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
     -*Cloud Access Security Broker (CASB)
     -*API Security*
     -*Endpoint Detection and Response (EDR)*
+    
 # 📊 Advanced Security Capabilities Table
 ## Capability	Benefit
-🛡️ - **Enterprise Firewall	High-performance filtering (>45 Gbps throughput).**
-- 🌐 **Secure VPN	Secure remote connections (12+ Gbps with WireGuard).**
-- 📈 **Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).**
-- 🤖 **AI-driven Security	Rapid, real-time threat detection and mitigation.**
-- 🔍 **Threat Hunting	Identify advanced persistent threats proactively.**
-📧 **Secure Email & Web	Protection from email phishing and web threats.**
-**☁️ CASB & API Security	Secure management of cloud apps and APIs.**
-**💻 Endpoint Protection	Advanced endpoint threat detection (EDR).**
-**🔒 Data Loss Prevention	Prevent unauthorized access and data leakage.**
+**🛡️ Enterprise Firewall	High-performance filtering (>45 Gbps throughput).**
+- **🌐Secure VPN	Secure remote connections (12+ Gbps with WireGuard).**
+- **📈 Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).**
+- **🤖 AI-driven Security	Rapid, real-time threat detection and mitigation.**
+- **🔍 Threat Hunting	Identify advanced persistent threats proactively.**
+- **📧 Secure Email & Web	Protection from email phishing and web threats.**
+- **☁️ CASB & API Security	Secure management of cloud apps and APIs.**
+- **💻 Endpoint Protection	Advanced endpoint threat detection (EDR).**
+- **🔒 Data Loss Prevention	Prevent unauthorized access and data leakage.**
 
 ## 🚀 Future Innovations
 
