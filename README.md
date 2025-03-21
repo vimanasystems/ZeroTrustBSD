@@ -1,6 +1,15 @@
 # ZeroTrustBSD Firewall 🔒
 ## Next-Generation Enterprise Firewall Proudly Developed in Luxembourg 🇱🇺
 
+**ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
+
+Designed for use by government agencies, critical infrastructure operators, and regulated enterprises, ZeroTrustBSD provides:
+
+- 🔐 Zero Trust Architecture
+- 📡 Secure SD-WAN and SD-RAN node capabilities
+- 🧠 Real-time AI-enhanced threat analytics
+- ⚙️ Automated compliance with CISO Assistant
+- 📦 Bootable ISO for virtual and physical deployments
 **OpenBSD Enterprise Firewall with DynFi Manager Integration**  
 **Developed and Maintained in Luxembourg 🇱🇺**
 
@@ -180,3 +189,30 @@ Take immediate steps to protect your organization’s digital assets and simplif
 ### Prerequisites
 - **Hardware:** 64-bit CPU, 8GB RAM, SSD 128GB+, Dual NIC
 - **Software:** ZeroTrustBSD ISO, DynFi Manager
+
+- ## ✨ Need to know Features
+
+| Feature                            | Description                                                     |
+|-----------------------------------|-----------------------------------------------------------------|
+| 🔐 Hardened OpenBSD Core          | Minimal, secure base OS with PF, RBAC, and container isolation  |
+| 📦 Bootable ISO                   | Deploy via USB, PXE, VM, or air-gapped environments             |
+| 📊 eBPF Observability             | Kernel-level telemetry for system and network insights          |
+| 🧬 YARA Rules & Threat Detection  | Live scanning and correlation for malware and IOC detection     |
+| 📈 Wazuh + ELK Integration        | SIEM-ready telemetry and dashboards                             |
+| 📜 CISO Assistant                 | Built-in governance & compliance automation (NIS2, ISO 27001)   |
+| 🌐 STIX/TAXII Feeds               | Supports external threat intelligence platforms like MISP        |
+| 🧱 SD-WAN & SD-RAN Support        | Secure routing at the edge and in 5G environments               |
+| 🚀 Multi-Tenant Ready             | VMM, Jails, and RBAC for segmentation and agency isolation      |
+
+## 🏛️ Designed For
+- Governments & Ministries
+- Healthcare & Hospitals
+- Financial Institutions
+- Energy & Utilities
+- National Defense & CERT Teams
+- Telecom & Edge Infrastructure Providers
+
+## 🛠️ ISO Installation
+
+ZeroTrustBSD is distributed as a bootable ISO image.  
+To install.
