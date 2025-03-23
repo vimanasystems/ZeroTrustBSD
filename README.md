@@ -3,24 +3,55 @@
 
 **ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
 
+ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on OpenBSD. It serves as a sovereign firewall and network security operating system, integrating Zero Trust Architecture principles with advanced threat defense and compliance features. Developed and maintained in Luxembourg, ZeroTrustBSD supports deployments across all 102 communes, aligning with EU data sovereignty goals to keep sensitive data under European jurisdiction. The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
 Designed for use by government agencies, critical infrastructure operators, and regulated enterprises, ZeroTrustBSD provides:
 
-- 🔐 Zero Trust Architecture
-- 📡 Secure SD-WAN and SD-RAN node capabilities
-- 🧠 Real-time AI-enhanced threat analytics
-- ⚙️ Automated compliance with CISO Assistant
-- 📦 Bootable ISO for virtual and physical deployments
+## 🔐 Key Capabilities
+
+| 🧰 Category       | 🛡️ Features |
+|------------------|-------------|
+| 🔒 Zero Trust     | Microsegmentation, RBAC, relayd, pf anchors |
+| 🧠 Threat Intel   | Suricata, Snort, YARA, Wazuh, ClamAV |
+| 🔐 Identity & IAM | RCDevs OpenOTP, LDAP, Entra ID, Azure AD |
+| 🛰 QKD Integration | EuroQCI-ready, CWDM/DWDM quantum links |
+| 📦 Firewall       | PF with NAT, anchors, default deny |
+| 📡 Routing & VPN  | BGP, OSPF, MPLS, WireGuard, IPsec, OpenVPN |
+| 🧱 Isolation      | VMM, Jails, Tenant RBAC, USB/Airgap configs |
+| 📊 Observability  | eBPF, Prometheus, Filebeat, SNMP, ELK stack |
+| ⚙️ Automation     | GitHub Actions, Terraform, Ansible, GitOps |
+| 🧾 Compliance     | NIS2, GDPR, ISO 27001, STANAG, DORA-ready |
+
+## 🇱🇺 Designed for Luxembourg & EU Sovereignty
+ZeroTrustBSD is deployed across **all 102 communes**, supporting:
+- 🏛 Government and municipal IT
+- 📡 Encrypted MPLS and SD-WAN links
+- 🛰 National & NATO-aligned defense architecture
+- 🏫 Education, public sector, smart cities
+- 🧾 Tier IV EU-hosted, sovereignty-compliant deployments
+
+## 📜 Regulatory Compliance
+Framework	Support
+🇪🇺 NIS2	Identity enforcement, segmentation, audit logs
+🇪🇺 GDPR	Encryption, data locality, secure identities
+🇪🇺 DORA	Monitoring, alerting, risk resilience
+📘 ISO 27001	Network hardening, policy controls
+🛰 STANAG	NATO crypto metadata, QKD tunneling
+
 **OpenBSD Enterprise Firewall with DynFi Manager Integration**  
 **Developed and Maintained in Luxembourg 🇱🇺**
 
 ## 🚀 Executive Summary
 
-ZeroTrustBSD is a robust, secure, and enterprise-grade firewall built on OpenBSD, designed specifically for public administrations, enterprises, banks, and local governments. With integrated centralized management through DynFi Manager, it simplifies deployment, management, and compliance with EU cybersecurity standards (NIS2, GDPR).
-ZeroTrustBSD: Secure, Compliant, and Multi-Tenant Cybersecurity—Built for Europe's Digital Leaders
+**ZeroTrustBSD** is a robust, secure, and enterprise- derived from military grade firewall built on OpenBSD, designed specifically for public administrations, enterprises, banks, and local governments. With integrated centralized management through DynFi Manager, it simplifies deployment, management, and compliance with EU cybersecurity standards (NIS2, GDPR).
 
-European organizations today face complex cybersecurity challenges and regulatory obligations. The need for robust, cost-effective security solutions is higher than ever. ZeroTrustBSD answers this need—a powerful, open-source firewall platform based on the renowned security of OpenBSD, enhanced with centralized management (DynFi Manager), quantum-resistant encryption, AI-driven threat detection, and fully integrated multi-tenancy capabilities.
+**ZeroTrustBSD:** 
+Secure, Compliant, and Multi-Tenant Cybersecurity—Built for Europe's Digital Leaders
 
-ZeroTrustBSD simplifies your path to regulatory compliance (GDPR, NIS2) while protecting sensitive data and providing true European digital sovereignty
+European organizations today face complex cybersecurity challenges and regulatory obligations. The need for robust, cost-effective security solutions is higher than ever. 
+
+**ZeroTrustBSD** answers this need—a powerful, open-source firewall platform based on the renowned security of OpenBSD, enhanced with centralized management (DynFi Manager), quantum-resistant encryption, AI-driven threat detection, and fully integrated multi-tenancy capabilities.
+
+**ZeroTrustBSD** simplifies your path to regulatory compliance (GDPR, NIS2) while protecting sensitive data and providing true European digital sovereignty
 
 ## Why ZeroTrustBSD?
 ZeroTrustBSD stands out by combining advanced cybersecurity tools, simplified compliance management, and multi-tenancy in a single, unified platform:
