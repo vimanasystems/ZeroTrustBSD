@@ -10,6 +10,8 @@ En luxembourgeois, "bonjour" peut être traduit de plusieurs manières selon le 
 - **Mëtteg : Elle signifie "bon après-midi" et est utilisée à partir de midi jusqu'au soir.**
 - **Nowend : Cette expression signifie "bonsoir" et est utilisée le soir.**
 
+
+
 Ces salutations sont couramment utilisées dans la vie quotidienne au Luxembourg pour saluer les gens.
 
 **ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
@@ -145,6 +147,11 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 - **Real-Time Compliance Insights: Continuously monitor compliance status, generating real-time reports and actionable insights.**
 - **Integrating CISO Assistant ensures your technical controls align precisely with regulatory requirements, simplifying compliance processes while ensuring continuous audit readiness.**
 
+## 🔐 RCDevs Security – Capabilities & What It Provides
+### 🏢 Overview
+RCDevs Security is a Luxembourg-based software company specializing in secure Identity & Access Management (IAM) and Multi-Factor Authentication (MFA) for enterprise, government, and critical infrastructure networks.
+Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe and globally, with deployments in finance, defense, healthcare, and public sectors.
+
 ## 🎯 Clear Business Impact
 - **Strategic Objective	Delivered by ZeroTrustBSD**
 - **Reduce Cyber Risk	Real-time, AI-driven threat detection (>99.8% accuracy).**
@@ -153,7 +160,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 - **Data Sovereignty	Fully EU-based hosting and management.**
 - **Future-Proof Security	Quantum-safe encryption protects against emerging threats.**
 - **Less funds to raise for commercial cyber security solutions.**
-- 
+  
 ## 📈 Performance Metrics
 - **Firewall Throughput: >45 Gbps**
 - **VPN Performance (WireGuard): >12 Gbps**
