@@ -294,15 +294,15 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 - **Improved network microsegmentation for granular control.**
 - **Expanded quantum-resistant cryptographic standards integration.**
 
-🇱🇺 ZeroTrustBSD: Europe’s Cybersecurity Firewall for Sovereignty, Compliance, and Intelligence
+## 🇱🇺 ZeroTrustBSD: Europe’s Cybersecurity Firewall for Sovereignty, Compliance, and Intelligence
 In today’s landscape of ransomware, nation-state threats, and regulatory complexity, European organizations face an urgent choice: buy foreign and hope for trust, or build sovereign and earn security.
 
-ZeroTrustBSD is Europe’s answer — a modern enterprise firewall and cybersecurity platform, proudly developed and hosted in Luxembourg, powered by OpenBSD, enriched with eBPF, YARA, threat intelligence, and built to ensure compliance, visibility, and digital sovereignty.
+**ZeroTrustBSD** is Europe’s answer — a modern enterprise firewall and cybersecurity platform, proudly developed and hosted in Luxembourg, powered by **OpenBSD**, enriched with eBPF, YARA, threat intelligence, and built to ensure compliance, visibility, and digital sovereignty.
 
-ZeroTrustBSD is not just secure. It’s intelligent. Resilient. European.
+**ZeroTrustBSD** is not just secure. It’s intelligent. Resilient. European.
 
-🧱 A Firewall That Does More Than Block
-ZeroTrustBSD is built on the world’s most secure open-source OS — OpenBSD — and takes it further with:
+## 🧱 A Firewall That Does More Than Block
+**ZeroTrustBSD** is built on the world’s most secure open-source OS — OpenBSD — and takes it further with:
 
 ## Core Pillars	Description
 ## 🇱🇺 EU Digital Sovereignty	100% developed and hosted in Luxembourg Tier IV data centers.
@@ -312,7 +312,7 @@ ZeroTrustBSD is built on the world’s most secure open-source OS — OpenBSD �
 ### 🛠 Multi-Tenancy by Design	Easily isolate ministries, agencies, or business units with VMM + jails.
 ### 🔍 Observability Redefined with eBPF
 
-eBPF (Extended Berkeley Packet Filter) enables ZeroTrustBSD to inspect, trace, and respond to system behavior in real time — without kernel rewrites or heavy agents.
+**eBPF** (Extended Berkeley Packet Filter) enables ZeroTrustBSD to inspect, trace, and respond to system behavior in real time — without kernel rewrites or heavy agents.
 
 ## eBPF Capability	Benefit
 ### 🔎 Live Syscall Tracing	Detect abnormal process behavior instantly.
@@ -322,35 +322,33 @@ eBPF (Extended Berkeley Packet Filter) enables ZeroTrustBSD to inspect, trace, a
 ### 🦠 YARA-Powered Malware Detection
 
 ### YARA rules allow ZeroTrustBSD to detect known and unknown malware patterns based on file, memory, and behavior analysis.
-- **Maintain your own custom rule sets**
+-**Maintain your own custom rule sets**
 -**sync from trusted open-source YARA feeds**
 -**Scan processes and files dynamically**
 -**Automatically trigger Wazuh alerts and playbooks**
 -**Combine YARA + eBPF for elite threat hunting capability.**
 
 ## 🌐 Intelligence-Driven Defense
-ZeroTrustBSD integrates with leading threat intelligence platforms:
+
+**ZeroTrustBSD** integrates with leading threat intelligence platforms:
 
 -**STIX/TAXII support: pull live feeds from MISP, AbuseIPDB, etc.**
 
 Map detection & prevention to MITRE ATT&CK and automate response via Wazuh SIEM + SOAR pipelines
 
-✅ Complete Compliance, Automated
+## ✅ Complete Compliance, Automated
 With CISO Assistant built in, ZeroTrustBSD automates your governance and risk processes:
 
-Framework Support	Capability
-✅ GDPR, NIS2, ISO 27001	Preloaded control sets, auto-assessment
-🔁 Control Auto-Mapping	Avoid duplicating security documentation
-📄 Report Generation	Executive-ready reports with real-time status
-🏛 Multi-Tenant Governance	Assign compliance responsibility by entity
-
-## 🚨 Ready to Enhance Your Cybersecurity?
-Take immediate steps to protect your organization’s digital assets and simplify compliance management:
+### Framework Support	Capability
+#### ✅ GDPR, NIS2, ISO 27001	Preloaded control sets, auto-assessment
+#### 🔁 Control Auto-Mapping	Avoid duplicating security documentation
+#### 📄 Report Generation	Executive-ready reports with real-time status
+#### 🏛 Multi-Tenant Governance	Assign compliance responsibility by entity
 
 ## 📌 Quick Installation
 
 ### Prerequisites
-- **Hardware:** 64-bit CPU, 8GB RAM (or more), SSDx2 SOFTRAID 128GB+, Quadruple NIC 10G SFP (10GBASET-SR min)
+- **Hardware:** 64-bit CPU, 8GB RAM (or more), SSDx2 SOFTRAID 128GB+, Quadruple NIC 10G SFP (10GBASET-SR min) Yet I always suggest black fiber or just plain fine fiber.
 - **Software:** ZeroTrustBSD ISO, DynFi Manager
 
 - ## ✨ Need to know Features
