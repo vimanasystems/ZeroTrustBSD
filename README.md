@@ -335,8 +335,16 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 - National Defense & CERT Teams
 - Telecom & Edge Infrastructure Providers
 
-## References
+## Next Steps and Future Research
+### To strengthen security and compliance:
 
+- **Adopt Zero Trust Architecture (ZTA): Implement microsegmentation and least-privilege access policies.**
+- **Automate Configuration Management: Use Ansible for firewall rule consistency.**
+- **Deploy Intrusion Detection and Prevention Systems (IDS/IPS): Integrate Suricata or Snort for advanced threat detection.**
+- **Expand Compliance Assessments: Conduct ISO 27001 and PCI DSS audits.**
+- **Leverage AI-driven CISO Assistant Tools: Automate security analytics, risk assessment, and compliance reporting.**
+
+## References
 -**De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.** 
 -**European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.**
 -**Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.**
