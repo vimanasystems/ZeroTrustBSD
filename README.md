@@ -5,10 +5,11 @@ Bonjour en luxembourgeois
 
 En luxembourgeois, "bonjour" peut être traduit de plusieurs manières selon le contexte et l'heure de la journée :
 
-Moien : C'est l'équivalent le plus courant de "bonjour" en luxembourgeois et peut être utilisé à tout moment de la journée.
-Gudde Moien : Cette expression est plus formelle et est souvent utilisée le matin.
-Mëtteg : Elle signifie "bon après-midi" et est utilisée à partir de midi jusqu'au soir.
-Nowend : Cette expression signifie "bonsoir" et est utilisée le soir.
+**Moien : C'est l'équivalent le plus courant de "bonjour" en luxembourgeois et peut être utilisé à tout moment de la journée.**  
+**Gudde Moien : Cette expression est plus formelle et est souvent utilisée le matin.**
+**Mëtteg : Elle signifie "bon après-midi" et est utilisée à partir de midi jusqu'au soir.**
+**Nowend : Cette expression signifie "bonsoir" et est utilisée le soir.**
+
 Ces salutations sont couramment utilisées dans la vie quotidienne au Luxembourg pour saluer les gens.
 
 **ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
