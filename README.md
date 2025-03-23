@@ -54,16 +54,13 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 ## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
-
 ### ✅ Registration to DynFi Manager (centralized, EU-hosted)
-
 ### ✅ Identity integration via RCDevs OpenOTP
-
 ### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites
 
 The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
 
-Designed for use by government agencies, critical infrastructure operators, and regulated enterprises, ZeroTrustBSD provides:
+**Designed for use by government agencies, critical infrastructure operators, and regulated enterprises, ZeroTrustBSD provides:**
 
 ## 🔐 Key Capabilities
 
@@ -81,20 +78,20 @@ Designed for use by government agencies, critical infrastructure operators, and 
 | 🧾 Compliance     | NIS2, GDPR, ISO 27001, STANAG, DORA-ready |
 
 ## 🇱🇺 Designed for Luxembourg & EU Sovereignty
-ZeroTrustBSD is deployed across **all of Europe**, supporting:
-- 🏛 Government and municipal IT
-- 📡 Encrypted MPLS and SD-WAN links
-- 🛰 National & NATO-aligned defense architecture
-- 🏫 Education, public sector, smart cities
-- 🧾 Tier IV EU-hosted, sovereignty-compliant deployments
+### ZeroTrustBSD is deployed across **all of Europe**, supporting:
+#### - 🏛 Government and municipal IT
+#### - 📡 Encrypted MPLS and SD-WAN links
+#### - 🛰 National & NATO-aligned defense architecture
+#### - 🏫 Education, public sector, smart cities
+#### - 🧾 Tier IV EU-hosted, sovereignty-compliant deployments
 
 ## 📜 Regulatory Compliance
-Framework	Support
-🇪🇺 NIS2	Identity enforcement, segmentation, audit logs
-🇪🇺 GDPR	Encryption, data locality, secure identities
-🇪🇺 DORA	Monitoring, alerting, risk resilience
-📘 ISO 27001	Network hardening, policy controls
-🛰 STANAG	NATO crypto metadata, QKD tunneling
+### Framework	Support
+#### - 🇪🇺 NIS2	Identity enforcement, segmentation, audit logs
+#### - 🇪🇺 GDPR	Encryption, data locality, secure identities
+#### - 🇪🇺 DORA	Monitoring, alerting, risk resilience
+#### - 📘 ISO 27001	Network hardening, policy controls
+#### 🛰 STANAG	NATO crypto metadata, QKD tunneling
 
 **OpenBSD Enterprise Firewall with DynFi Manager Integration**  
 **Developed and Maintained in Luxembourg 🇱🇺**
@@ -119,14 +116,15 @@ These are functionalities for telecom deployment in 4G/5G or better.
 #### 📶 Private 5G/LTE	Deploy and secure on-premise 5G/4G cells (via srsRAN or Amarisoft) using VXLAN/GENEVE tunnels and mTLS
 #### 🔐 Per-Slice Firewalling	Use pf.conf to enforce policies per network slice or gNB
 #### 🌍 Tactical & Military	Enable battlefield / disaster response comms with encrypted radio backhaul, multi-hop relay, and audit-ready access
-#### 🧩 Open Source SDR Stack for ZeroTrustBSD
+#### 🧩 Open Source SDR Stack for ZeroTrustBSD*
+
 ### Component	Function
 - **srsRAN	4G/5G stack with eNodeB/gNodeB, EPC, and UE**
 - **GNU Radio	Signal processing and SDR logic**
 - **openairinterface5g	Full O-RAN-compatible 5G NR stack**
 - **limesuite / uhd	Drivers for LimeSDR / USRP devices**
 - **libiio, soapysdr	I/O libraries for SDR device abstraction**
-- 
+
 These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
 
 ## Why ZeroTrustBSD?
