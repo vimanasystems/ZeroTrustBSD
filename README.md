@@ -3,7 +3,12 @@
 
 **ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
 
-ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on OpenBSD. It serves as a sovereign firewall and network security operating system, integrating Zero Trust Architecture principles with advanced threat defense and compliance features. Developed and maintained in Luxembourg, ZeroTrustBSD supports deployments across all 102 communes, aligning with EU data sovereignty goals to keep sensitive data under European jurisdiction. The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
+ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on OpenBSD. It serves as a sovereign firewall and network security operating system, integrating Zero Trust Architecture principles with advanced threat defense and compliance features. 
+
+Developed and maintained in Luxembourg, ZeroTrustBSD supports deployments across all 102 communes, aligning with EU data sovereignty goals to keep sensitive data under European jurisdiction.
+
+The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
+
 Designed for use by government agencies, critical infrastructure operators, and regulated enterprises, ZeroTrustBSD provides:
 
 ## 🔐 Key Capabilities
