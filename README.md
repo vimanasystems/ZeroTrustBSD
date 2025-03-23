@@ -5,6 +5,12 @@
 
 ![Luxembourg](https://img.shields.io/badge/🇱🇺-Made%20in%20Luxembourg-blue?style=flat-square)
 
+# Abstract# 
+
+This paper presents an in-depth analysis of deploying DynFi Firewall on OpenBSD, emphasizing security hardening, regulatory compliance, and industry best practices. The study incorporates OpenBGPD, RCDevs authentication, OpenVPN, Public Key Infrastructure (PKI), 802.1X Network Access Control (NAC), MACsec, and CIS security controls. Additionally, it explores Lightweight Directory Access Protocol (LDAP), Active Directory (AD), Entra ID (Azure AD), and other identity service providers (IdPs) for enhanced authentication and access control.
+
+The objective is to demonstrate how OpenBSD’s security-centric design, coupled with DynFi, achieves an enterprise-grade network security posture. By analyzing compliance frameworks such as NIS2 Directive, GDPR, HIPAA, and CIS Controls, this paper offers a structured approach to secure firewall deployment. Furthermore, it explores the integration of threat intelligence feeds and CISO assistant capabilities to enhance proactive security monitoring and decision-making.
+
 Bonjour en luxembourgeois
 
 En luxembourgeois, "bonjour" peut être traduit de plusieurs manières selon le contexte et l'heure de la journée :
