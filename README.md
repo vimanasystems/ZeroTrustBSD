@@ -69,6 +69,25 @@ European organizations today face complex cybersecurity challenges and regulator
 
 **ZeroTrustBSD** simplifies your path to regulatory compliance (GDPR, NIS2) while protecting sensitive data and providing true European digital sovereignty
 
+📡 Added Capabilities: SD-RAN & Software-Defined Radio (SDR)
+Feature	Description
+### 🛰 SD-RAN Integration	Secure Zero Trust architecture extended into Open RAN (O-RAN) environments using RAN Intelligent Controllers (RIC), Kubernetes-native apps, and eBPF-based microsegmentation
+### 📻 Software-Defined Radio (SDR)	Support for GNU Radio, srsRAN, OpenAirInterface, and USRP hardware for private 4G/5G and tactical mesh deployments
+### 📶 Private 5G/LTE	Deploy and secure on-premise 5G/4G cells (via srsRAN or Amarisoft) using VXLAN/GENEVE tunnels and mTLS
+### 🔐 Per-Slice Firewalling	Use pf.conf to enforce policies per network slice or gNB
+### 🌍 Tactical & Military	Enable battlefield / disaster response comms with encrypted radio backhaul, multi-hop relay, and audit-ready access
+### 🧩 Open Source SDR Stack for ZeroTrustBSD
+#### Component	Function
+- srsRAN	4G/5G stack with eNodeB/gNodeB, EPC, and UE
+- GNU Radio	Signal processing and SDR logic
+- openairinterface5g	Full O-RAN-compatible 5G NR stack
+- limesuite / uhd	Drivers for LimeSDR / USRP devices
+- libiio, soapysdr	I/O libraries for SDR device abstraction
+
+These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
+
+
+
 ## Why ZeroTrustBSD?
 ZeroTrustBSD stands out by combining advanced cybersecurity tools, simplified compliance management, and multi-tenancy in a single, unified platform:
 
