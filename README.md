@@ -69,7 +69,7 @@ European organizations today face complex cybersecurity challenges and regulator
 
 **ZeroTrustBSD** simplifies your path to regulatory compliance (GDPR, NIS2) while protecting sensitive data and providing true European digital sovereignty
 
-📡 Added Capabilities: SD-RAN & Software-Defined Radio (SDR)
+## 📡 Added Capabilities: SD-RAN & Software-Defined Radio (SDR)
 Feature	Description
 ### 🛰 SD-RAN Integration	Secure Zero Trust architecture extended into Open RAN (O-RAN) environments using RAN Intelligent Controllers (RIC), Kubernetes-native apps, and eBPF-based microsegmentation
 ### 📻 Software-Defined Radio (SDR)	Support for GNU Radio, srsRAN, OpenAirInterface, and USRP hardware for private 4G/5G and tactical mesh deployments
