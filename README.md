@@ -5,7 +5,7 @@
 
 ![Luxembourg](https://img.shields.io/badge/🇱🇺-Made%20in%20Luxembourg-blue?style=flat-square)
 
-# Abstract# 
+# Abstract
 
 This paper presents an in-depth analysis of deploying DynFi Firewall on OpenBSD, emphasizing security hardening, regulatory compliance, and industry best practices. The study incorporates OpenBGPD, RCDevs authentication, OpenVPN, Public Key Infrastructure (PKI), 802.1X Network Access Control (NAC), MACsec, and CIS security controls. Additionally, it explores Lightweight Directory Access Protocol (LDAP), Active Directory (AD), Entra ID (Azure AD), and other identity service providers (IdPs) for enhanced authentication and access control.
 
