@@ -163,7 +163,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 | 🔑 **Quantum-Resistant Encryption** | Future-proof data protection against quantum threats.|
 | 🤖 **AI-Enhanced Security**     | Real-time threat detection and analytics.     |
 
-## 🚀 Platform Architecture (Simplified YAML)
+## 🚀 Platform Architecture
 ### YAML
 - **ZeroTrustBSD:**
   Core Infrastructure:
