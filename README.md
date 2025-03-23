@@ -338,6 +338,17 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 -**Automatically trigger Wazuh alerts and playbooks**
 -**Combine YARA + eBPF for elite threat hunting capability.**
 
+## 🧱 ZeroTrustBSD – More Than Just a Firewall
+
+| 🔑 Core Pillar                 | 💬 Description |
+|-------------------------------|----------------|
+| 🇱🇺 EU Digital Sovereignty     | 100% developed and hosted in Luxembourg’s Tier IV data centers — fully aligned with EU sovereignty laws. |
+| 🔐 Zero Trust Architecture     | Every connection, device, and user is authenticated and verified — "never trust, always verify". |
+| 🤖 AI + eBPF + YARA            | Real-time detection of malware, anomalies, and advanced persistent threats with minimal performance impact using modern observability tech. |
+| 📜 Automated Compliance        | Built-in support for GDPR, NIS2, ISO 27001 with mappings to MITRE ATT&CK — compliance made operational. |
+| 🛠 Multi-Tenancy by Design     | Isolate ministries, agencies, or business units using OpenBSD VMM and jails — secure, scalable, sovereign. |
+| 🔍 Observability with eBPF     | eBPF enables deep visibility into system behavior without kernel changes — lightweight, powerful, and secure. |
+
 ## 🌐 Intelligence-Driven Defense
 
 **ZeroTrustBSD** integrates with leading threat intelligence platforms:
