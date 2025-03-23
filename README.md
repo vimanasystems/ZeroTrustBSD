@@ -97,8 +97,6 @@ Feature	Description
 
 These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
 
-
-
 ## Why ZeroTrustBSD?
 ZeroTrustBSD stands out by combining advanced cybersecurity tools, simplified compliance management, and multi-tenancy in a single, unified platform:
 
