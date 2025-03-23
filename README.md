@@ -41,6 +41,16 @@ This paper provides a systematic implementation guide, ensuring secure, scalable
 ## 📁 EU Multi-Site Deployment: ZeroTrustBSD
 ZeroTrustBSD is built for sovereign, secure deployment across all European regions, ministries, and national infrastructures. In multi-site topologies, coordination, automation, and visibility are key.
 
+## 🧱 ZeroTrustBSD – More Than Just a Firewall
+### 🔑 Core Pillar	💬 Description
+- **🇱🇺 EU Digital Sovereignty	100% developed, hosted, and maintained in Luxembourg’s Tier IV data centers, ensuring compliance with EU data residency laws.**
+- **🔐 Zero Trust Architecture	Implements “never trust, always verify”: Every device, user, and packet must be authenticated and authorized.**
+- **🤖 AI + eBPF + YARA	Uses AI-powered anomaly detection, eBPF tracing, and YARA rules for real-time malware and APT detection — with low system overhead.**
+- **📜 Automated Compliance	Pre-integrated with frameworks like GDPR, NIS2, and ISO 27001 — with mappings to the MITRE ATT&CK framework.**
+- **🛠 Multi-Tenancy by Design	Supports multi-agency, multi-site operations using OpenBSD VMM and jails — each tenant is fully isolated.**
+- **🔍 Observability Redefined	Powered by eBPF, ZeroTrustBSD offers real-time, in-kernel tracing of system behavior without heavy agents or kernel changes.**
+
+
 ## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
