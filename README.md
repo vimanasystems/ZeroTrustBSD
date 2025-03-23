@@ -191,7 +191,7 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 - **Quantum-Resistant Encryption: Cryptography designed to protect against future quantum computing threats.**
 - **Governance, Risk, Compliance (GRC): Integrated strategy to manage cybersecurity risks and regulatory adherence effectively.**
 
-## 📊 Advanced Security Capabilities Table
+## 📊 Advanced Security Capabilities Table (work in progress)
 | Capability                     | Benefit                                                 |
 |--------------------------------|---------------------------------------------------------|
 | 🛡️ **Enterprise Firewall**     | High-performance filtering (>45 Gbps throughput).       |
