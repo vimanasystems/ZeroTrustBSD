@@ -172,12 +172,6 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 - **Data Sovereignty	Fully EU-based hosting and management.**
 - **Future-Proof Security	Quantum-safe encryption protects against emerging threats.**
 - **Less funds to raise for commercial cyber security solutions.**
-  
-## 📈 Performance Metrics
-- **Firewall Throughput: >45 Gbps**
-- **VPN Performance (WireGuard): >12 Gbps**
-- **Incident Detection Time (MTTD): <2 minutes**
-- **Compliance: Fully aligned with GDPR, NIS2, ENISA frameworks**
 
 ## 📌 Technical Glossary (Simplified)
 - **Multi-Tenancy: Architecture where one platform securely supports multiple distinct users or departments.**
