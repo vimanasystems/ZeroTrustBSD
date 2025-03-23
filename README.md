@@ -26,6 +26,18 @@ Ces salutations sont couramment utilisées dans la vie quotidienne au Luxembourg
 
 ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on OpenBSD. It serves as a sovereign firewall and network security operating system, integrating Zero Trust Architecture principles with advanced threat defense and compliance features. 
 
+## Introduction
+
+### Background
+
+The increasing sophistication of cyber threats necessitates robust network security frameworks. Firewalls remain a cornerstone of network defense, offering traffic inspection, access control, and threat mitigation. OpenBSD, known for its "secure by default" architecture, is widely utilized in security-sensitive environments (De Raadt, 2002).
+
+DynFi, an open-source firewall manager, simplifies the administration of OpenBSD-based firewalls. Its integration with security frameworks such as OpenBGPD, OpenVPN, MFA, and CIS controls provides a hardened security stance. Furthermore, the inclusion of LDAP, AD, and Entra ID facilitates centralized identity management and Zero Trust Architecture (ZTA).
+
+The addition of threat intelligence feeds ensures real-time detection of malicious activity by correlating network traffic with known threat indicators. Moreover, CISO assistant capabilities provide security executives with automated reporting, compliance tracking, and predictive analytics for improved decision-making.
+
+This paper provides a systematic implementation guide, ensuring secure, scalable, and compliant network firewall deployment.
+
 ## 📁 EU Multi-Site Deployment: ZeroTrustBSD
 ZeroTrustBSD is built for sovereign, secure deployment across all European regions, ministries, and national infrastructures. In multi-site topologies, coordination, automation, and visibility are key.
 
