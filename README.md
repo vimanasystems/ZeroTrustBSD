@@ -95,7 +95,7 @@ ZeroTrustBSD stands out by combining advanced cybersecurity tools, simplified co
 ZeroTrustBSD fully supports multi-tenant architecture, enabling your organization to efficiently secure and manage multiple, distinct environments under a unified solution:
 
 ### Key Capabilities:
-Virtualization & Isolation (VMM & Jails):
+**Virtualization & Isolation (VMM & Jails):**
 Leverage OpenBSD's built-in virtualization and containerization technologies to create isolated, secure environments for each tenant, ensuring that sensitive data and applications remain protected and confidential.
 
 ### Microsegmentation:
@@ -127,6 +127,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 - **Data Sovereignty	Fully EU-based hosting and management.**
 - **Future-Proof Security	Quantum-safe encryption protects against emerging threats.**
 - **Less funds to raise for commercial cyber security solutions.**
+- 
 ## 📈 Performance Metrics
 - **Firewall Throughput: >45 Gbps**
 - **VPN Performance (WireGuard): >12 Gbps**
@@ -228,7 +229,7 @@ Take immediate steps to protect your organization’s digital assets and simplif
 ## 📌 Quick Installation
 
 ### Prerequisites
-- **Hardware:** 64-bit CPU, 8GB RAM, SSD 128GB+, Dual NIC
+- **Hardware:** 64-bit CPU, 8GB RAM (or more), SSDx2 SOFTRAID 128GB+, Quadruple NIC 10G SFP (10GBASET-SR min)
 - **Software:** ZeroTrustBSD ISO, DynFi Manager
 
 - ## ✨ Need to know Features
