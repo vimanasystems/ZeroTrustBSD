@@ -19,7 +19,7 @@ ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on Op
 ## 📁 EU Multi-Site Deployment: ZeroTrustBSD
 ZeroTrustBSD is built for sovereign, secure deployment across all European regions, ministries, and national infrastructures. In multi-site topologies, coordination, automation, and visibility are key.
 
-This playbook system automates:
+## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
 
