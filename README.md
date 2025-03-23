@@ -315,6 +315,18 @@ Take immediate steps to protect your organization’s digital assets and simplif
 | 🧱 SD-WAN & SD-RAN Support        | Secure routing at the edge and in 5G environments               |
 | 🚀 Multi-Tenant Ready             | VMM, Jails, and RBAC for segmentation and agency isolation      |
 
+## System Requirements
+
+-**Operating System: OpenBSD (Latest Stable Release)**
+-**Firewall Solution: DynFi Firewall**
+-**Networking Protocols: OpenBGPD, OpenVPN**
+-**Authentication Mechanisms: RCDevs OpenOTP, LDAP, AD, Entra ID**
+-**Security Enhancements: 802.1X NAC, MACsec**
+-**Threat Intelligence: Open Threat Exchange (OTX), MISP**
+
+CISO Assistant: Automated Compliance Reporting, AI-driven Security Analytics
+Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
+
 ## 🏛️ Designed For
 - Governments & Ministries
 - Healthcare & Hospitals
