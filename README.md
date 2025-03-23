@@ -115,7 +115,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 - **Simplified Compliance	Integrated CISO Assistant for automated compliance audits.**
 - **Data Sovereignty	Fully EU-based hosting and management.**
 - **Future-Proof Security	Quantum-safe encryption protects against emerging threats.**
-- 
+- **Less funds to raise for commercial cyber security solutions.**
 ## 📈 Performance Metrics
 - **Firewall Throughput: >45 Gbps**
 - **VPN Performance (WireGuard): >12 Gbps**
