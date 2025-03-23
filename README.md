@@ -184,7 +184,7 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 ##### 💡 Multi-Tenancy	Role-based policies per agency, tenant, or branch
 ##### 🛠 DevSecOps	Integrate MFA into CI/CD pipelines and build systems
 
-🇪🇺 Data Sovereignty	100% hosted in Luxembourg or on-prem — supports national cloud or air-gapped setups
+## 🇪🇺 Data Sovereignty	100% hosted in Luxembourg or on-prem — supports national cloud or air-gapped setups
 
 ### ⚙️ Integration Options
 #### Integration Type	Tools
@@ -271,21 +271,21 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
     -*Data Loss Prevention (DLP)*
     -*Secure Email Gateway*
     -*Secure Web Gateway*
-    -*Cloud Access Security Broker (CASB)
+    -*Cloud Access Security Broker (CASB)*
     -*API Security*
     -*Endpoint Detection and Response (EDR)*
     
 # 📊 Advanced Security Capabilities Table
 ## Capability	Benefit
 **🛡️ Enterprise Firewall	High-performance filtering (>45 Gbps throughput).**
-- **🌐Secure VPN	Secure remote connections (12+ Gbps with WireGuard).**
-- **📈 Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).**
-- **🤖 AI-driven Security	Rapid, real-time threat detection and mitigation.**
-- **🔍 Threat Hunting	Identify advanced persistent threats proactively.**
-- **📧 Secure Email & Web	Protection from email phishing and web threats.**
-- **☁️ CASB & API Security	Secure management of cloud apps and APIs.**
-- **💻 Endpoint Protection	Advanced endpoint threat detection (EDR).**
-- **🔒 Data Loss Prevention	Prevent unauthorized access and data leakage.**
+- ***🌐Secure VPN	Secure remote connections (12+ Gbps with WireGuard).***
+- ***📈 Compliance Automation	Automated regulatory audits and reporting (GDPR, NIS2).***
+- ***🤖 AI-driven Security	Rapid, real-time threat detection and mitigation.***
+- ***🔍 Threat Hunting	Identify advanced persistent threats proactively.***
+- ***📧 Secure Email & Web	Protection from email phishing and web threats.***
+- ***☁️ CASB & API Security	Secure management of cloud apps and APIs.***
+- ***💻 Endpoint Protection	Advanced endpoint threat detection (EDR).***
+- ***🔒 Data Loss Prevention	Prevent unauthorized access and data leakage.***
 
 ## 🚀 Future Innovations
 ### ZeroTrustBSD is committed to continuous innovation:
