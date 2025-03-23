@@ -337,10 +337,10 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 
 ## References
 
-- **De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.** 
+-**De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.** 
 -**European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.**
 -**Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.**
-  -**National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.**
+-**National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.**
 
 ## 🛠️ ISO Installation
 
