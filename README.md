@@ -1,5 +1,9 @@
-# ZeroTrustBSD Firewall 🔒
+# 🛡️ ZeroTrustBSD
 ## Next-Generation Enterprise Firewall Proudly Developed in Luxembourg 🇱🇺
+> A military-grade, BSD-licensed cybersecurity appliance  
+> 🇱🇺 Proudly built in Luxembourg for European sovereignty
+
+![Luxembourg](https://img.shields.io/badge/🇱🇺-Made%20in%20Luxembourg-blue?style=flat-square)
 
 Bonjour en luxembourgeois
 
