@@ -10,8 +10,6 @@ En luxembourgeois, "bonjour" peut être traduit de plusieurs manières selon le 
 - **Mëtteg : Elle signifie "bon après-midi" et est utilisée à partir de midi jusqu'au soir.**
 - **Nowend : Cette expression signifie "bonsoir" et est utilisée le soir.**
 
-
-
 Ces salutations sont couramment utilisées dans la vie quotidienne au Luxembourg pour saluer les gens.
 
 **ZeroTrustBSD** is a security-hardened, open-source operating system based on **OpenBSD**, purpose-built for sovereign firewall deployments, national cybersecurity frameworks, and compliance with European directives like **NIS2**, **GDPR**, and **DORA**.
@@ -151,6 +149,16 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 ### 🏢 Overview
 RCDevs Security is a Luxembourg-based software company specializing in secure Identity & Access Management (IAM) and Multi-Factor Authentication (MFA) for enterprise, government, and critical infrastructure networks.
 Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe and globally, with deployments in finance, defense, healthcare, and public sectors.
+
+### ⚙️ Integration Options
+#### Integration Type	Tools
+- ***PAM Authentication	pam_openotp, pam_radius***
+- ***SSH Login MFA	/etc/pam.d/sshd with OpenOTP***
+- ***Web Login & UI	SAML, OIDC***
+- ***VPN Gateways	OpenVPN + RADIUS or LDAP***
+- ***Firewall Panels	RADIUS-protected admin login***
+- ***Web Admin Portal	Self-service token provisioning***
+- ***Certificates	Smartcards, FIDO2, PKI-aware access (QKD-ready)***
 
 ## 🎯 Clear Business Impact
 - **Strategic Objective	Delivered by ZeroTrustBSD**
