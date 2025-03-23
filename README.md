@@ -9,13 +9,13 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 
 This playbook system automates:
 
-### ✅ Deployment of DynFi Agent (mTLS-secured)### 
+### ✅ Deployment of DynFi Agent (mTLS-secured)
 
-### ✅ Registration to DynFi Manager (centralized, EU-hosted)###
+### ✅ Registration to DynFi Manager (centralized, EU-hosted)
 
-### ✅ Identity integration via RCDevs OpenOTP###
+### ✅ Identity integration via RCDevs OpenOTP
 
-### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites###
+### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites
 
 
 The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
