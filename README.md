@@ -154,6 +154,18 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 RCDevs Security is a Luxembourg-based software company specializing in secure Identity & Access Management (IAM) and Multi-Factor Authentication (MFA) for enterprise, government, and critical infrastructure networks.
 Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe and globally, with deployments in finance, defense, healthcare, and public sectors.
 
+## 🛡️ Why RCDevs Is Ideal for ZeroTrustBSD
+#### Security Domain	RCDevs Contribution
+##### ✅ Zero Trust Access	Strong identity before access — never trust, always verify
+##### 🧱 Microsegmentation	Identity-aware access per zone, VLAN, overlay or firewall anchor
+##### 🔐 SSH Hardening	MFA for administrative shell access to ZeroTrustBSD nodes
+##### 🌐 VPN/Firewall Auth	MFA for OpenVPN, IPsec, WireGuard, and web panels via RADIUS
+##### 🧾 Compliance (NIS2, ISO, GDPR)	Audit logs, RBAC, access expiry, self-registration workflows
+##### 💡 Multi-Tenancy	Role-based policies per agency, tenant, or branch
+##### 🛠 DevSecOps	Integrate MFA into CI/CD pipelines and build systems
+
+🇪🇺 Data Sovereignty	100% hosted in Luxembourg or on-prem — supports national cloud or air-gapped setups
+
 ### ⚙️ Integration Options
 #### Integration Type	Tools
 - ***PAM Authentication	pam_openotp, pam_radius***
