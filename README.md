@@ -287,7 +287,7 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 
 ## 🚀 Future Innovations
 ### ZeroTrustBSD is committed to continuous innovation:
-- **Enhanced AI-driven threat prediction and automated security response.***
+- **Enhanced AI-driven threat prediction and automated security response.**
 - **Advanced automation of compliance and auditing processes.**
 - **Improved network microsegmentation for granular control.**
 - **Expanded quantum-resistant cryptographic standards integration.**
