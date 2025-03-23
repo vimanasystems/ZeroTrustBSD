@@ -167,7 +167,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 ### YAML
 - **ZeroTrustBSD:**
   Core Infrastructure:
-    - *OpenBSD Secure Foundation*
+    - *OpenBSD Secure Foundation OS - Thank you Theo de Raddt*
     - *Quantum-Resistant Cryptography*
     - *Luxembourg-Based Tier IV Data Centers (EU Sovereignty)*
 
