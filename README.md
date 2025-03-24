@@ -7,7 +7,9 @@
 
 # Abstract
 
-This paper presents an in-depth analysis of deploying DynFi Firewall on OpenBSD, emphasizing security hardening, regulatory compliance, and industry best practices. The study incorporates OpenBGPD, RCDevs authentication, OpenVPN, Public Key Infrastructure (PKI), 802.1X Network Access Control (NAC), MACsec, and CIS security controls. Additionally, it explores Lightweight Directory Access Protocol (LDAP), Active Directory (AD), Entra ID (Azure AD), and other identity service providers (IdPs) for enhanced authentication and access control.
+This paper presents an in-depth analysis of deploying DynFi Firewall on OpenBSD, emphasizing security hardening, regulatory compliance, and industry best practices. 
+
+The study incorporates OpenBGPD, RCDevs authentication, OpenVPN, Public Key Infrastructure (PKI), 802.1X Network Access Control (NAC), MACsec, and CIS security controls. Additionally, it explores Lightweight Directory Access Protocol (LDAP), Active Directory (AD), Entra ID (Azure AD), and other identity service providers (IdPs) for enhanced authentication and access control.
 
 The objective is to demonstrate how OpenBSD’s security-centric design, coupled with DynFi, achieves an enterprise-grade network security posture. By analyzing compliance frameworks such as NIS2 Directive, GDPR, HIPAA, and CIS Controls, this paper offers a structured approach to secure firewall deployment. Furthermore, it explores the integration of threat intelligence feeds and CISO assistant capabilities to enhance proactive security monitoring and decision-making.
 
@@ -27,9 +29,7 @@ Ces salutations sont couramment utilisées dans la vie quotidienne au Luxembourg
 ZeroTrustBSD is a military-grade, open-source cybersecurity platform built on OpenBSD. It serves as a sovereign firewall and network security operating system, integrating Zero Trust Architecture principles with advanced threat defense and compliance features. 
 
 ## Introduction
-
 ### Background
-
 The increasing sophistication of cyber threats necessitates robust network security frameworks. Firewalls remain a cornerstone of network defense, offering traffic inspection, access control, and threat mitigation. OpenBSD, known for its "secure by default" architecture, is widely utilized in security-sensitive environments (De Raadt, 2002).
 
 DynFi, an open-source firewall manager, simplifies the administration of OpenBSD-based firewalls. Its integration with security frameworks such as OpenBGPD, OpenVPN, MFA, and CIS controls provides a hardened security stance. Furthermore, the inclusion of LDAP, AD, and Entra ID facilitates centralized identity management and Zero Trust Architecture (ZTA).
@@ -49,7 +49,6 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 - **📜 Automated Compliance	Pre-integrated with frameworks like GDPR, NIS2, and ISO 27001 — with mappings to the MITRE ATT&CK framework.**
 - **🛠 Multi-Tenancy by Design	Supports multi-agency, multi-site operations using OpenBSD VMM and jails — each tenant is fully isolated.**
 - **🔍 Observability Redefined	Powered by eBPF, ZeroTrustBSD offers real-time, in-kernel tracing of system behavior without heavy agents or kernel changes.**
-
 
 ## This playbook system automates:
 
@@ -126,7 +125,7 @@ These are functionalities for telecom deployment in 4G/5G or better.
 - **openairinterface5g	Full O-RAN-compatible 5G NR stack**
 - **limesuite / uhd	Drivers for LimeSDR / USRP devices**
 - **libiio, soapysdr	I/O libraries for SDR device abstraction**
-- 
+
 These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
 
 ## Why ZeroTrustBSD?
@@ -182,6 +181,7 @@ ZeroTrustBSD integrates seamlessly with CISO Assistant, an advanced open-source 
 ## 🔐 RCDevs Security – Capabilities & What It Provides
 ### 🏢 Overview
 RCDevs Security is a Luxembourg-based software company specializing in secure Identity & Access Management (IAM) and Multi-Factor Authentication (MFA) for enterprise, government, and critical infrastructure networks.
+
 Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe and globally, with deployments in finance, defense, healthcare, and public sectors.
 
 ## 🛡️ Why RCDevs Is Ideal for ZeroTrustBSD
@@ -399,12 +399,12 @@ CISO Assistant: Automated Compliance Reporting, AI-driven Security Analytics
 Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 
 ## 🏛️ Designed For
-- Governments & Ministries
-- Healthcare & Hospitals
-- Financial Institutions
-- Energy & Utilities
-- National Defense & CERT Teams
-- Telecom & Edge Infrastructure Providers
+- **Governments & Ministries**
+- **Healthcare & Hospitals**
+- **Financial Institutions**
+- **Energy & Utilities**
+- **National Defense & CERT Teams**
+- **Telecom & Edge Infrastructure Providers**
 
 ## Next Steps and Future Research
 ### To strengthen security and compliance:
