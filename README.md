@@ -50,15 +50,11 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 - **🛠 Multi-Tenancy by Design	Supports multi-agency, multi-site operations using OpenBSD VMM and jails — each tenant is fully isolated.**
 - **🔍 Observability Redefined	Powered by eBPF, ZeroTrustBSD offers real-time, in-kernel tracing of system behavior without heavy agents or kernel changes.**
 
-
 ## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
-
 ### ✅ Registration to DynFi Manager (centralized, EU-hosted)
-
 ### ✅ Identity integration via RCDevs OpenOTP
-
 ### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites
 
 The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
@@ -126,7 +122,7 @@ These are functionalities for telecom deployment in 4G/5G or better.
 - **openairinterface5g	Full O-RAN-compatible 5G NR stack**
 - **limesuite / uhd	Drivers for LimeSDR / USRP devices**
 - **libiio, soapysdr	I/O libraries for SDR device abstraction**
-- 
+
 These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
 
 ## Why ZeroTrustBSD?
