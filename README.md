@@ -406,6 +406,44 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 - National Defense & CERT Teams
 - Telecom & Edge Infrastructure Providers
 
+## ZeroTrustBSD is delivered as a bootable ISO image.
+
+### Minimum Requirements
+-**Component	Recommended Spec**
+-**CPU	x86_64 (Intel/AMD 64-bit)**
+-**RAM	8–16 GB (per tenant)**
+-**Storage	2x 128GB SSD (RAID1 preferred)**
+-**Network	4x 10G SFP+ NICs**
+-**Medium	USB, PXE, or ISO image**
+
+## Installation Steps
+-**Download ISO: GitHub Releases**
+-**Verify Integrity: sha256 -C SHA256SUMS**
+-**Boot from USB or PXE**
+-**Follow guided install: disk, network, hostname**
+-**Configure via CLI or DynFi Web UI**
+-**Integrate Identity, Threat Feeds, SIEM**
+
+## 🧠 CISO Assistant – Built-in GRC Automation
+Integrated with ZeroTrustBSD, CISO Assistant automates:
+
+-*Control Mapping for GDPR, NIS2, ISO 27001*
+-*Real-Time Compliance Dashboards*
+-*Audit-Ready Reporting*
+-*Multi-Tenant GRC Profiles*
+-*Continuous Risk Assessment*
+-*Reduce compliance overhead and improve audit readiness.*
+
+## 🇪🇺 Trusted by European Cybersecurity Professionals
+ZeroTrustBSD reflects the strategic need for European-built, military-grade cybersecurity. It offers:
+
+✅ Operational efficiency
+✅ Vendor neutrality
+✅ Digital sovereignty
+✅ Regulatory alignment
+✅ Threat visibility
+✅ Defense-grade resilience
+
 ## Next Steps and Future Research
 ### To strengthen security and compliance:
 
@@ -425,3 +463,12 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 
 ZeroTrustBSD is distributed as a bootable ISO image.  
 To install.
+
+## 📬 Contact
+Contact Type	Info
+General Inquiries	hello@zerotrustbsd.lu
+Security Reports	security@zerotrustbsd.lu
+GitHub	vimanasystems/zerotrustbsd
+Website	https://zerotrustbsd.lu
+
+**"ZeroTrustBSD empowers CISOs, governments, and digital leaders to take control of their cybersecurity infrastructure — without compromise."**
