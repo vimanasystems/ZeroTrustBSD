@@ -376,10 +376,15 @@ With CISO Assistant built in, ZeroTrustBSD automates your governance and risk pr
 ## System Requirements
 
 -**Operating System: OpenBSD (Latest Stable Release)**
+
 -**Firewall Solution: DynFi Firewall**
+
 -**Networking Protocols: OpenBGPD, OpenVPN**
+
 -**Authentication Mechanisms: RCDevs OpenOTP, LDAP, AD, Entra ID**
+
 -**Security Enhancements: 802.1X NAC, MACsec**
+
 -**Threat Intelligence: Open Threat Exchange (OTX), MISP**
 
 CISO Assistant: Automated Compliance Reporting, AI-driven Security Analytics
@@ -397,17 +402,21 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 ### To strengthen security and compliance:
 
 - **Adopt Zero Trust Architecture (ZTA): Implement microsegmentation and least-privilege access policies.**
+  
 - **Automate Configuration Management: Use Ansible for firewall rule consistency.**
+  
 - **Deploy Intrusion Detection and Prevention Systems (IDS/IPS): Integrate Suricata or Snort for advanced threat detection.**
+  
 - **Expand Compliance Assessments: Conduct ISO 27001 and PCI DSS audits.**
+  
 - **Leverage AI-driven CISO Assistant Tools: Automate security analytics, risk assessment, and compliance reporting.**
 
 ## References
 
--*De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.*
--*European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.*
--*Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.*
--*National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.*
+- *De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.*
+- *European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.*
+- *Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.*
+- *National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.*
 
 ## 🛠️ ISO Installation
 
