@@ -119,7 +119,7 @@ These are functionalities for telecom deployment in 4G/5G or better.
 - **openairinterface5g	Full O-RAN-compatible 5G NR stack**
 - **limesuite / uhd	Drivers for LimeSDR / USRP devices**
 - **libiio, soapysdr	I/O libraries for SDR device abstraction**
-- 
+
 These packages can be built and integrated into OpenBSD jails or VMM guests, protected by ZeroTrustBSD's microsegmentation policies.
 
 ## Why ZeroTrustBSD?
