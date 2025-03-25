@@ -227,7 +227,7 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 | 💻 **Endpoint Protection**     | Advanced endpoint threat detection (EDR).               |
 | 🔒 **Data Loss Prevention**    | Prevent unauthorized access and data leakage.           |
 
-## 🌟 Key Features
+## 🌟 Reminder of Features
 | Feature                        | Description                                   |
 |--------------------------------|-----------------------------------------------|
 | 🔐 **Security by Design**       | Built on the secure OpenBSD foundation.       |
@@ -307,13 +307,18 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 ## 🧱 A Firewall That Does More Than Block
 **ZeroTrustBSD** is built on the world’s most secure open-source OS — OpenBSD — and takes it further with:
 
-## Core Pillars	Description
-## 🇱🇺 EU Digital Sovereignty	100% developed and hosted in Luxembourg Tier IV data centers.
-### 🔐 Zero Trust Architecture	Every request is verified. Every device is authenticated.
-### 🤖 AI + eBPF + YARA	Detect malware, anomalies, and APTs in real time with minimal performance loss.
-### 📜 Automated Compliance	Built-in compliance for GDPR, NIS2, ISO 27001, mapped to MITRE ATT&CK.
-### 🛠 Multi-Tenancy by Design	Easily isolate ministries, agencies, or business units with VMM + jails.
-### 🔍 Observability Redefined with eBPF
+## 🧱 ZeroTrustBSD – More Than Just a Firewall
+
+| 🔑 Core Pillar                 | 💬 Description |
+|-------------------------------|----------------|
+| 🇱🇺 EU Digital Sovereignty     | 100% developed and hosted in Luxembourg’s Tier IV data centers — fully aligned with EU sovereignty laws. |
+| 🔐 Zero Trust Architecture     | Every connection, device, and user is authenticated and verified — "never trust, always verify". |
+| 🤖 AI + eBPF + YARA            | Real-time detection of malware, anomalies, and advanced persistent threats with minimal performance impact using modern observability tech. |
+| 📜 Automated Compliance        | Built-in support for GDPR, NIS2, ISO 27001 with mappings to MITRE ATT&CK — compliance made operational. |
+| 🛠 Multi-Tenancy by Design     | Isolate ministries, agencies, or business units using OpenBSD VMM and jails — secure, scalable, sovereign. |
+| 🔍 Observability with eBPF     | eBPF enables deep visibility into system behavior without kernel changes — lightweight, powerful, and secure. |
+
+## 🔍 Observability Redefined with eBPF
 
 **eBPF** (Extended Berkeley Packet Filter) enables ZeroTrustBSD to inspect, trace, and respond to system behavior in real time — without kernel rewrites or heavy agents.
 
@@ -330,17 +335,6 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 -**Scan processes and files dynamically**
 -**Automatically trigger Wazuh alerts and playbooks**
 -**Combine YARA + eBPF for elite threat hunting capability.**
-
-## 🧱 ZeroTrustBSD – More Than Just a Firewall
-
-| 🔑 Core Pillar                 | 💬 Description |
-|-------------------------------|----------------|
-| 🇱🇺 EU Digital Sovereignty     | 100% developed and hosted in Luxembourg’s Tier IV data centers — fully aligned with EU sovereignty laws. |
-| 🔐 Zero Trust Architecture     | Every connection, device, and user is authenticated and verified — "never trust, always verify". |
-| 🤖 AI + eBPF + YARA            | Real-time detection of malware, anomalies, and advanced persistent threats with minimal performance impact using modern observability tech. |
-| 📜 Automated Compliance        | Built-in support for GDPR, NIS2, ISO 27001 with mappings to MITRE ATT&CK — compliance made operational. |
-| 🛠 Multi-Tenancy by Design     | Isolate ministries, agencies, or business units using OpenBSD VMM and jails — secure, scalable, sovereign. |
-| 🔍 Observability with eBPF     | eBPF enables deep visibility into system behavior without kernel changes — lightweight, powerful, and secure. |
 
 ## 🌐 Intelligence-Driven Defense
 
@@ -409,10 +403,11 @@ Compliance & Security Tools: CIS Security Controls, NIS2 Compliance Framework
 - **Leverage AI-driven CISO Assistant Tools: Automate security analytics, risk assessment, and compliance reporting.**
 
 ## References
--**De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.** 
--**European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.**
--**Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.**
--**National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.**
+
+-*De Raadt, T. (2002). "OpenBSD Security Innovations." Proceedings of the Usenix Security Symposium.*
+-*European Commission (2022). "NIS2 Directive: Strengthening Europe's Cybersecurity." EU Cybersecurity Policy Report.*
+-*Center for Internet Security (2021). "CIS Controls v8: Cyber Defense Framework." CIS Benchmark Documentation.*
+-*National Institute of Standards and Technology (NIST). (2020). "Zero Trust Architecture (ZTA)." NIST Special Publication 800-207.*
 
 ## 🛠️ ISO Installation
 
