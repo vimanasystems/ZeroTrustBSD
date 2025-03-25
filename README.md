@@ -54,11 +54,8 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 ## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
-
 ### ✅ Registration to DynFi Manager (centralized, EU-hosted)
-
 ### ✅ Identity integration via RCDevs OpenOTP
-
 ### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites
 
 The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
@@ -150,6 +147,19 @@ These packages can be built and integrated into OpenBSD jails or VMM guests, pro
 - **Identity & Access Management:** LDAP, Active Directory, Azure Entra ID, and RCDevs OpenOTP MFA.
 - **Optimized MPLS Compatibility:** Ready for integration with service provider MPLS networks.
 - **Luxembourg Tier IV Hosting:** Optimized for maximum resilience and data security.
+
+## 🧬 Example: Real-World Microsegmentation Setup
+- **Component	Security Applied**
+- **VM for VPN	PF only allows ports 1194 (OpenVPN), outbound DNS**
+- **VM for DynFi agent	mTLS cert-auth only, no external access**
+- **Jail for DNS	Pledge = "inet rpath", unveil = /etc/resolv.conf only**
+- **Jail for Filebeat	No network access, only write to log spool**
+- **Suricata Host	Logs every VM-to-VM traffic + alerts on anomaly**
+### ✅ Result
+- #### 📦 App isolation with minimal trust assumptions
+- #### 🧱 Defense in depth — compromise of one jail or VM won’t affect others
+- #### 🔒 Compliant with NIS2 / ISO 27001 for segmentation & access control
+### 🔁 Recoverable, auditable, secure — every action is logged
 
 ## 🛡️ Enhanced Security Through Multi-Tenancy
 ZeroTrustBSD fully supports multi-tenant architecture, enabling your organization to efficiently secure and manage multiple, distinct environments under a unified solution:
@@ -244,6 +254,15 @@ Their flagship platform, OpenOTP Security Suite, is widely adopted across Europe
 | 🔑 **Quantum-Resistant Encryption** | Future-proof data protection against quantum threats.|
 | 🤖 **AI-Enhanced Security**     | Real-time threat detection and analytics.     |
 
+## 🔑 Core Pillars
+| 🔑 Core Pillar                 | 💬 Description |
+|-------------------------------|----------------|
+| 🇱🇺 EU Digital Sovereignty     | 100% developed and hosted in Luxembourg’s Tier IV data centers — fully aligned with EU sovereignty laws. |
+| 🔐 Zero Trust Architecture     | Every connection, device, and user is authenticated and verified — "never trust, always verify". |
+| 🤖 AI + eBPF + YARA            | Real-time detection of malware, anomalies, and advanced persistent threats with minimal performance impact using modern observability tech. |
+| 📜 Automated Compliance        | Built-in support for GDPR, NIS2, ISO 27001 with mappings to MITRE ATT&CK — compliance made operational. |
+| 🛠 Multi-Tenancy by Design     | Isolate ministries, agencies, or business units using OpenBSD VMM and jails — secure, scalable, sovereign. |
+| 🔍 Observability with eBPF     | eBPF enables deep visibility into system behavior without kernel changes — lightweight, powerful, and secure. |
 ## 🚀 Platform Architecture
 ### YAML
 - **ZeroTrustBSD:**
