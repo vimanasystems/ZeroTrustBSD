@@ -314,31 +314,7 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 ## 🧱 A Firewall That Does More Than Block
 **ZeroTrustBSD** is built on the world’s most secure open-source OS — OpenBSD — and takes it further with:
 
-## Core Pillars	Description
-## 🇱🇺 EU Digital Sovereignty	100% developed and hosted in Luxembourg Tier IV data centers.
-### 🔐 Zero Trust Architecture	Every request is verified. Every device is authenticated.
-### 🤖 AI + eBPF + YARA	Detect malware, anomalies, and APTs in real time with minimal performance loss.
-### 📜 Automated Compliance	Built-in compliance for GDPR, NIS2, ISO 27001, mapped to MITRE ATT&CK.
-### 🛠 Multi-Tenancy by Design	Easily isolate ministries, agencies, or business units with VMM + jails.
-### 🔍 Observability Redefined with eBPF
-
-**eBPF** (Extended Berkeley Packet Filter) enables ZeroTrustBSD to inspect, trace, and respond to system behavior in real time — without kernel rewrites or heavy agents.
-
-## eBPF Capability	Benefit
-### 🔎 Live Syscall Tracing	Detect abnormal process behavior instantly.
-### 🧠 Behavior-Based Alerts	Alert on suspicious I/O, memory access, or lateral movement.
-### ⚡ Minimal Overhead	Monitor with <1% CPU load, even under stress.
-### 🧩 Event Correlation	Tie process + network + file activity into real-time alerting.
-### 🦠 YARA-Powered Malware Detection
-
-### YARA rules allow ZeroTrustBSD to detect known and unknown malware patterns based on file, memory, and behavior analysis.
--**Maintain your own custom rule sets**
--**sync from trusted open-source YARA feeds**
--**Scan processes and files dynamically**
--**Automatically trigger Wazuh alerts and playbooks**
--**Combine YARA + eBPF for elite threat hunting capability.**
-
-## 🧱 ZeroTrustBSD – More Than Just a Firewall
+### 🧱 ZeroTrustBSD – More Than Just a Firewall
 
 | 🔑 Core Pillar                 | 💬 Description |
 |-------------------------------|----------------|
@@ -349,7 +325,7 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 | 🛠 Multi-Tenancy by Design     | Isolate ministries, agencies, or business units using OpenBSD VMM and jails — secure, scalable, sovereign. |
 | 🔍 Observability with eBPF     | eBPF enables deep visibility into system behavior without kernel changes — lightweight, powerful, and secure. |
 
-## 🌐 Intelligence-Driven Defense
+### 🌐 Intelligence-Driven Defense
 
 **ZeroTrustBSD** integrates with leading threat intelligence platforms:
 
@@ -357,7 +333,7 @@ In today’s landscape of ransomware, nation-state threats, and regulatory compl
 
 Map detection & prevention to MITRE ATT&CK and automate response via Wazuh SIEM + SOAR pipelines
 
-## ✅ Complete Compliance, Automated
+### ✅ Complete Compliance, Automated
 With CISO Assistant built in, ZeroTrustBSD automates your governance and risk processes:
 
 ### Framework Support	Capability
