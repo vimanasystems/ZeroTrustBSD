@@ -50,15 +50,11 @@ ZeroTrustBSD is built for sovereign, secure deployment across all European regio
 - **🛠 Multi-Tenancy by Design	Supports multi-agency, multi-site operations using OpenBSD VMM and jails — each tenant is fully isolated.**
 - **🔍 Observability Redefined	Powered by eBPF, ZeroTrustBSD offers real-time, in-kernel tracing of system behavior without heavy agents or kernel changes.**
 
-
 ## This playbook system automates:
 
 ### ✅ Deployment of DynFi Agent (mTLS-secured)
-
 ### ✅ Registration to DynFi Manager (centralized, EU-hosted)
-
 ### ✅ Identity integration via RCDevs OpenOTP
-
 ### ✅ Secure policy deployment to firewalls across communes, ministries, or critical sites
 
 The platform delivers robust network protection for critical infrastructure, government, and enterprise use, combining OpenBSD’s renowned security hardening with modern innovations in identity management, quantum-resistant cryptography, and DevSecOps workflows.
@@ -81,7 +77,7 @@ Designed for use by government agencies, critical infrastructure operators, and 
 | 🧾 Compliance     | NIS2, GDPR, ISO 27001, STANAG, DORA-ready |
 
 ## 🇱🇺 Designed for Luxembourg & EU Sovereignty
-ZeroTrustBSD is deployed across **all of Europe**, supporting:
+ZeroTrustBSD can be deployed across **all of Europe**, supporting:
 - 🏛 Government and municipal IT
 - 📡 Encrypted MPLS and SD-WAN links
 - 🛰 National & NATO-aligned defense architecture
@@ -89,15 +85,12 @@ ZeroTrustBSD is deployed across **all of Europe**, supporting:
 - 🧾 Tier IV EU-hosted, sovereignty-compliant deployments
 
 ## 📜 Regulatory Compliance
-Framework	Support
-🇪🇺 NIS2	Identity enforcement, segmentation, audit logs
-🇪🇺 GDPR	Encryption, data locality, secure identities
-🇪🇺 DORA	Monitoring, alerting, risk resilience
-📘 ISO 27001	Network hardening, policy controls
-🛰 STANAG	NATO crypto metadata, QKD tunneling
-
-**OpenBSD Enterprise Firewall with DynFi Manager Integration**  
-**Developed and Maintained in Luxembourg 🇱🇺**
+### Framework	Support
+-*🇪🇺 NIS2	Identity enforcement, segmentation, audit logs*
+-*🇪🇺 GDPR	Encryption, data locality, secure identities*
+-*🇪🇺 DORA	Monitoring, alerting, risk resilience*
+### 📘 ISO 27001	Network hardening, policy controls
+*🛰 STANAG	NATO crypto metadata, QKD tunneling*
 
 ## 🚀 Executive Summary
 
