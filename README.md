@@ -103,6 +103,32 @@ European organizations today face complex cybersecurity challenges and regulator
 
 **ZeroTrustBSD** answers this need—a powerful, open-source firewall platform based on the renowned security of OpenBSD, enhanced with centralized management (DynFi Manager), quantum-resistant encryption, AI-driven threat detection, and fully integrated multi-tenancy capabilities.
 
+## 🧠 What DynFi Does for ZeroTrustBSD
+DynFi is a powerful, open-source centralized firewall management system, designed to simplify the deployment, monitoring, and policy enforcement of OpenBSD-based firewalls — including ZeroTrustBSD.
+
+### 🔧 Core Responsibilities of DynFi in ZeroTrustBSD:
+| Role	Description |
+| ----------------------| 
+| 🔐 Centralized Management	Configure and manage hundreds of ZeroTrustBSD firewalls from a single web-based control plane. |
+| 📡 Multi-Site Synchronization	Ensure firewall rules, routing configurations, and user access policies are consistent  across ministries, agencies, data centers, or branch sites. |
+| 🔄 Change Control & Auditing	Enforce secure change workflows with full version history, rollback options, and compliance-grade logging. |
+| 🔁 High Availability Management	Manage clusters with CARP, pfsync, and load balancing across multiple ZeroTrustBSD instances. |
+| 🧰 Dynamic Policy Templates	Deploy reusable security policies and PF rule sets via templating and variables — reduce errors and simplify configuration. |
+| 🌍 Geolocation & GeoIP Control	Automatically block or allow traffic based on real-world geography and IP intelligence. |
+| 🔑 mTLS-Secured Agent Registration	Each ZeroTrustBSD node securely registers with DynFi Manager over mutual TLS (mTLS) for integrity and authenticity. |
+| 📊 Monitoring & Reporting	Visualize firewall activity, system health, and security posture with built-in metrics, alerts, and logs. |
+
+## 🧩 Integration-Ready	Compatible with OpenBGPD, OpenVPN, RCDevs (for identity), and SIEM systems like Wazuh and ELK Stack.
+### 🛡 Why DynFi Matters
+In a Zero Trust model, security must be centrally controlled yet locally enforced. DynFi bridges that gap — allowing admins and CISOs to orchestrate a secure-by-design firewall mesh across regions, clouds, and secure enclaves, while meeting NIS2, GDPR, and ISO 27001 mandates.
+
+### 🗂️ Example Use Case:
+A national cybersecurity team manages 50+ firewalls across government ministries. With DynFi:
+- **Changes are approved centrally, rolled out automatically, and verified.**
+- **Identity integration (e.g. via RCDevs or LDAP) is deployed uniformly.**
+- **Compliance reports can be generated to demonstrate policy adherence.**
+- **Disaster recovery (via rule snapshots) and incident response are click-fast.**
+
 **ZeroTrustBSD** simplifies your path to regulatory compliance (GDPR, NIS2) while protecting sensitive data and providing true European digital sovereignty
 
 ## 📡 Added Capabilities: SD-RAN & Software-Defined Radio (SDR)
