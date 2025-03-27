@@ -109,16 +109,16 @@ European organizations today face complex cybersecurity challenges and regulator
 DynFi is a powerful, open-source centralized firewall management system, designed to simplify the deployment, monitoring, and policy enforcement of OpenBSD-based firewalls — including ZeroTrustBSD.
 
 ### 🔧 Core Responsibilities of DynFi in ZeroTrustBSD:
-| Role	Description |
-| ----------------------| 
-| 🔐 Centralized Management	Configure and manage hundreds of ZeroTrustBSD firewalls from a single web-based control plane. |
-| 📡 Multi-Site Synchronization	Ensure firewall rules, routing configurations, and user access policies are consistent  across ministries, agencies, data centers, or branch sites. |
-| 🔄 Change Control & Auditing	Enforce secure change workflows with full version history, rollback options, and compliance-grade logging. |
-| 🔁 High Availability Management	Manage clusters with CARP, pfsync, and load balancing across multiple ZeroTrustBSD instances. |
-| 🧰 Dynamic Policy Templates	Deploy reusable security policies and PF rule sets via templating and variables — reduce errors and simplify configuration. |
-| 🌍 Geolocation & GeoIP Control	Automatically block or allow traffic based on real-world geography and IP intelligence. |
-| 🔑 mTLS-Secured Agent Registration	Each ZeroTrustBSD node securely registers with DynFi Manager over mutual TLS (mTLS) for integrity and authenticity. |
-| 📊 Monitoring & Reporting	Visualize firewall activity, system health, and security posture with built-in metrics, alerts, and logs. |
+| Role	Description | 🛡️ Features |
+|------------------|-------------|
+| 🔐 Centralized Management | Configure and manage hundreds of ZeroTrustBSD firewalls from a single web-based control plane. |
+| 📡 Multi-Site Synchronization |	Ensure firewall rules, routing configurations, and user access policies are consistent  across ministries, agencies, data centers, or branch sites. |
+| 🔄 Change Control & Auditing | Enforce secure change workflows with full version history, rollback options, and compliance-grade logging. |
+| 🔁 High Availability Management |	Manage clusters with CARP, pfsync, and load balancing across multiple ZeroTrustBSD instances. |
+| 🧰 Dynamic Policy Templates | Deploy reusable security policies and PF rule sets via templating and variables — reduce errors and simplify configuration. |
+| 🌍 Geolocation & GeoIP Control |	Automatically block or allow traffic based on real-world geography and IP intelligence. |
+| 🔑 mTLS-Secured Agent | Registration	Each ZeroTrustBSD node securely registers with DynFi Manager over mutual TLS (mTLS) for integrity and authenticity. |
+| 📊 Monitoring & Reporting	 | Visualize firewall activity, system health, and security posture with built-in metrics, alerts, and logs. |
 
 ## 🧩 Integration-Ready	Compatible with OpenBGPD, OpenVPN, RCDevs (for identity), and SIEM systems like Wazuh and ELK Stack.
 ### 🛡 Why DynFi Matters
