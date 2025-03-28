@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/OpenBSD-7.x-red.svg?style=flat-square" alt="OpenBSD Version">
 </p>
 # Work in progress 
+
 # 🛡️ ZeroTrustBSD: Military-Grade Next-Gen Firewall
 
 > 🇱🇺 Proudly Developed in Luxembourg for European Sovereignty  
