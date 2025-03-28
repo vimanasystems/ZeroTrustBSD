@@ -36,6 +36,9 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 | **Monitoring**             | eBPF, Prometheus, ELK Stack     | Real-time tracing, metrics, and visual dashboards    |
 | **Orchestration**          | Ansible, Terraform, GitOps      | Infrastructure-as-Code with no cloud lock-in         |
 
+## Many more to come
+### I am amazed by the scientifics. 
+
 ## 🏛 Deployment Use Case: All Cantons of Luxembourg
 
 Securely interconnect all communes of Luxembourg over **service-provider MPLS** using:
