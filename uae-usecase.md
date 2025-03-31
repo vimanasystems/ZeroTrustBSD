@@ -108,7 +108,7 @@ Use dynamic inventory for all emirate deployments with secure mTLS connection to
 ### Prerequisites:
 - 🖥 x86_64 hardware or VM
 - 🔐 DynFi Manager & RCDevs OpenOTP server
-- 📥 [Download ISO](https://zerotrustbsd.com/download)
+- 📥 [Download ISO](https://zerotrustbsd.com/download) (Work in progress)
 
 ### Install:
 
