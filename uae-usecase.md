@@ -104,8 +104,8 @@ Follow OpenBSD-style installer prompts:
 
 ## 📬 Contact & Support
 
-📧 uae@zerotrustbsd.com  
-🌍 https://zerotrustbsd.com  
-📘 GitHub Docs: https://github.com/YOURORG/ZeroTrustBSD
+📧 uae@zerotrustbsd.com  (Work in progress)
+🌍 https://zerotrustbsd.com  (Work in progress)
+📘 GitHub Docs: https://github.com/vimanasystems/ZeroTrustBSD
 
 > “ZeroTrustBSD empowers national resilience by design — built for trust, transparency, and operational control.”
