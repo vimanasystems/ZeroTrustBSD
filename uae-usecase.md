@@ -44,7 +44,6 @@ Designed for:
     |              |                     |
  [ZT-BSD]      [ZT-BSD]              [ZT-BSD]
  Firewall + VPN   IDS + Overlay     OT/ICS Hardening
-```
 
 Each node is fully isolated, managed, and secured using ZeroTrustBSD standards.
 
