@@ -7,8 +7,6 @@
 ![Made in OpenBSD](https://img.shields.io/badge/built%20on-OpenBSD-ff69b4)
 ![UAE Ready](https://img.shields.io/badge/UAE-Ready-green)
 
----
-
 ## 🔐 What Is ZeroTrustBSD?
 
 **ZeroTrustBSD** is a next-generation cybersecurity operating system built on OpenBSD and designed for national deployments. It combines:
@@ -21,7 +19,6 @@
 - 🛠 Ansible-Powered Automation
 - 🇦🇪 UAE Deployment-Ready Infrastructure
 
----
 
 ## 🏗 Example UAE Deployment
 
@@ -39,8 +36,6 @@ Abu Dhabi       Dubai              Sharjah
 [PF + VPN]   [IDS + VXLAN]      [ICS Gateway]
 ```
 
----
-
 ## 🧩 Key Capabilities
 
 | Category              | Feature                                               |
@@ -54,8 +49,6 @@ Abu Dhabi       Dubai              Sharjah
 | 🛰 SD-RAN & 5G         | VXLAN/GENEVE with pf slice enforcement               |
 | 🔍 Observability       | Prometheus, ELK Stack, MISP integration               |
 
----
-
 ## 🏭 OT/ICS/SCADA Protection
 
 ZeroTrustBSD enables secure OT network zoning across critical sectors:
@@ -68,8 +61,6 @@ ZeroTrustBSD enables secure OT network zoning across critical sectors:
 | Air-Gapped Deployments | Bootable USB ISO + offline DynFi registration       |
 | Remote Access          | VPN + MFA for technicians & contractors             |
 
----
-
 ## 📦 UAE-Specific Integrations
 
 | Stack Component     | Description                          |
@@ -80,8 +71,6 @@ ZeroTrustBSD enables secure OT network zoning across critical sectors:
 | CISO Assistant       | Control maps for NESA & UAE IAS      |
 | GitOps / CI/CD       | GitHub Actions + Terraform           |
 
----
-
 ## 📜 UAE Compliance Mapping
 
 | Framework     | Support                                  |
@@ -91,17 +80,7 @@ ZeroTrustBSD enables secure OT network zoning across critical sectors:
 | ISO/IEC 27001 | Built-in policies and reports             |
 | GDPR (opt)    | Data protection enforcement               |
 
----
-
-## 🤖 Ansible Automation Example
-
-```bash
-ansible-playbook playbooks/deploy-firewalls.yml --limit=abu_dhabi
-```
-
 Use dynamic inventory for all emirate deployments with secure mTLS connection to DynFi.
-
----
 
 ## 🚀 Getting Started
 
@@ -109,15 +88,6 @@ Use dynamic inventory for all emirate deployments with secure mTLS connection to
 - 🖥 x86_64 hardware or VM
 - 🔐 DynFi Manager & RCDevs OpenOTP server
 - 📥 [Download ISO](https://zerotrustbsd.com/download) (Work in progress)
-
-### Install:
-
-```bash
-dd if=zerotrustbsd.iso of=/dev/sdX bs=1M status=progress
-boot -> install -> configure IP, SSH, PF, DynFi agent
-```
-
----
 
 ## 📡 Future Vision
 
