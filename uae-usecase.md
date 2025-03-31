@@ -26,10 +26,11 @@ Designed for:
 | Firewall       | pf, relayd, OpenBGPD                 | ZTA, segmentation, HA routing |
 | IAM & MFA      | RCDevs, OpenOTP, LDAP, AD            | Identity verification & access |
 | Compliance     | CISO Assistant (UAE IAS, NESA, ISO)  | Audit readiness, reporting     |
-| Threat Intel   | Suricata, Wazuh, MISP, eBPF, YARA    | Live threat detection          |
+| Threat Intel   | Suricata, Wazuh, MISP, eBPF, YARA, OpenCTI | Live threat detection          |
 | Virtualization | VMM + jails                          | Tenant isolation               |
 | VPN & Overlay  | WireGuard, IPsec, VXLAN, GENEVE      | Encrypted inter-site fabric    |
-| Automation     | Ansible, GitOps, Terraform           | CI/CD & security-as-code       |
+| Observability  | Prometheus, Filebeat, ELK Stack      | Central monitoring and telemetry|
+
 
 ## 🌐 UAE Deployment Architecture
 
