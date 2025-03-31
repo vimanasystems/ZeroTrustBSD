@@ -33,6 +33,7 @@ Designed for:
 
 ## 🌐 UAE Deployment Architecture
 
+```text
           [ 🇦🇪 National Cyber SOC ]
                     |
         [ DynFi Manager + CISO Assistant ]
@@ -44,8 +45,10 @@ Designed for:
     |              |                     |
  [ZT-BSD]      [ZT-BSD]              [ZT-BSD]
  Firewall + VPN   IDS + Overlay     OT/ICS Hardening
+```
 
 Each node is fully isolated, managed, and secured using ZeroTrustBSD standards.
+
 
 ## 🔧 ZeroTrustBSD Capabilities
 
