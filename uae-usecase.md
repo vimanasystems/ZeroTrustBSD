@@ -106,6 +106,5 @@ Follow OpenBSD-style installer prompts:
 
 📧 uae@zerotrustbsd.com  
 🌍 https://zerotrustbsd.com  
-📘 GitHub Docs: https://github.com/YOURORG/ZeroTrustBSD
 
 > “ZeroTrustBSD empowers national resilience by design — built for trust, transparency, and operational control.”
