@@ -1,57 +1,88 @@
-# 🛡️ ZeroTrustBSD — Next-Gen Firewall & Cybersecurity OS
+# 🛡️ ZeroTrustBSD — Cybersecurity OS for FinTech & Critical Infrastructure
 
-> A BSD-licensed cybersecurity operating system built on OpenBSD. Designed for FinTech, government infrastructure, industrial systems, and cloud-native environments with secure MPLS capabilities.
+> BSD-licensed OS based on OpenBSD for Zero Trust, multi-tenancy, and regulatory compliance.
 
 ![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)
-![OpenBSD Foundation](https://img.shields.io/badge/built%20on-OpenBSD-lightgrey)
-![Use Cases](https://img.shields.io/badge/Finance%2C%20Gov%2C%20MPLS%2C%20OT-green)
+![Built on OpenBSD](https://img.shields.io/badge/built%20on-OpenBSD-lightgrey)
+![CISO Ready](https://img.shields.io/badge/for-CISOs%20%7C%20FinTech%20%7C%20MPLS-green)
 
-## 🔐 What is ZeroTrustBSD?
+## 🎯 Executive Summary
 
-**ZeroTrustBSD** is a modern, hardened operating system for security-conscious environments. It functions as an enterprise firewall, compliance gateway, and multi-tenant platform — all based on OpenBSD. It includes:
+**ZeroTrustBSD** provides CISOs and cybersecurity leaders with a hardened, secure operating system tailored for:
 
-- 🔐 Zero Trust principles
-- 🛰️ MPLS support for service-provider-grade backbone routing
-- 🧠 Threat detection and telemetry (Suricata, eBPF, OpenCTI)
-- 📊 Compliance with PCI DSS, ISO 27001, NIS2, and GDPR
-- 🧱 Multi-tenancy using OpenBSD's VMM and jails
+- 🔐 Zero Trust Network Architecture (ZTNA)
+- 🧱 Secure multi-tenancy for cloud or on-prem
+- 📜 Compliance: PCI DSS, ISO 27001, NIS2, GDPR
+- 🧠 Integrated threat detection and logging
+- 🛰️ Secure MPLS and encrypted interconnects
 
-## ✅ Use Cases
+## 🔑 Capabilities for CISO Objectives
 
-| Sector            | Use Case Description |
-|-------------------|----------------------|
-| 🏦 FinTech         | PCI DSS compliance, secure APIs, payment network segmentation |
-| 🏛 Public Sector   | Inter-departmental isolation, regulatory enforcement |
-| 🏭 Industrial OT   | OT/ICS segmentation, protocol control, audit-ready deployment |
-| ☁️ Sovereign Cloud | Secure private cloud foundations with RBAC and microsegmentation |
-| 🌐 Telecom/MPLS    | Encrypted multi-site connectivity with MPLS-based L2+L3 paths |
+| Goal                         | Capability                                                    |
+|------------------------------|---------------------------------------------------------------|
+| Risk Reduction               | Hardened OpenBSD base, no default services, firewall by default |
+| Compliance Mapping           | Policy-ready for PCI, ISO 27001, NIS2, and GDPR                |
+| Threat Detection & Response  | Suricata IDS, YARA rules, OpenCTI, eBPF-based telemetry        |
+| Identity Access Management   | LDAP, PAM, FIDO2, OIDC, OpenOTP integration                   |
+| Tenant/Zone Isolation        | Multi-tenant using OpenBSD VMM and jails                      |
+| MPLS & L2/L3 Connectivity    | Secure interconnect with PF + MPLS tagging support            |
 
-## 🔧 Key Features
+## 🧩 High-Level Architecture
 
-| Capability         | Description |
-|--------------------|-------------|
-| 🔒 Zero Trust       | Explicit identity verification, strict access control |
-| 🧱 Multi-Tenant     | Lightweight isolation via VMM + jails |
-| 📦 PF Firewall      | Stateful, rule-based traffic enforcement |
-| 📡 MPLS Support     | Secure service-provider routing and L2 VPN segmentation |
-| 🧠 Threat Detection | Suricata IDS, OpenCTI integration, YARA rules |
-| 🛡️ VPN + Overlay    | WireGuard, IPsec, VXLAN for tenant tunnels |
-| 📜 Compliance       | PCI DSS, ISO 27001, GDPR, NIS2 mappings |
-| 📊 SIEM Integration | Wazuh, Filebeat, Prometheus, ELK ready |
-| 👥 Identity & MFA   | OpenOTP, LDAP, FIDO2, OIDC-compatible IAM |
+```
+[ SOC / NOC ]
+     |
+[ZT-BSD Control Node] -- GitOps / CI Integration
+     |
+  ----------------------------
+ |            |             |
+[ZT-BSD]   [ZT-BSD]     [ZT-BSD]
+ Finance   Ministry      ICS/OT
+ VPN, ACLs Enforce       Protocol-aware
 
-## 📐 Deployment Architecture (Example)
+## 📜 Compliance Ready
 
-```text
-        [ Security Operations Center ]
-                   |
-      [ ZeroTrustBSD Management Node ]
-                   |
-     -------------------------------------
-    |               |                   |
- FinTech A       Gov Dept. A        OT Zone A
-    |               |                   |
-[ZT-BSD]         [ZT-BSD]            [ZT-BSD]
-VPN + Firewall   Multi-Tenant        ICS Isolation
-    |               |                   |
---- MPLS Backbone — Encrypted L2/L3 Interconnect ---
+| Standard       | Supported Controls                                    |
+|----------------|--------------------------------------------------------|
+| PCI DSS        | ACLs, encryption, multi-tenancy, logging               |
+| ISO/IEC 27001  | Network control, IAM, policy enforcement               |
+| GDPR           | RBAC, minimal data footprint, audit trails            |
+| NIS2 Directive | Alerting, access control, segmentation, SIEM export   |
+
+## 📦 Installation (Manual)
+
+```bash
+# Clone and run setup
+git clone https://github.com/vimanasystems/zerotrustbsd
+cd zerotrustbsd/scripts
+sh setup-firewall.sh
+sh enable-mpls.sh
+sh harden-kernel.sh
+```
+
+> Full ISO and GUI installer are under development.
+
+## 📚 References
+
+- https://www.openbsd.org/
+- https://suricata.io/
+- https://www.opencti.io/
+- https://attack.mitre.org/
+- https://wazuh.com/
+- https://opensource.org/license/bsd-2-clause/
+
+## ⚖️ Security & Legal
+
+- No telemetry
+- No vendor lock-in
+- BSD-licensed
+- All deployments are self-managed
+- No affiliation to any state or defense entity
+
+## 📬 Contact
+
+**Email:** info@zerotrustbsd.com  
+**GitHub:** [github.com/vimanasystems/zerotrustbsd](https://github.com/vimanasystems/zerotrustbsd)  
+**Website:** https://zerotrustbsd.com
+
+> ZeroTrustBSD — Hardened. Compliant. CISO-aligned.
