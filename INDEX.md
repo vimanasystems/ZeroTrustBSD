@@ -41,7 +41,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 
 ## 🏛 Deployment Use Case: All Cantons of Luxembourg
 
-Securely interconnect all communes of Luxembourg over **service-provider MPLS** using:
+Securely interconnect EU organizations over **service-provider MPLS** using:
 
 - 🔐 ZeroTrustBSD at each canton boundary
 - 📡 Encrypted tunnels between canton, ministry, and datacenter nodes
