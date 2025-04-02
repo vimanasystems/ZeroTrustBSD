@@ -39,7 +39,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 ## Many more to come
 ### I am amazed by the scientifics. 
 
-## 🏛 Deployment Use Case: All Cantons of Luxembourg
+## 🏛 Deployment Use Case: EU Sovereign Next Generation Firewall
 
 Securely interconnect EU organizations over **service-provider MPLS** using:
 
