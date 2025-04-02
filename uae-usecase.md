@@ -88,7 +88,7 @@ Includes roles for:
 | ISO/IEC 27001   | Baselines, control mapping, logging |
 | GDPR (optional) | Data integrity & e-ID enforcement   |
 
-## 🚀 Future Roadmap (2024-2025)
+## 🚀 Future Roadmap (2025-2030)
 
 - 🔐 Post-quantum cryptography integration (Kyber, Dilithium)
 - 📦 Kubernetes-native VMM workloads
