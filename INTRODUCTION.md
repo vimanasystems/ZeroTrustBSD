@@ -92,10 +92,6 @@ Powered by **RCDevs OpenOTP**, Luxembourg's leading IAM solution:
 - **Strategic Compliance:** Automated compliance workflows for reduced operational overhead.
 - **Future-Proofing:** Quantum-resistant encryption and ongoing innovation aligned with global cybersecurity trends.
 
-## 📌 **Example Deployment: Luxembourg’s Cantons**
-
-ZeroTrustBSD can seamlessly connect and secure multiple locations—such as Luxembourg’s cantons—using MPLS, ensuring EU data sovereignty, secure network segmentation, centralized policy management, and full compliance with regulatory requirements.
-
 ## 🚧 **System Requirements**
 
 | Component    | Recommended Specification                            |
