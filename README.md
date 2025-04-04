@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)
 ![Built on OpenBSD](https://img.shields.io/badge/built%20on-OpenBSD-lightgrey)
-![CISO Ready](https://img.shields.io/badge/for-CISOs%20%7C%20FinTech%20%7C%20MPLS-green)
+![CISO Ready](https://img.shields.io/badge/for-CISOs%20%7C%20NGFW%20%7C%20MPLS-green)
 
 ## 🎯 Executive Summary
 
