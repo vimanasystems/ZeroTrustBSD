@@ -1,4 +1,4 @@
-# 🛡️ ZeroTrustBSD — Cybersecurity OS for FinTech & Critical Infrastructure
+# 🛡️ ZeroTrustBSD — Military Grade Cybersecurity OS
 
 > BSD-licensed OS based on OpenBSD for Zero Trust, multi-tenancy, and regulatory compliance.
 
