@@ -7,7 +7,7 @@
 
 # 🛡️ ZeroTrustBSD: Military-Grade Next-Gen Firewall
 
-> 🇱🇺 Proudly Developed in Europe for Sovereignty  
+> EU Proudly Developed in Europe for Sovereignty  
 > 🌐 BSD Licensed | Open Source | Zero Trust by Default
 
 ## 🌟 **Overview**
