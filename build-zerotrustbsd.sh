@@ -46,9 +46,6 @@ pkg_add -v /packages/*.tgz
 EOF
 chmod +x "$ROOTFS/scripts/install-packages.sh"
 
-# External tools note
-echo "Deploy externally (containers/VMs): DynFi Manager, RCDevs OpenOTP, MISP, OpenCTI, SoftEther VPN, Graylog, FRRouting, CISO Assistant" > "$ROOTFS/EXTERNAL_TOOLS.md"
-
 # Create ISO
 echo "Creating ISO image..."
 xorriso -as mkisofs -o "$ISO_NAME" -R -J "$ROOTFS"
