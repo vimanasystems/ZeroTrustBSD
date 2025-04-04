@@ -2,11 +2,10 @@
 
 > Enabling Secure, Open, and European-Controlled Cybersecurity Infrastructure  
 > Powered by **ZeroTrustBSD**, OpenBSD, and EU-based Open Source Technologies  
-> Proudly Built in 🇱🇺 Luxembourg and Deployable Across Europe
 
 ## 🎯 Objective
 
-Establish a fully sovereign, **military-grade cybersecurity stack** deployable across Europe for:
+Establish a fully sovereign, **military-grade cybersecurity stack** than can be deployable across Europe or the globe for:
 - National & local government IT
 - Ministries and EU agencies
 - Critical infrastructure & public utilities
@@ -23,7 +22,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 
 | Layer                       | Technology                      | Sovereign Attribute                                 |
 |----------------------------|----------------------------------|-----------------------------------------------------|
-| **Operating System**       | `ZeroTrustBSD (OpenBSD)`        | 🇱🇺 Luxembourg origin, hardened BSD kernel            |
+| **Operating System**       | `ZeroTrustBSD (OpenBSD)`        | 🇪🇺 European origin, hardened BSD kernel            |
 | **Firewall Management**    | `DynFi Manager`                 | 🇫🇷 French-built centralized control for firewalls    |
 | **Authentication & IAM**   | `RCDevs OpenOTP Suite`          | 🇱🇺 Identity & MFA, PKI, SSH, RADIUS, PAM             |
 | **Threat Detection**       | `Suricata` + `Wazuh`            | 🇪🇺 EU-supported IDS/IPS and SIEM                     |
@@ -36,12 +35,10 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 | **Monitoring**             | eBPF, Prometheus, ELK Stack     | Real-time tracing, metrics, and visual dashboards    |
 | **Orchestration**          | Ansible, Terraform, GitOps      | Infrastructure-as-Code with no cloud lock-in         |
 
-## 🏛 Deployment Use Case: All Cantons of Luxembourg
-
-Securely interconnect all communes of Luxembourg over **service-provider MPLS** using:
+Securely interconnect organization over **service-provider MPLS** using:
 
 - 🔐 ZeroTrustBSD at each canton boundary
-- 📡 Encrypted tunnels between canton, ministry, and datacenter nodes
+- 📡 Encrypted tunnels between ministry, and datacenter nodes
 - ⚙️ Centralized control via DynFi Manager in Tier IV datacenter
 - 🧩 Microsegmented VMM + Jails per tenant (e.g., administration, transport, finance)
 - 🧾 CISO Assistant to track GDPR/NIS2 per agency
