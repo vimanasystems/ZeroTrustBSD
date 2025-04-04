@@ -39,7 +39,7 @@
 [ZT-BSD]   [ZT-BSD]     [ZT-BSD]
  Finance   Ministry      ICS/OT
  VPN, ACLs Enforce       Protocol-aware
-
+```
 ## 📜 Compliance Ready
 
 | Standard       | Supported Controls                                    |
