@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/🇱🇺-Made%20in%20Luxembourg-blue?style=flat-square" alt="Made in Luxembourg">
+  <img src="https://img.shields.io/badge/🇱🇺-Made%20in%20Luxembourg-blue?style=flat-square" alt="Made in Europe">
   <img src="https://img.shields.io/badge/License-BSD--2--Clause-green.svg?style=flat-square" alt="BSD License">
   <img src="https://img.shields.io/badge/OpenBSD-7.x-red.svg?style=flat-square" alt="OpenBSD Version">
 </p>
