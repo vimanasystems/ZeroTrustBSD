@@ -51,16 +51,7 @@
 
 ## 📦 Installation (Manual)
 
-```bash
-# Clone and run setup
-git clone https://github.com/vimanasystems/zerotrustbsd
-cd zerotrustbsd/scripts
-sh setup-firewall.sh
-sh enable-mpls.sh
-sh harden-kernel.sh
-```
-
-> Full ISO and GUI installer are under development.
+Full ISO and GUI installer are under development.
 
 ## 📚 References
 
