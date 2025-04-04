@@ -22,7 +22,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 
 | Layer                       | Technology                      | Sovereign Attribute                                 |
 |----------------------------|----------------------------------|-----------------------------------------------------|
-| **Operating System**       | `ZeroTrustBSD (OpenBSD)`        | 🇪🇺 European origin, hardened BSD kernel            |
+| **Operating System**       | `ZeroTrustBSD (Canada OpenBSD)`  | 🇪🇺 European origin, hardened BSD kernel              |
 | **Firewall Management**    | `DynFi Manager`                 | 🇫🇷 French-built centralized control for firewalls    |
 | **Authentication & IAM**   | `RCDevs OpenOTP Suite`          | 🇱🇺 Identity & MFA, PKI, SSH, RADIUS, PAM             |
 | **Threat Detection**       | `Suricata` + `Wazuh`            | 🇪🇺 EU-supported IDS/IPS and SIEM                     |
