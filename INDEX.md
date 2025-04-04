@@ -2,7 +2,6 @@
 
 > Enabling Secure, Open, and European-Controlled Cybersecurity Infrastructure  
 > Powered by **ZeroTrustBSD**, OpenBSD, and EU-based Open Source Technologies  
-> Proudly Built in 🇱🇺 Luxembourg and Deployable Across Europe
 
 ## 🎯 Objective
 
@@ -23,7 +22,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 
 | Layer                       | Technology                      | Sovereign Attribute                                 |
 |----------------------------|----------------------------------|-----------------------------------------------------|
-| **Operating System**       | `ZeroTrustBSD (OpenBSD)`        | 🇱🇺 Luxembourg origin, hardened BSD kernel            |
+| **Operating System**       | `ZeroTrustBSD (OpenBSD)`        | EU European origin, hardened BSD kernel            |
 | **Firewall Management**    | `DynFi Manager`                 | 🇫🇷 French-built centralized control for firewalls    |
 | **Authentication & IAM**   | `RCDevs OpenOTP Suite`          | 🇱🇺 Identity & MFA, PKI, SSH, RADIUS, PAM             |
 | **Threat Detection**       | `Suricata` + `Wazuh`            | 🇪🇺 EU-supported IDS/IPS and SIEM                     |
@@ -43,7 +42,7 @@ By anchoring the solution on **ZeroTrustBSD** and **OpenBSD**, this architecture
 
 Securely interconnect EU organizations over **service-provider MPLS** using:
 
-- 🔐 ZeroTrustBSD at each canton boundary
+- 🔐 ZeroTrustBSD at each organization or department
 - 📡 Encrypted tunnels between canton, ministry, and datacenter nodes
 - ⚙️ Centralized control via DynFi Manager in Tier IV datacenter
 - 🧩 Microsegmented VMM + Jails per tenant (e.g., administration, transport, finance)
