@@ -110,7 +110,7 @@ Distributed under the permissive **BSD 2-Clause License**. This allows full free
 Developed, hosted, and supported entirely in Luxembourg’s secure, sovereign, Tier IV datacenters. Committed to enhancing cybersecurity resilience throughout Europe.
 
 ## 📚 **Documentation & Support**
-
+### Under development
 - **[Installation Guide](docs/install.md)**  
 - **[Configuration Guide](docs/configuration.md)**  
 - **[DynFi Manager Integration](docs/dynfi.md)**  
