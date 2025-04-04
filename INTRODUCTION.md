@@ -105,10 +105,6 @@ Powered by **RCDevs OpenOTP**, Luxembourg's leading IAM solution:
 
 Distributed under the permissive **BSD 2-Clause License**. This allows full freedom for commercial and private usage, modification, and distribution, fostering an open ecosystem around ZeroTrustBSD.
 
-## 🇱🇺 **Proudly Luxembourgish**
-
-Developed, hosted, and supported entirely in Luxembourg’s secure, sovereign, Tier IV datacenters. Committed to enhancing cybersecurity resilience throughout Europe.
-
 ## 📚 **Documentation & Support**
 ### Under development
 - **[Installation Guide](docs/install.md)**  
