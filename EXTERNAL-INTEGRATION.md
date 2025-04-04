@@ -16,7 +16,6 @@ This guide explains how to integrate powerful external cybersecurity tools with 
 | **FRRouting (FRR)**   | Docker or Linux VM    | BGP, OSPF, VXLAN         | Advanced dynamic routing                 |
 
 ## 🚀 Deployment Methods
-
 ### 🐳 Docker Deployment (Recommended)
 
 Deploy using Docker for rapid setup and consistent environments.
@@ -65,9 +64,8 @@ Deploy externally and connect ZeroTrustBSD using OpenVPN/IPsec tunnels.
 
 ## 📈 Logging (Graylog)
 Forward logs from ZeroTrustBSD using syslog-ng.
-```sh
 syslog-ng.conf Example:
-
+```sh
 conf
 Copier
 Modifier
@@ -80,25 +78,19 @@ log {
 };
 ```
 ## 🌍 Advanced Routing (FRRouting)
-Deploy FRR for protocols like advanced BGP, OSPF, or MPLS routing.
-
-Connect to ZeroTrustBSD via static routes or dynamic routing protocols.
+- Deploy FRR for protocols like advanced BGP, OSPF, or MPLS routing.
+- Connect to ZeroTrustBSD via static routes or dynamic routing protocols.
 
 ## 🔒 Security Best Practices
-Always use TLS/mTLS for inter-service communication.
-
-Apply micro-segmentation using ZeroTrustBSD PF rules.
-
-Regularly update external services and monitor security logs.
+- Always use TLS/mTLS for inter-service communication.
+- Apply micro-segmentation using ZeroTrustBSD PF rules.
+- Regularly update external services and monitor security logs.
 
 ## 🤖 Automation & IaC
 Use tools like Ansible and Terraform to simplify management:
 
 Ansible Example (DynFi Manager deployment):
 ```yaml
-yaml
-Copier
-Modifier
 - hosts: dynfi_manager
   tasks:
     - name: Install DynFi Manager
