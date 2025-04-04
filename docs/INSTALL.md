@@ -13,6 +13,7 @@
 ## 🧱 Installation Steps
 
 ### 1. Download the ISO
+Work in progress
 
 - Get the latest release: [https://zerotrustbsd.com/downloads](https://zerotrustbsd.com/downloads)
 
