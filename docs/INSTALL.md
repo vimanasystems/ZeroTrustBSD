@@ -1,4 +1,3 @@
-
 # 🚀 ZeroTrustBSD Installation Guide
 
 Follow this simple guide to install and configure your ZeroTrustBSD firewall system quickly and securely.
