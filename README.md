@@ -1,79 +1,98 @@
-# 🛡️ ZeroTrustBSD — Military Grade Cybersecurity OS
+# 🛡️ ZeroTrustBSD - Military Grade Cybersecurity Appliance
 
-> BSD-licensed OS based on OpenBSD for Zero Trust, multi-tenancy, and regulatory compliance.
+[![BSD License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](./LICENSE)
+![Made with OpenBSD](https://img.shields.io/badge/Made%20with-OpenBSD-orange)
 
-![License](https://img.shields.io/badge/license-BSD--2--Clause-blue)
-![Built on OpenBSD](https://img.shields.io/badge/built%20on-OpenBSD-lightgrey)
-![CISO Ready](https://img.shields.io/badge/for-CISOs%20%7C%20NGFW%20%7C%20MPLS-green)
+---
 
-## 🎯 Executive Summary
+## 🚀 What is ZeroTrustBSD?
 
-**ZeroTrustBSD** provides CISOs and cybersecurity leaders with a hardened, secure operating system tailored for:
+**ZeroTrustBSD** is a highly secure, next-generation firewall and cybersecurity appliance built on the robust foundation of **OpenBSD**. Engineered for maximum security, compliance, and observability, ZeroTrustBSD incorporates advanced features including Zero Trust principles, integrated threat detection, multi-tenancy, and real-time monitoring.
 
-- 🔐 Zero Trust Network Architecture (ZTNA)
-- 🧱 Secure multi-tenancy for cloud or on-prem
-- 📜 Compliance: PCI DSS, ISO 27001, NIS2, GDPR
-- 🧠 Integrated threat detection and logging
-- 🛰️ Secure MPLS and encrypted interconnects
+---
 
-## 🔑 Capabilities for CISO Objectives
+## 🌟 Key Features
 
-| Goal                         | Capability                                                    |
-|------------------------------|---------------------------------------------------------------|
-| Risk Reduction               | Hardened OpenBSD base, no default services, firewall by default |
-| Compliance Mapping           | Policy-ready for PCI, ISO 27001, NIS2, and GDPR                |
-| Threat Detection & Response  | Suricata IDS, YARA rules, OpenCTI, eBPF-based telemetry        |
-| Identity Access Management   | LDAP, PAM, FIDO2, OIDC, OpenOTP integration                   |
-| Tenant/Zone Isolation        | Multi-tenant using OpenBSD VMM and jails                      |
-| MPLS & L2/L3 Connectivity    | Secure interconnect with PF + MPLS tagging support            |
+| Feature               | Description                                      |
+|-----------------------|--------------------------------------------------|
+| 🔐 **Security First** | Built on the secure-by-default OpenBSD OS        |
+| 🚀 **High Performance** | Optimized for low latency, high-throughput networking |
+| 📡 **Advanced Networking** | MPLS, VXLAN, BGP, OSPF, WireGuard, OpenVPN, IPsec |
+| 🎯 **Threat Detection** | Suricata, Zeek, OSSEC integrated for IDS/IPS   |
+| 🛰️ **Quantum-Ready** | Quantum cryptography (QKD) and post-quantum algorithms ready |
+| 📊 **Observability**  | eBPF, Prometheus, Grafana, ELK stack integration |
+| 🔍 **Compliance Ready** | GDPR, NIS2, DORA, NATO STANAG, ISO27001 aligned |
+| 🧩 **Central Management** | Compatible with DynFi Manager                |
+| 🛠️ **Identity & Access** | Supports RCDevs OpenOTP, LDAP, PAM            |
+| 🗃️ **Multi-Tenancy**  | Native isolation via OpenBSD VMM & jails        |
+| ⚙️ **Automation Ready** | Integrated Ansible, Terraform, GitOps support  |
 
-## 🧩 High-Level Architecture
+---
 
+## 📋 Getting Started
+
+- [System Requirements](./SYSTEM_REQUIREMENTS.md)
+- [Installation Guide](./installation-guide.md)
+- [Configuration Guide](./configuration.md)
+- [DynFi Manager Integration](./dynfi.md)
+- [External Integration Guide](./EXTERNAL_INTEGRATION_GUIDE.md)
+
+---
+
+## ⚡ Quick Install
+
+Download or build the latest ISO and install:
+
+```sh
+# Flash to USB (Linux/macOS)
+sudo dd if=zerotrustbsd.iso of=/dev/sdX bs=4M status=progress && sync
 ```
-[ SOC / NOC ]
-     |
-[ZT-BSD Control Node] -- GitOps / CI Integration
-     |
-  ----------------------------
- |            |             |
-[ZT-BSD]   [ZT-BSD]     [ZT-BSD]
- Finance   Ministry      ICS/OT
- VPN, ACLs Enforce       Protocol-aware
+
+Boot from USB and follow the [Installation Guide](./installation-guide.md).
+
+---
+
+## 🔧 Example Firewall Configuration
+
+Simple default-deny firewall:
+
+```pf
+set skip on lo
+block all
+pass out keep state
+pass in proto tcp to port { ssh http https } keep state
 ```
-## 📜 Compliance Ready
 
-| Standard       | Supported Controls                                    |
-|----------------|--------------------------------------------------------|
-| PCI DSS        | ACLs, encryption, multi-tenancy, logging               |
-| ISO/IEC 27001  | Network control, IAM, policy enforcement               |
-| GDPR           | RBAC, minimal data footprint, audit trails            |
-| NIS2 Directive | Alerting, access control, segmentation, SIEM export   |
+---
 
-## 📦 Installation (Manual)
+## 🌐 External Tool Integration
 
-Full ISO and GUI installer are under development.
+Enhance ZeroTrustBSD with external tools like DynFi Manager, RCDevs OpenOTP, MISP, OpenCTI, and more. See [External Integration Guide](./EXTERNAL_INTEGRATION_GUIDE.md).
 
-## 📚 References
+---
 
-- https://www.openbsd.org/
-- https://suricata.io/
-- https://www.opencti.io/
-- https://attack.mitre.org/
-- https://wazuh.com/
-- https://opensource.org/license/bsd-2-clause/
+## 🤝 Contributing
 
-## ⚖️ Security & Legal
+We welcome your contributions:
 
-- No telemetry
-- No vendor lock-in
-- BSD-licensed
-- All deployments are self-managed
-- No affiliation to any state or defense entity
+- [Contributing Guide](./CONTRIBUTION.md)
+- Open an issue or PR to discuss and submit enhancements.
 
-## 📬 Contact
+---
 
-**Email:** info@zerotrustbsd.com  
-**GitHub:** [github.com/vimanasystems/zerotrustbsd](https://github.com/vimanasystems/zerotrustbsd)  
-**Website:** https://zerotrustbsd.com
+## 📜 License
 
-> ZeroTrustBSD — Hardened. Compliant. CISO-aligned.
+ZeroTrustBSD is proudly open-source under the [BSD License](./LICENSE).
+
+---
+
+## 🧑‍💻 Maintainers
+
+Developed and maintained by cybersecurity professionals with a passion for open-source and privacy.
+
+---
+
+## 📌 Disclaimer
+
+ZeroTrustBSD is provided as-is without warranty. Use responsibly in accordance with local laws and regulations.
+
