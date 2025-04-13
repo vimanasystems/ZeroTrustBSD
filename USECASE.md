@@ -1,5 +1,5 @@
 
-# 📌 USECASE.md – Real-World Use Cases for ZeroTrustBSD
+# 📌 Real-World Use Cases for ZeroTrustBSD
 
 ZeroTrustBSD is a modular, open-source firewall operating system designed to deliver military-grade, sovereign, and regulatory-compliant security across diverse sectors. Below are high-value use cases that demonstrate how ZeroTrustBSD can be effectively deployed.
 
