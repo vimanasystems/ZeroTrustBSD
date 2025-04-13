@@ -1,6 +1,6 @@
 # 🛡️ ZeroTrustBSD – Military-Grade OpenBSD Firewall Platform
 
-**ZeroTrustBSD** is a next-generation, military-grade firewall and network security platform based on [OpenBSD](https://www.openbsd.org), designed for sovereign cloud deployments, national cybersecurity operations, and enterprise-grade multi-tenancy. It is fully BSD-licensed and optimized for mission assurance, cyber defense, and regulatory compliance across telecom, government, energy, and finance sectors.
+**ZeroTrustBSD** is a next-generation, military-grade firewall and network security platform based on [OpenBSD](https://www.openbsd.org), designed for sovereign cloud deployments, national cybersecurity operations, operational technology (OT), industrial control systems (ICS), and enterprise-grade multi-tenancy. It is fully BSD-licensed and optimized for mission assurance, cyber defense, and regulatory compliance across telecom, government, energy, manufacturing, and finance sectors.
 
 ---
 
@@ -15,6 +15,7 @@ ZeroTrustBSD integrates:
 - OpenBGPD, VXLAN, MPLS, and SD-WAN capabilities
 - CISO Assistant for automated compliance
 - eBPF, Prometheus, Filebeat, and ELK for observability
+- 🏭 OT/ICS Compatibility with Purdue Model segmentation
 
 ---
 
@@ -31,6 +32,7 @@ ZeroTrustBSD integrates:
 | Virtualization         | VMM, Jails, VLANs, Anchors          |
 | VPN & PKI              | WireGuard, OpenVPN, strongSwan      |
 | Compliance Automation  | CISO Assistant                      |
+| OT/ICS Security        | Purdue Model, Modbus/DNP3 inspection, isolated VLANs |
 | DevSecOps & GitOps     | Ansible, Terraform, GitHub Actions  |
 
 ---
@@ -44,6 +46,7 @@ doas sh install.sh
 - Review `/etc/pf.conf` and adjust anchors per tenant
 - Configure VMs using `/etc/vm.conf` and `vmctl`
 - Enable DynFi agent and RCDevs auth as needed
+- Isolate SCADA/PLC network in L1-L3 per Purdue segmentation
 - Logs and metrics forwarded via Filebeat/Prometheus
 
 ---
@@ -53,6 +56,7 @@ doas sh install.sh
 - Default-deny firewall policy
 - MFA-protected VPN and SSH
 - Per-tenant microsegmentation using VMM + jails
+- Purdue Model L1–L5 segmentation for ICS networks
 - Encrypted telemetry and audit-ready logging
 - QKD-ready crypto stack for STANAG/NATO interop
 
@@ -77,6 +81,7 @@ doas sh install.sh
 - 🇪🇺 GDPR, NIS2, DORA
 - 📘 ISO/IEC 27001:2022
 - 🛰️ STANAG 4774/4754 (QKD-ready)
+- 🏭 IEC 62443 for OT/ICS environments
 
 ---
 
@@ -84,8 +89,8 @@ doas sh install.sh
 
 - Ministries and Agencies (EU, GCC, ASEAN)
 - CERT/SOC & Military Cyber Units
-- Critical Infrastructure Operators
-- Regulated Enterprises (Banking, Energy)
+- Critical Infrastructure Operators (OT/ICS)
+- Regulated Enterprises (Banking, Energy, Manufacturing)
 - Sovereign Cloud Providers
 
 ---
@@ -96,7 +101,7 @@ doas sh install.sh
 - Fully open source and BSD-licensed
 - Zero Trust, DevSecOps, and STIG-ready
 - Multi-tenant & microsegmented deployments
-- Built for digital sovereignty
+- Built for digital sovereignty and industrial resilience
 
 ---
 
@@ -115,5 +120,5 @@ This project is licensed under the **BSD 2-Clause License**. See [`LICENSE.md`](
 
 ---
 
-🛡️ Proudly engineered for sovereign cybersecurity  
+🛡️ Proudly engineered for sovereign cybersecurity & critical infrastructure  
 Maintained by **Vimana Systems**
