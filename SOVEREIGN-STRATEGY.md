@@ -84,5 +84,5 @@ ZeroTrustBSD’s strategic response to the global semiconductor crisis ensures o
 
 ---
 
-© 2024 Vimana Systems  
+© 2025 Vimana Systems  
 Maintained under the **BSD 2-Clause License**.
