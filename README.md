@@ -68,7 +68,7 @@ We welcome contributions! Please review [CONTRIBUTING.md](./CONTRIBUTING.md) for
 
 ## 📜 License
 
-This project is licensed under the **BSD 2-Clause License**. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **BSD 2-Clause License**. See the [LICENSE](./LICENSE.md) file for details.
 
 ---
 
