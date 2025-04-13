@@ -1,5 +1,5 @@
 
-# 📜 LICENSE.md – BSD 2-Clause License (Simplified BSD License)
+# 📜 BSD 2-Clause License (Simplified BSD License)
 
 **SPDX-License-Identifier: BSD-2-Clause**  
 **Project**: ZeroTrustBSD  
