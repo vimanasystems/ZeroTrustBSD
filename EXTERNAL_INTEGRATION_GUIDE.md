@@ -1,146 +1,179 @@
+# 🌐 EXTERNAL_INTEGRATION_GUIDE.md – Integrating Third-Party Tools with ZeroTrustBSD
 
-# 🌐 External Integration Guide for ZeroTrustBSD
-
-This guide outlines best practices and methods for integrating external tools to enhance your ZeroTrustBSD cybersecurity deployment.
-
----
-
-## 🛠️ External Tools Overview
-
-| Tool                  | Deployment Method     | Integration Type              | Usage Scenario                     |
-|-----------------------|-----------------------|-------------------------------|------------------------------------|
-| **DynFi Manager**     | Docker / Linux VM     | SSH / REST API                | Centralized firewall management    |
-| **RCDevs OpenOTP**    | Linux VM / Docker     | RADIUS, LDAP, PAM             | Secure authentication & IAM        |
-| **MISP**              | Docker Compose        | REST API, STIX/TAXII          | Cyber threat intelligence          |
-| **OpenCTI**           | Docker Compose        | REST API, STIX/TAXII          | Advanced threat analytics          |
-| **CISO Assistant**    | Docker / Linux VM     | REST API                      | Compliance & governance automation |
-| **SoftEther VPN**     | Docker / Linux VM     | OpenVPN, IPsec compatibility  | Multi-protocol VPN                 |
-| **Graylog**           | Docker Compose        | Syslog/GELF                   | Central log aggregation            |
-| **FRRouting (FRR)**   | Docker / Linux VM     | BGP, OSPF, MPLS, VXLAN        | Advanced routing                   |
+This guide describes how to integrate leading open-source cybersecurity tools and services with **ZeroTrustBSD**, enhancing observability, compliance, identity, and threat response capabilities.
 
 ---
 
-## 🚀 Deployment Examples
+## 🛠️ 1. DynFi Firewall Manager
 
-### 📥 Docker Deployment (Recommended)
+**DynFi** is a centralized web-based manager for OpenBSD-based firewalls.
 
-Example for deploying MISP:
+### Features:
+- Policy synchronization
+- Multi-firewall management
+- UI for pf rules and interface management
+
+### Integration:
 
 ```sh
-git clone https://github.com/MISP/misp-docker.git
-cd misp-docker
-docker-compose up -d
+pkg_add dynfi-agent
 ```
 
----
+Edit `/etc/dynfi/agent.conf`:
 
-### 🖥️ Virtual Machine (VM)
+```ini
+[agent]
+server = https://dynfi-manager.local
+token = <your-agent-token>
+```
 
-Example for deploying DynFi Manager:
-
-- Set up a VM (Debian/Ubuntu recommended).
-- Install DynFi Manager (`.deb` package available at [DynFi website](https://dynfi.com)).
-- Access via HTTPS: `https://your-vm-ip`.
-
----
-
-## 🔐 IAM Integration (RCDevs OpenOTP)
-
-- Deploy RCDevs OpenOTP on Linux VM or Docker container.
-- Configure RADIUS authentication for VPN (WireGuard/OpenVPN/IPsec).
-- Use LDAP/PAM for administrative SSH logins.
-
----
-
-## 🕵️ Threat Intelligence (MISP/OpenCTI)
-
-Automate threat intelligence fetching:
+Enable and start:
 
 ```sh
-curl -H "Authorization: <API_KEY>" https://misp-instance/attributes/restSearch -o suricata.rules
-```
-
-Configure Suricata to auto-update rules regularly via cron.
-
----
-
-## 📊 Compliance Automation (CISO Assistant)
-
-- Deploy CISO Assistant via Docker or VM.
-- Use its REST API to integrate compliance audits and reports.
-
----
-
-## 🌐 SoftEther VPN Integration
-
-- Deploy SoftEther externally, manage ZeroTrustBSD connectivity via standard OpenVPN or IPsec tunnels.
-
----
-
-## 📈 Log Aggregation (Graylog)
-
-Configure `syslog-ng` on ZeroTrustBSD to forward logs to Graylog:
-
-```conf
-destination d_graylog {
-  network("graylog-server-ip" port(12201) transport("udp"));
-};
-log {
-  source(src);
-  destination(d_graylog);
-};
+rcctl enable dynfi-agent
+rcctl start dynfi-agent
 ```
 
 ---
 
-## 📡 Advanced Routing (FRRouting)
+## 🔐 2. RCDevs OpenOTP Suite
 
-- Deploy FRRouting externally for advanced routing needs.
-- Establish dynamic routing protocols like BGP or OSPF between FRRouting and ZeroTrustBSD.
+**RCDevs OpenOTP** provides MFA, PKI, RADIUS, SSH and SAML authentication.
+
+### Integration Options:
+
+- PAM Authentication
+- SSH Login
+- VPN RADIUS (OpenVPN, IPsec, WireGuard)
+- SAML/OIDC for Web UI
+
+Install:
+
+```sh
+pkg_add openotp-pam openldap-client
+```
+
+Configure `/etc/pam.d/sshd` and SSHD as per documentation.
 
 ---
 
-## 🔒 Security Best Practices
+## 🔍 3. Suricata + Wazuh + Zeek
 
-- Encrypt all external integration traffic (TLS/mTLS).
-- Segment external integrations within firewall rules.
-- Regularly patch and update external tools.
+Use these tools for real-time network intrusion detection (NIDS), endpoint telemetry, and log aggregation.
+
+```sh
+pkg_add suricata wazuh-agent zeek
+```
+
+- Configure Wazuh to forward to ELK
+- Use YARA for signature-based scanning
 
 ---
 
-## 🤖 Automation
+## 📡 4. OpenCTI + MISP (Threat Intelligence)
 
-Example Ansible Playbook snippet (DynFi Manager):
+### MISP:
+
+- Source: [https://github.com/MISP/MISP](https://github.com/MISP/MISP)
+- Use `cron` to pull IOC feeds and sync to local Suricata/YARA
+
+### OpenCTI:
+
+- Aggregate threat intelligence and TTP correlation
+- Run via jail or VM with PostgreSQL + Elasticsearch
+
+Feed example:
 
 ```yaml
-- hosts: dynfi_manager
-  tasks:
-    - name: Install DynFi Manager
-      apt:
-        name: dynfi-manager
-        state: present
-    - name: Start DynFi service
-      service:
-        name: dynfi
-        state: started
-        enabled: yes
+stix2:
+  pull:
+    - https://misp.local/feed1
 ```
 
 ---
 
-## 📖 Resources
+## 📈 5. Logging & Telemetry (ELK / Grafana / Prometheus)
 
-- [DynFi Manager Docs](https://dynfi.com)
-- [RCDevs OpenOTP Docs](https://www.rcdevs.com/products/openotp/)
-- [MISP Installation](https://www.circl.lu/doc/misp/)
-- [OpenCTI Setup](https://github.com/OpenCTI-Platform/docker)
-- [SoftEther VPN](https://www.softether.org/)
-- [Graylog Docker Docs](https://docs.graylog.org/docs/docker)
-- [FRRouting Docs](https://docs.frrouting.org)
+### Filebeat Configuration:
+
+```sh
+pkg_add filebeat
+echo "*.info @elk.local:514" >> /etc/syslog.conf
+/etc/rc.d/syslogd restart
+```
+
+### Prometheus + Node Exporter:
+
+```sh
+pkg_add prometheus node_exporter
+rcctl enable node_exporter
+```
+
+Add firewall metrics via `pfstat` or `snmpd`.
 
 ---
 
-## ✅ Integration Complete!
+## 🧠 6. CISO Assistant (Compliance Dashboard)
 
-For further integration assistance, please open an issue or PR.
+```sh
+pkg_add ciso-assistant
+rcctl enable ciso-assistant
+rcctl start ciso-assistant
+```
 
+Configure compliance policies (GDPR, NIS2, ISO 27001) via Web UI at:
+
+```
+https://your-firewall:9443
+```
+
+---
+
+## 🔐 7. VPN & PKI Gateways
+
+- **OpenVPN**: `pkg_add openvpn`
+- **WireGuard**: `pkg_add wireguard-tools`
+- **IPsec/IKEv2**: Configure via `ikectl` and `/etc/iked.conf`
+
+Use RCDevs or your CA to provision VPN certs.
+
+---
+
+## 📦 8. Containerized Add-Ons (Optional)
+
+Some components can run in jails or VMM for isolation:
+
+| Tool         | Runtime Option |
+|--------------|----------------|
+| OpenCTI      | VMM VM         |
+| MISP         | Jail           |
+| TheHive/Cortex| Jail + Elasticsearch |
+| Grafana + Loki| Jail or container (isolated port) |
+
+---
+
+## 🧱 9. CI/CD + DevSecOps Tools
+
+Use GitOps or GitHub Actions for automated deployments:
+
+```yaml
+name: Deploy Firewall Config
+
+on:
+  push:
+    paths:
+      - "pf.conf"
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - run: ssh firewall "pfctl -f /etc/pf.conf"
+```
+
+---
+
+## ✅ Summary
+
+**ZeroTrustBSD** integrates easily with modern open-source cybersecurity ecosystems, enabling high-assurance perimeter defense, auditability, and policy enforcement — with full tenant and compliance isolation.
+
+> Secure the edge, the cloud, and every packet in between.
