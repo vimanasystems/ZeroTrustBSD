@@ -1,5 +1,4 @@
-
-# 🚀 PITCH.md – Vision & Value of ZeroTrustBSD
+# 🚀 Vision & Value of ZeroTrustBSD
 
 > A modern, modular, and military-grade firewall operating system — built for digital sovereignty, resilience, and compliance.
 
