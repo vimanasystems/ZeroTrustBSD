@@ -1,111 +1,82 @@
-# 🛡️ ZeroTrustBSD – Military-Grade OpenBSD Cybersecurity Appliance
 
-[![BSD Licensed](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
-![OpenBSD Based](https://img.shields.io/badge/Built%20on-OpenBSD-yellow.svg)
-
-## 🌟 What is ZeroTrustBSD?
-
-**ZeroTrustBSD** is a military-grade, next-generation firewall and cybersecurity appliance built on the robust, secure, and proven foundation of **OpenBSD**. Designed for the highest levels of security, compliance, and operational reliability, ZeroTrustBSD delivers a fully integrated Zero Trust network security model out-of-the-box.
+# 🛡️ ZeroTrustBSD
+### A Sovereign, Military-Grade Cybersecurity Appliance Powered by OpenBSD
 
 ---
 
-## 🎖️ Key Features
+## 🔐 What is ZeroTrustBSD?
 
-| Feature               | Description                                                  |
-|-----------------------|--------------------------------------------------------------|
-| 🔒 **Security-First OS** | Built on OpenBSD’s secure-by-default architecture.         |
-| 🔎 **Real-time Threat Detection** | Integrated Suricata, Zeek, OSSEC, and Wazuh for robust IDS/IPS. |
-| 🌐 **Advanced Networking** | Full support for MPLS, VXLAN, BGP, OSPF, IPsec, WireGuard, OpenVPN. |
-| 🛰️ **Quantum-Ready Security** | Prepared for Quantum Key Distribution (QKD) and Post-Quantum Cryptography. |
-| 📡 **Software-Defined Radio (SDR)** | SDR integration (e.g., srsRAN, OpenAirInterface) for secure tactical communications. |
-| 📊 **Real-Time Observability** | Powerful eBPF monitoring, Prometheus/Grafana dashboards, and ELK log analytics. |
-| 🚩 **Compliance Automation** | Pre-configured for GDPR, NIS2, DORA, ISO 27001, NATO STANAG, MITRE ATT&CK standards. |
-| 🧩 **Centralized Management** | Native integration with DynFi Manager for seamless firewall control. |
-| 🔐 **Identity & Authentication** | Supports RCDevs OpenOTP, LDAP, RADIUS, PAM for robust IAM. |
-| 🗃️ **Multi-Tenant Isolation** | Built-in microsegmentation via OpenBSD VMM and jails. |
-| ⚙️ **Automation & IaC** | Native Ansible, Terraform, GitOps integration for DevSecOps workflows. |
+**ZeroTrustBSD** is a secure, BSD-licensed operating system and firewall platform based on **OpenBSD**, designed to meet modern cybersecurity demands in high-assurance environments.
+
+Built with a focus on **Zero Trust Architecture (ZTA)**, regulatory compliance, and full-stack observability, it serves as the foundation for secure infrastructure across sectors such as government, defense, finance, critical infrastructure, and tactical networks.
 
 ---
 
-## 🚀 Quickstart Guide
+## ✅ Core Capabilities
 
-### 📋 [System Requirements](SYSTEM_REQUIREMENTS.md)
-
-- CPU: 64-bit (AMD64 or ARM64), 4+ cores recommended
-- RAM: 8GB minimum, 16-32GB recommended
-- Storage: 128GB SSD minimum (256GB NVMe recommended)
-- Network: Minimum dual Gigabit Ethernet (recommended quad-port 10G SFP+)
-
-### 🔧 [Installation Guide](installation-guide.md)
-
-```bash
-# Create USB installation media (Linux/macOS)
-sudo dd if=zerotrustbsd.iso of=/dev/sdX bs=4M status=progress && sync
-```
-
-- Boot from USB
-- Follow straightforward installation steps
-- Install recommended security packages after initial setup
+| Capability        | Description |
+|-------------------|-------------|
+| **OpenBSD Secure Core** | Hardened, auditable foundation |
+| **Zero Trust Architecture** | MFA, RBAC, microsegmentation |
+| **DynFi Integration** | Centralized firewall management |
+| **RCDevs IAM**    | Secure identity and authentication |
+| **Quantum Readiness** | QKD and post-quantum crypto support |
+| **eBPF + YARA**   | Real-time system observability & threat detection |
+| **SOAR & SIEM Integration** | Suricata, Wazuh, OpenCTI, CISO Assistant |
+| **MPLS + VXLAN**  | Carrier-grade routing and microsegmentation |
+| **Tactical Radio & SatCom** | SDR mesh & satellite-aware deployments |
 
 ---
 
-## ⚙️ [Configuration Guide](configuration.md)
+## 📦 Deployment Scenarios
 
-Quick example of firewall rules (`/etc/pf.conf`):
-
-```pf
-set skip on lo
-block all
-pass out keep state
-pass in proto tcp to port { ssh http https } keep state
-```
-
-Reload firewall rules:
-
-```sh
-doas pfctl -f /etc/pf.conf
-```
+- **Government & Defense:** Hardened firewall for ministries, embassies, NATO-aligned agencies
+- **Financial Services:** GDPR/NIS2/DORA-compliant perimeter with observability
+- **Critical Infrastructure:** Field-deployable, air-gap-ready firewalling
+- **SD-WAN & SD-RAN:** Support for 5G slicing, private LTE, and tactical mesh
+- **Private Cloud/Edge:** VMM, Jails, and container-native environments
 
 ---
 
-## 🌐 [External Integrations](EXTERNAL_INTEGRATION_GUIDE.md)
+## 📄 Documentation
 
-Enhance your ZeroTrustBSD appliance with external integrations:
+- [📘 Installation Guide](./installation-guide.md)
+- [⚙️ Configuration Guide](./configuration.md)
+- [🔌 DynFi Integration](./dynfi.md)
+- [🌍 External Integration Guide](./EXTERNAL_INTEGRATION_GUIDE.md)
+- [🔧 Hardware Compatibility Guide](./HARDWARE_GUIDE.md)
+- [📈 Feedback & Strategy](./FEEDBACK.md)
+- [📊 Pitch & Vision](./PITCH.md)
 
-- **DynFi Manager** – Central firewall policy management
-- **RCDevs OpenOTP** – Multi-factor authentication
-- **MISP/OpenCTI** – Threat intelligence integration
-- **CISO Assistant** – Compliance and audit automation
-- **SoftEther VPN** – Advanced VPN integration
-- **Graylog/ELK** – Centralized log management
-- **FRRouting** – Advanced routing (BGP, OSPF, MPLS)
+---
+
+## 🚀 Quick Start
+
+1. Download the ISO (coming soon)
+2. Flash to USB or PXE boot
+3. Install ZeroTrustBSD with encrypted partitions
+4. Configure DynFi Agent and RCDevs OpenOTP
+5. Apply your compliance profile using CISO Assistant
 
 ---
 
 ## 🤝 Contributing
 
-We welcome community contributions:
-
-- [Contribution Guide](CONTRIBUTION.md)
-- Open an issue to discuss improvements or feature requests.
-- Submit pull requests with clear explanations and updates.
+We welcome contributions! Please review [CONTRIBUTING.md](./CONTRIBUTING.md) for coding standards, documentation style, and integration policies.
 
 ---
 
 ## 📜 License
 
-ZeroTrustBSD is open-source software licensed under the [BSD 3-Clause License](LICENSE).
+This project is licensed under the **BSD 2-Clause License**. See the [LICENSE](./LICENSE) file for details.
 
 ---
 
-## 🛠️ Maintainers & Support
+## 🌐 Project Goals
 
-- Developed and maintained by **Vimana Systems**, committed to open-source cybersecurity.
-- For commercial support or custom integrations, contact via GitHub issues or email.
+- Provide a secure-by-default alternative to commercial firewalls
+- Empower sovereign deployments with open-source trust
+- Deliver ZTA-compliant infrastructure to governments and industries
+- Be the foundation for compliance, observability, and resilience
 
----
-
-## 📌 Disclaimer
-
-ZeroTrustBSD is provided as-is without warranty. Ensure compliance with applicable local and international laws and regulations.
-
+> Built for the sovereign digital age — secure, scalable, and future-proof.
