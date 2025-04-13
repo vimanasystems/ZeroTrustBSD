@@ -1,5 +1,5 @@
 
-# ⚙️ configuration.md – ZeroTrustBSD Configuration Guide
+# ⚙️ ZeroTrustBSD Configuration Guide
 
 This guide outlines the core configuration steps after installing **ZeroTrustBSD**, including firewall policies, identity management, observability, and compliance automation.
 
