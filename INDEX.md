@@ -1,7 +1,18 @@
 # 🇪🇺 Sovereign Architecture Strategy: EuroShield Stack
 
 > Enabling Secure, Open, and European-Controlled Cybersecurity Infrastructure  
-> Powered by **ZeroTrustBSD**, OpenBSD, and EU-based Open Source Technologies  
+> Powered by **ZeroTrustBSD**, OpenBSD, and EU-based Open Source Technologies
+
+## 🚀 Overview
+
+ZeroTrustBSD provides:
+- 🔐 Hardened firewall capabilities (pf, relayd, NAT, WireGuard)
+- 🛡️ Zero Trust Architecture (ZTA)
+- 📡 Multi-tenant segmentation via VMM and jails
+- 🔎 Real-time observability (eBPF, Prometheus, Filebeat)
+- 🧠 AI-driven intrusion detection (Suricata, Zeek, Wazuh)
+- 🔐 Identity enforcement (RCDevs OpenOTP, PAM, SSO)
+- 📜 Built-in compliance automation (GDPR, NIS2, ISO 27001, IEC 62443)
 
 ## 🎯 Objective
 
