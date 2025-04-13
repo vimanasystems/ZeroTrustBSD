@@ -1,5 +1,4 @@
-
-# 📦 PACKAGES.md – Recommended Packages for ZeroTrustBSD
+# 📦 Recommended Packages for ZeroTrustBSD
 
 This document outlines recommended packages to enhance the functionality, security, observability, and compliance posture of ZeroTrustBSD. All tools are vetted for OpenBSD compatibility or available in portable form (source/jail/VM).
 
