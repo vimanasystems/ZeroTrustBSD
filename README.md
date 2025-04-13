@@ -16,7 +16,17 @@ ZeroTrustBSD integrates:
 - CISO Assistant for automated compliance
 - eBPF, Prometheus, Filebeat, and ELK for observability
 - 🏭 OT/ICS Compatibility with Purdue Model segmentation
+---
+### 🚀 Overview Continued
 
+ZeroTrustBSD provides:
+- 🔐 Hardened firewall capabilities (pf, relayd, NAT, WireGuard)
+- 🛡️ Zero Trust Architecture (ZTA)
+- 📡 Multi-tenant segmentation via VMM and jails
+- 🔎 Real-time observability (eBPF, Prometheus, Filebeat)
+- 🧠 AI-driven intrusion detection (Suricata, Zeek, Wazuh)
+- 🔐 Identity enforcement (RCDevs OpenOTP, PAM, SSO)
+- 📜 Built-in compliance automation (GDPR, NIS2, ISO 27001, IEC 62443)
 ---
 
 ## 🧱 Key Components
