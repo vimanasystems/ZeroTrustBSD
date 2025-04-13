@@ -1,5 +1,4 @@
-
-# 🧱 tenant-example.md – VMM & Jail Tenant Template for ZeroTrustBSD
+# 🧱 VMM & Jail Tenant Template for ZeroTrustBSD
 
 This guide demonstrates how to define and deploy isolated tenants using OpenBSD's built-in virtualization (VMM) and jail features for microsegmentation and multi-tenancy.
 
@@ -93,3 +92,65 @@ anchor "tenant1" {
 
 > 🛡 ZeroTrustBSD leverages native OpenBSD isolation for strong tenant segmentation without external hypervisors.
 
+
+
+---
+
+## 🧰 Sample /etc/pf.conf for Multi-Tenant Isolation
+
+```pf
+# /etc/pf.conf – ZeroTrustBSD Example with VMM/Jail Microsegmentation
+
+# Global defaults
+set skip on lo
+set loginterface vether0
+set block-policy drop
+
+# Normalize and protect
+scrub in all
+
+# Anchor directories
+anchor "tenant1/*"
+anchor "tenant2/*"
+
+# Default block everything
+block in all
+block out all
+
+# Allow outbound DNS and HTTPS for all tenants
+pass out quick on vether0 inet proto udp from any to port 53 keep state
+pass out quick on vether0 inet proto tcp from any to port 443 keep state
+
+# Allow Admin Interface from trusted subnet
+pass in quick on em0 inet proto tcp from 192.168.1.0/24 to any port 22 keep state
+
+# Tenant 1 – Finance Dept (VLAN 10)
+anchor "tenant1" {
+    pass in quick on vether0.10 inet proto tcp from 10.10.10.0/24 to port 443
+    pass out quick on vether0.10 inet proto tcp to port 443
+    block drop in log on vether0.10 from 10.10.20.0/24
+}
+
+# Tenant 2 – Public Services (VLAN 20)
+anchor "tenant2" {
+    pass in quick on vether0.20 inet proto tcp from 10.10.20.0/24 to port 80
+    pass out quick on vether0.20 inet proto udp to port 123 keep state  # NTP
+    block in on vether0.20 from 10.10.10.0/24
+}
+
+# Allow WireGuard VPN
+pass in on em0 proto udp to port 51820 keep state
+
+# Logging with pflog
+pass out log on egress all keep state
+
+# Optional: Enable pfsync or CARP for HA
+# pass on pfsync0
+# pass on carp0
+```
+
+This configuration supports:
+- Tenant-to-tenant isolation
+- Logging and traffic visibility
+- Segregated access based on roles or VLAN
+- Anchor scalability for large deployments
