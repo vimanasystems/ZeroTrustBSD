@@ -1,5 +1,5 @@
 
-# 🤝 CONTRIBUTING.md – How to Contribute to ZeroTrustBSD
+# 🤝 How to Contribute to ZeroTrustBSD
 
 Welcome, and thank you for considering a contribution to **ZeroTrustBSD** — a sovereign, BSD-licensed firewall OS based on OpenBSD, purpose-built for high-assurance environments.
 
