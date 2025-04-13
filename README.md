@@ -62,7 +62,7 @@ Built with a focus on **Zero Trust Architecture (ZTA)**, regulatory compliance, 
 
 ## 🤝 Contributing
 
-We welcome contributions! Please review [CONTRIBUTING.md](./CONTRIBUTING.md) for coding standards, documentation style, and integration policies.
+We welcome contributions! Please review [CONTRIBUTING](./CONTRIBUTING.md) for coding standards, documentation style, and integration policies.
 
 ---
 
