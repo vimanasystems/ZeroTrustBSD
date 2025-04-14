@@ -1,10 +1,39 @@
-# 🔐 MICROSEGMENTATION – ZeroTrustBSD
+# 🧱 ZeroTrustBSD Deployment Topologies
+
+This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. It includes ASCII topology diagrams for:
+
+- Core Microsegmentation
+- VXLAN-based Overlay Networks
+- Multi-Tenant Segmentation with VMM + Jails
+- Secure Internet Edge with DynFi & RCDevs
 
 ## 🧱 What Is Microsegmentation?
 
 Microsegmentation is a security technique that divides a network into fine-grained, isolated zones, allowing strict access controls and limiting lateral movement of threats. In **ZeroTrustBSD**, microsegmentation is enforced at the kernel and virtualization layers using **OpenBSD VMM**, **jails**, **pf(4)**, and RBAC policies.
 
 ---
+
+## 🛰️ Core Microsegmentation Topology
+
+```ascii
+                        [ Internet ]
+                             |
+                    +------------------+
+                    |  Edge Firewall   |  <-- ZeroTrustBSD (OpenBSD + pf)
+                    |  (WAN Gateway)   |
+                    +--------+---------+
+                             |
+              +--------------+----------------+
+              |                               |
+       +------+-----+                  +------+-----+
+       |   Tenant A  |                 |   Tenant B  |
+       |  VMM / Jail |                 |  VMM / Jail |
+       +------------+                 +------------+
+           |   |                            |   |
+           |   +-- VLAN 100                 |   +-- VLAN 200
+           |                                |
+    [ Microsegmented Workloads ]   [ Microsegmented Workloads ]
+```
 
 ## 🎯 Why Microsegmentation in ZeroTrustBSD?
 
@@ -29,6 +58,7 @@ Microsegmentation is a security technique that divides a network into fine-grain
 ---
 
 ## 🔍 Example Architecture (ASCII)
+```ascii
 
                       +------------------------+
                       |    Central Firewall    |
@@ -44,7 +74,7 @@ Microsegmentation is a security technique that divides a network into fine-grain
        |   pf anchor A      |   pf anchor B      |   pf anchor C
        |   VXLAN/GENEVE     |   VXLAN/GENEVE     |   VXLAN/GENEVE
        +--------------------+--------------------+-----------------+
-
+```
 ## 🧠 Benefits a bit more
 
 Microsegmentation is the practice of breaking a network into secure zones to apply fine-grained security controls.
@@ -191,6 +221,143 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 
     • VXLAN/GENEVE used to create microsegmented overlays per agency or role.
     • Firewall rules defined per-tenant using `pf.conf` anchors and NAT segregation.
+```
+---
+
+```ascii
+                    +------------------------------------------+
+                    |         🛡️ ZeroTrustBSD Network          |
+                    +------------------------------------------+
+
+                             ┌──────────── Site A ─────────────┐
+                             │                                 │
+                             │     +---------------------+     │
+                             │     |   VMM / Hypervisor  |     │
+                             │     |---------------------|     │
+                             │     | Tenant 1 (Jail)     |     │
+                             │     | Tenant 2 (Jail)     |     │
+                             │     | Tenant N (Jail)     |     │
+                             │     +----------+----------+     │
+                             │                |                │
+                             │                | pf/vxlan0      │
+                             │        +-------+--------+       │
+                             │        |   VXLAN Bridge  |       │
+                             │        +-------+--------+       │
+                             │                |                │
+                             └────────────────|────────────────┘
+                                              |
+                                              |
+                                    .─────────┴──────────.
+                                    │                    │
+                                    ▼                    ▼
+
+                      +---------------------+    +---------------------+
+                      |     Internet/MPLS   |────|     Internet/MPLS   |
+                      +---------------------+    +---------------------+
+
+                                    ▲                    ▲
+                                    │                    │
+                                    │                    │
+                             ┌──────┴──────┐     ┌───────┴───────┐
+                             │                                 │
+                             │     +---------------------+     │
+                             │     |   VMM / Hypervisor  |     │
+                             │     |---------------------|     │
+                             │     | Tenant A (Jail)     |     │
+                             │     | Tenant B (Jail)     |     │
+                             │     +----------+----------+     │
+                             │                | pf/vxlan0      │
+                             │        +-------+--------+       │
+                             │        |   VXLAN Bridge  |       │
+                             │        +-------+--------+       │
+                             │                |                │
+                             └──────────── Site B ─────────────┘
+
+                    ⇨ All VXLAN traffic encrypted and authenticated using:
+                      - WireGuard/IPsec
+                      - RCDevs MFA for admin access
+                      - TLS/mTLS for API and policy updates
+
+                    ⇨ Management plane (DynFi Manager) deployed separately:
+```
+---
+```ascii
+                    ┌────────────────────┐
+                    │   DynFi Manager    │
+                    │ (Central Control)  │
+                    └────────┬───────────┘
+                             │
+                 ┌───────────▼────────────┐
+                 │   Core SDN/MPLS Spine  │
+                 └───────────┬────────────┘
+            ┌────────────┐   │   ┌────────────┐
+            │ Site A     │   │   │ Site B     │
+            │ (Campus 1) │   │   │ (Campus 2) │
+            └────┬───────┘   │   └────┬───────┘
+                 │           │        │
+          ┌──────▼─────┐     │   ┌────▼─────┐
+          │ VTEP A     │─────┼───│ VTEP B   │
+          │ VXLAN ENC  │     │   │ VXLAN ENC│
+          └────┬───────┘     │   └────┬─────┘
+               │             │        │
+    ┌──────────▼─────────┐   │   ┌────▼──────────┐
+    │ Tenant A Jail/VM   │   │   │ Tenant B Jail │
+    │ PF + Anchors       │   │   │ Wazuh + YARA  │
+    └────────────────────┘   │   └────────────────┘
+```
+# 🧱 ZeroTrustBSD Topologies (ASCII Visuals)
+
+This document provides example ASCII diagrams for real-world ZeroTrustBSD deployments across enterprise, government, and OT/ICS environments. Designed for GitHub rendering.
+
+---
+
+## 🛰️ Multi-Tenant Firewall with VXLAN Overlay
+
+```ascii
++----------------------+       VXLAN 1001         +----------------------+
+|   GOV Tenant (VMM)   |------------------------->|   EDU Tenant (VMM)   |
+|     192.168.10.0/24  |                          |     192.168.20.0/24  |
++----------------------+                          +----------------------+
+         |                                                    |
+         |                                                    |
+         | PF Anchor: gov_anchor.conf                         | PF Anchor: edu_anchor.conf
+         |                                                    |
+         v                                                    v
++-------------------------------------------------------------+
+|                ZeroTrustBSD (OpenBSD VMM Host)              |
+|                                                             |
+|  +----------------------+        +----------------------+   |
+|  |     RCDevs MFA       |        |    DynFi Firewall     |  |
+|  +----------------------+        +----------------------+   |
+|            |                           |                    |
+|      LDAP / PAM auth         DynFi Config Sync             |
+|            |                           |                    |
+|            +-------------> pf.conf <------------------------+
+|                                                             |
+|       VXLAN Interfaces (vxlan0, vxlan1) for Tenant Overlay  |
+|       eBPF + Wazuh + Filebeat for tenant visibility         |
++-------------------------------------------------------------+
+```
+---
+## 🧩 Multi-Tenant VMM + Jail Deployment
+```ascii
+                          +--------------------+
+                          |  ZeroTrustBSD Host |
+                          |--------------------|
+                          | - pf.conf          |
+                          | - relayd           |
+                          | - vxlan / vether   |
+                          | - rcctl services   |
+                          +---------+----------+
+                                    |
+       +----------------------------+----------------------------+
+       |                            |                            |
++------+-----+              +-------+------+             +-------+------+
+| Tenant: SOC |            | Tenant: Finance|           | Tenant: DevOps|
+|  VMM + Jail |            |  VMM + Jail    |           | VMM + Jail    |
++------------+            +---------------+           +--------------+
+    VLAN 10                     VLAN 20                      VLAN 30
+    VNI 1010                    VNI 1020                     VNI 1030
 ```
 ---
 
