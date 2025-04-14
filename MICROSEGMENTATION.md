@@ -82,7 +82,7 @@ Microsegmentation is a security technique that divides a network into fine-grain
 
 ---
 
-## 🔍 Example Architecture (ASCII)
+## 🔍 Example Architectures
 ```ascii
 
                       +------------------------+
@@ -161,7 +161,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 
 ---
 
-## 🖥️ ASCII Topology Diagram: Multi-Tenant Microsegmentation
+## 🖥️ Multi-Tenant Microsegmentation
 
 ```ascii
         +-----------------+
@@ -183,6 +183,9 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
                 |                           |
         VLAN 10 / VXLAN 1001       VLAN 20 / VXLAN 1002
 ```
+
+---
+
 ```ascii
                              +----------------------+
                              |      Internet        |
@@ -336,9 +339,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 ```
 ---
 
-# 🧱 ZeroTrustBSD Topologies (ASCII Visuals)
-
-This document provides example ASCII diagrams for real-world ZeroTrustBSD deployments across enterprise, government, and OT/ICS environments. Designed for GitHub rendering.
+# 🧱 More ZeroTrustBSD Topologies
 
 ---
 
