@@ -125,7 +125,8 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
          [pf anchor: tenant1]       [pf anchor: tenant2]
                 |                           |
         VLAN 10 / VXLAN 1001       VLAN 20 / VXLAN 1002
-
+```
+```ascii
                              +----------------------+
                              |      Internet        |
                              +----------------------+
