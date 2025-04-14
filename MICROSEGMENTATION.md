@@ -394,6 +394,30 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 ```
 ---
 
+## 🧱 VXLAN + Microsegmentation Deployment
+```ascii
+                        +---------------------------+
+                        |  DynFi Manager (Control)  |
+                        +------------+--------------+
+                                     |
+                         VXLAN/GENEVE Overlay Fabric
+                                     |
+       +-----------------------------+-----------------------------+
+       |                                                           |
++------v--------+                                        +---------v------+
+| ZeroTrustBSD  |                                        | ZeroTrustBSD  |
+|  Gateway A     |         VXLAN Tunnel (Port 4789)      |  Gateway B     |
+| pf + VXLAN     +-------------------------------------->+ pf + VXLAN     |
++---------------+                                        +----------------+
+     | Mgmt + Tenant Segments                                   | Jails
+     +--+------+---------+                            +----------+------+
+        |      |         |                            |         |      |
+     [VMM]   [Jail1]   [Jail2]                      [Jail3]   [VMM]  [IoT]
+
+```
+VXLAN is used to build scalable, isolated L2 segments over L3 infrastructure. Each tenant can be microsegmented using PF anchors.
+---
+
 ## 🛡️ Use Cases
 
 - 🏛️ **Government Ministries:** Separate each ministry with its own VMM/jail.
