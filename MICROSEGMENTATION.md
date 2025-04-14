@@ -1,6 +1,6 @@
 # 🧱 ZeroTrustBSD Deployment Topologies
 
-This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. It includes ASCII topology diagrams for:
+This document outlines key deployment topologies for ZeroTrustBSD across enterprise, telecom, and critical infrastructure (OT/ICS/IIoT) environments, including support for VXLAN and microsegmentation. This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. It includes ASCII topology diagrams for:
 
 - Core Microsegmentation
 - VXLAN-based Overlay Networks
@@ -35,6 +35,31 @@ Microsegmentation is a security technique that divides a network into fine-grain
     [ Microsegmented Workloads ]   [ Microsegmented Workloads ]
 ```
 
+## 📡 General ZeroTrustBSD Topology (Centralized Deployment)
+
+```ascii
+                        +------------------------+
+                        |   DynFi Manager        |
+                        |  (Central Mgmt Plane)  |
+                        +-----------+------------+
+                                    |
+                   +-------------------------------+
+                   |        Internet / MPLS WAN    |
+                   +-------------------------------+
+                             |           |
+                +------------+           +-------------+
+                |                                      |
+   +------------v------------+         +---------------v------------+
+   |   ZeroTrustBSD Node     |         |   ZeroTrustBSD Node        |
+   |   (Firewall/Gateway)    |         |   (Firewall/Gateway)       |
+   |   pf + relayd + VPN     |         |   pf + OpenVPN/WireGuard   |
+   +-------------------------+         +----------------------------+
+           |         |                            |
+    +------+     +---+---+                +-------+----+
+    | Mgmt |     | Tenant|                | VLAN 100   |
+    | VMM  |     | Jail  |                |    VMM     |
+    +------+     +-------+                +------------+
+```
 ## 🎯 Why Microsegmentation in ZeroTrustBSD?
 
 | Benefit                    | Description |
@@ -75,6 +100,8 @@ Microsegmentation is a security technique that divides a network into fine-grain
        |   VXLAN/GENEVE     |   VXLAN/GENEVE     |   VXLAN/GENEVE
        +--------------------+--------------------+-----------------+
 ```
+---
+
 ## 🧠 Benefits a bit more
 
 Microsegmentation is the practice of breaking a network into secure zones to apply fine-grained security controls.
@@ -182,6 +209,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 ```
 
 ---
+
 ```ascii
 
                        ┌────────────────────────────────────────────────────────────┐
@@ -281,6 +309,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
                     ⇨ Management plane (DynFi Manager) deployed separately:
 ```
 ---
+
 ```ascii
                     ┌────────────────────┐
                     │   DynFi Manager    │
@@ -305,6 +334,8 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
     │ PF + Anchors       │   │   │ Wazuh + YARA  │
     └────────────────────┘   │   └────────────────┘
 ```
+---
+
 # 🧱 ZeroTrustBSD Topologies (ASCII Visuals)
 
 This document provides example ASCII diagrams for real-world ZeroTrustBSD deployments across enterprise, government, and OT/ICS environments. Designed for GitHub rendering.
@@ -339,6 +370,7 @@ This document provides example ASCII diagrams for real-world ZeroTrustBSD deploy
 +-------------------------------------------------------------+
 ```
 ---
+
 ## 🧩 Multi-Tenant VMM + Jail Deployment
 ```ascii
                           +--------------------+
