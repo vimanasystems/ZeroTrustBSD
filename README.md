@@ -40,6 +40,42 @@ Ideal for:
 
 ---
 
+## 🛡 FreeIPA Integration for Advanced Identity & Access Management
+
+**ZeroTrustBSD** is enhanced with **FreeIPA**, bringing robust, centralized **identity management** and **access control** to the forefront. **FreeIPA** integrates seamlessly, offering powerful capabilities to secure your network infrastructure and ensure compliance with the highest standards.
+
+Here’s how **ZeroTrustBSD** with **FreeIPA** makes securing your digital ecosystem easy and effective:
+
+- **Centralized Authentication**: Manage users and devices with ease using **FreeIPA’s** LDAP, ensuring a unified identity store for your entire organization. By integrating **ZeroTrustBSD**, you can control access across all your network devices with **granular security policies**.
+- **Kerberos-Based Security**: **ZeroTrustBSD** benefits from **FreeIPA’s** **Kerberos** authentication to provide **high-assurance, single sign-on (SSO)** capabilities. Secure authentication is ensured across all devices and services in your network, reducing the risk of unauthorized access.
+- **Multi-Factor Authentication (MFA)**: With **FreeIPA**’s MFA support, you can take security to the next level by enforcing **two-factor authentication** for every user. Whether it’s **TOTP** (Time-based One-Time Password) or integrating **OpenOTP**, **ZeroTrustBSD** makes MFA easy and efficient.
+- **Role-Based Access Control (RBAC)**: Empower your security team with **FreeIPA’s** **RBAC**, which allows you to set strict access controls based on **user roles**. **ZeroTrustBSD** takes it further by enforcing these roles at the **network layer**, ensuring that each user’s access is in line with your security policies.
+- **Host-Based Access Control**: FreeIPA’s host-based access control allows **ZeroTrustBSD** to enforce device-specific security policies, ensuring that only **trusted, compliant devices** are allowed to communicate within your secure network.
+- **Audit Logging for Compliance**: Gain visibility into who is accessing what and when. With **FreeIPA’s** detailed **audit logging** integrated into **ZeroTrustBSD**, you can ensure full accountability and streamline compliance with regulations like **GDPR**, **HIPAA**, or **PCI-DSS**.
+
+---
+
+## ☁️ Multi-Cloud & Private Cloud Integration
+
+In today’s world, enterprises are rapidly adopting **multi-cloud** and **hybrid-cloud** strategies to take advantage of the best features of both public and private clouds. **ZeroTrustBSD** is built to thrive in these environments, ensuring **consistent security**, **identity management**, and **access control** across all cloud platforms. Whether you’re leveraging **VMware** for your private cloud infrastructure or deploying **OpenStack** in a multi-cloud configuration, **ZeroTrustBSD** provides seamless integration:
+
+### **VMware Integration**
+- **Microsegmentation** with **VMware NSX** for full network isolation.
+- **Automated policy enforcement** via **vRealize Automation**.
+- **Kerberos-based Authentication** and **MFA** with **VMware Identity Manager**.
+
+### **OpenStack Integration**
+- **VXLAN Segmentation** using **OpenStack Neutron**.
+- **Identity Management** via **OpenStack Keystone** with **MFA** and **Zero Trust** policies.
+- **Compliance Automation** with integrated audit logging and observability.
+
+### **Multi-Cloud Connectivity**
+- **BGP-driven overlays** between **ZeroTrustBSD** and multiple cloud providers.
+- **Identity Federation** across **AWS**, **Azure**, and **Google Cloud** IAM systems.
+- **Cloud-native observability** through **Prometheus** and **Grafana**.
+
+---
+
 ## 🛰️ Tactical Networking & Microsegmentation
 
 - 🌐 Layer-2 VXLAN overlays with segment-specific firewall rules
@@ -160,16 +196,20 @@ With **SD-RAN** support, ZeroTrustBSD enables secure, scalable, and flexible mob
 
 ---
 
-## 📍 Roadmap: What's Coming
+## 📍 Roadmap: What’s Coming
 
-- **Live GitOps Pull Mode** with commit signature enforcement
-- **Offline Key Vault Agent** to manage private keys securely for config signing
-- **ZFS snapshot + rollback layer** for immutable state recovery
-- **Signify-based Remote Update Server** with tamper-proof policy pushes
-- **Mobile 5G cell deployment stack** via OAI + SDR integration
-- **OpenTelemetry support** for structured trace ingestion
-- **Mermaid.js architecture visualizer** embedded in command console
-- **AI-assisted anomaly scoring and drift alerts**
+- **Live GitOps Pull Mode** with commit signature enforcement  
+- **Offline Key Vault Agent** for secure key management  
+- **ZFS Snapshot & Rollback** for immutable, recoverable states  
+- **Signify-based Remote Update Server** with tamper-proof policy pushes  
+- **Mobile 5G Cell Deployment** stack via OpenAirInterface + SDR  
+- **OpenTelemetry** for structured trace ingestion  
+- **Mermaid.js** embedded architecture visualizer in the console  
+- **AI-driven Anomaly Scoring** and automated drift alerts  
+- **VMware vSphere & NSX** native policy enforcement  
+- **Advanced OpenStack** private cloud security integration  
+- **Multi-Cloud Identity Federation** (AWS, Azure, Google Cloud)  
+- **Kubernetes Orchestration** support across hybrid platforms  
 
 ---
 
