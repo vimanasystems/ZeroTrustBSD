@@ -127,7 +127,7 @@ Detailed architecture playbooks are in [`docs/MICROSEGMENTATION.md`](./docs/MICR
 - Lightweight and deployable in both cloud and air-gapped environments
 
 ---
-
+# Work in progress :) 
 ## 📦 What's Inside the OS Distribution
 
 | Component                          | Purpose |
