@@ -1,3 +1,4 @@
+
 # 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
 
 ### **The Sovereign Security Operating System. Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
@@ -12,135 +13,200 @@ Get ready to step into the future of network security, where your firewall isn�
 
 ---
 
-**ZeroTrustBSD** is a next-generation, military-grade firewall and network security platform based on [OpenBSD](https://www.openbsd.org), designed for sovereign cloud deployments, national cybersecurity operations, operational technology (OT), industrial control systems (ICS), and enterprise-grade multi-tenancy. It is fully BSD-licensed and optimized for mission assurance, cyber defense, and regulatory compliance across telecom, government, energy, manufacturing, and finance sectors.
+## 🚀 Overview
+
+**ZeroTrustBSD** is an **Autonomous Cyber Defense OS** — a digitally sovereign, open-source security platform built on OpenBSD. It transforms any appliance into a programmable network shield capable of:
+- **Microsegmentation** with VXLAN, PF, and anchors
+- **BGP-driven overlays** for interconnectivity and failover
+- **Signed configuration enforcement** via [Signify](https://man.openbsd.org/signify)
+- **Embedded compliance** automation for critical industries
+
+Ideal for:
+- Government & national defense networks
+- Industrial and OT segmentation (IEC 62443, NIS2)
+- Embassy, field, and disaster-resilient deployments
+- Secure sovereign edge and cloud zones
 
 ---
 
-## 🌍 Overview
+## 🔐 Core Security Architecture
 
-ZeroTrustBSD integrates:
-- Hardened OpenBSD secure kernel
-- DynFi centralized firewall management
-- RCDevs OpenOTP identity and MFA
-- Suricata, Wazuh, Zeek for threat detection
-- WireGuard, IPsec, OpenVPN, and QKD-ready crypto
-- OpenBGPD, VXLAN, MPLS, and SD-WAN capabilities
-- CISO Assistant for automated compliance
-- eBPF, Prometheus, Filebeat, and ELK for observability
-- 🏭 OT/ICS Compatibility with Purdue Model segmentation
----
-### 🚀 Overview Continued
-
-ZeroTrustBSD provides:
-- 🔐 Hardened firewall capabilities (pf, relayd, NAT, WireGuard)
-- 🛡️ Zero Trust Architecture (ZTA)
-- 📡 Multi-tenant segmentation via VMM and jails
-- 🔎 Real-time observability (eBPF, Prometheus, Filebeat)
-- 🧠 AI-driven intrusion detection (Suricata, Zeek, Wazuh)
-- 🔐 Identity enforcement (RCDevs OpenOTP, PAM, SSO)
-- 📜 Built-in compliance automation (GDPR, NIS2, ISO 27001, IEC 62443)
----
-
-## 🧱 Key Components
-
-| Category               | Tools/Tech                          |
-|------------------------|-------------------------------------|
-| Firewall Management    | DynFi Manager                       |
-| IAM & Authentication   | RCDevs OpenOTP, LDAP, AD, Entra ID  |
-| IDS & Threat Detection | Suricata, Wazuh, Zeek, OSSEC, YARA  |
-| Threat Intelligence    | MISP, OpenCTI                       |
-| Observability          | eBPF, Prometheus, Filebeat, ELK     |
-| Networking             | OpenBGPD, VXLAN, OSPF, MPLS         |
-| Virtualization         | VMM, Jails, VLANs, Anchors          |
-| VPN & PKI              | WireGuard, OpenVPN, strongSwan      |
-| Compliance Automation  | CISO Assistant                      |
-| OT/ICS Security        | Purdue Model, Modbus/DNP3 inspection, isolated VLANs |
-| DevSecOps & GitOps     | Ansible, Terraform, GitHub Actions  |
+- 🧬 Hardened [OpenBSD](https://www.openbsd.org/) kernel with **pledge(2)**, **unveil(2)**, **W^X**, and securelevel
+- 🔏 Immutable, signed configs using [Signify](https://man.openbsd.org/signify)
+- 🔐 MFA + identity-based access using [RCDevs OpenOTP](https://www.rcdevs.com/) or compatible IAM suites like [PrivacyIDEA](https://www.privacyidea.org/), [Keycloak](https://www.keycloak.org/), [Authentik](https://goauthentik.io/), and [Authelia](https://www.authelia.com/)
+- 📜 GitOps & file integrity via `rc.firstboot`, `sha256`, and git-tracked `/etc`
 
 ---
 
-## 📦 Quick Start
+## 🛰️ Tactical Networking & Microsegmentation
 
-```sh
-doas sh install.sh
+- 🌐 Layer-2 VXLAN overlays with segment-specific firewall rules
+- 🔄 Dynamic route orchestration with [OpenBGPD](https://man.openbsd.org/bgpd)
+- 🧱 High availability with [CARP](https://man.openbsd.org/carp)
+- 🏭 Purdue Model isolation with jails, loopbacks, and anchored rulesets
+
+Detailed architecture playbooks are in [`docs/MICROSEGMENTATION.md`](./docs/MICROSEGMENTATION.md).
+
+---
+
+## 🛡 Threat Detection + Observability Suite
+
+- 🕵️ [Suricata](https://suricata.io/) for inline IDS/IPS + threat feeds
+- 📡 [Zeek](https://zeek.org/) for passive network telemetry and anomaly detection
+- 🔐 [Wazuh](https://wazuh.com/) for log monitoring, SIEM, FIM, and compliance mapping
+- 📊 [Prometheus](https://prometheus.io/), [Filebeat](https://www.elastic.co/beats/filebeat), [Grafana](https://grafana.com/), and ELK for full-stack observability
+
+### 🧠 **Threat Intelligence Integration: [OpenCTI](https://www.opencti.io/)**
+- Seamless integration with **OpenCTI** for centralized threat intelligence management
+- Aggregates and correlates CTI data from multiple sources (OSINT, commercial, and internal)
+- Allows sharing, collaboration, and alerting on actionable threats
+
+### 🔍 **Passive R-SPAN Monitoring**
+- Leverage passive [R-SPAN](https://www.networksorcery.com/enp/r-span/) for network traffic mirroring
+- Use this mode for non-intrusive packet capture without any disruption to live traffic
+- Ideal for forensic traffic analysis and real-time passive monitoring
+
+### 📊 **CMDB + Asset Management**
+- **Optional ITIL-based CMDB** integrated with ZeroTrustBSD for IT asset management and lifecycle tracking
+- Supports automated discovery, classification, and inventory of network assets
+- Enhances compliance by automatically mapping devices, users, and access to specific security policies
+
+---
+
+## 🔒 Next-Gen Cryptography & VPN
+
+- 🔑 [WireGuard](https://www.wireguard.com/) for high-speed secure tunnels
+- 🛡️ IPsec + [OpenVPN](https://openvpn.net/) for broad compatibility
+- 🔬 Quantum-safe readiness via crypto-agile abstraction
+
+---
+
+## 🖥 Remote Command Console (UI)
+
+- React + [Grafana](https://grafana.com/) dashboard with real-time firewall status
+- Display PF state, VXLAN topology, and live threat events
+- Trigger lockdown, config reloads, BGP resets
+- Lightweight and deployable in both cloud and air-gapped environments
+
+---
+
+## 📦 What's Inside the OS Distribution
+
+| Component                          | Purpose |
+|-----------------------------------|---------|
+| `build-zerotrustbsd-masteriso.sh` | Builds unattended installable image of the OS |
+| `autoinstall.conf`                | Defines role-based, headless provisioning via PXE/USB |
+| `rc.firstboot`                    | First-boot logic for provisioning, security bootstrap, config signing |
+| `vxlan-bgp-bootstrap.sh`          | Overlay microsegmentation and BGP peering setup |
+| `zerotrustbsd-ciso-toolkit.zip`   | Tools for audit reporting, compliance matrix generation, config diffing |
+| `console/`                         | Web-based command console for live observability and remote actions |
+| `docs/MICROSEGMENTATION.md`       | ASCII and diagram-based topology reference for segmented deployments |
+| `opencti-integration/`            | Threat intelligence and data correlation with OpenCTI integration |
+| `cmdb-asset-management/`          | ITIL-compliant asset management and discovery system |
+| `rspansnap/`                      | R-SPAN passive traffic mirroring and forensic capture |
+
+---
+
+## 🏢 Enterprise & Sector Use Cases
+
+### 🛡 Government / Military
+- National firewall infrastructure enforcing digital sovereignty
+- Tactical battlefield deployments with dynamic BGP meshing and CARP failover
+- Embassy and diplomatic zones with air-gap mode and identity-aware access
+- Intelligence compartmentalization with VXLAN + identity + anchor rulesets
+
+### ⚙️ Industrial (OT / ICS)
+- Purdue Model enforcement for SCADA and PLC isolation
+- IEC 62443, NIS2, and ISO 27001-compliant controls
+- Secure remote access via WireGuard/IPsec for plant technicians
+
+### 🏥 Healthcare
+- Identity-isolated clinical VLANs (radiology, ER, admin)
+- Encrypted patient data flows with anomaly detection
+- Automated HIPAA policy validation via CISO toolkit
+
+### 🏦 Financial & Fintech
+- PCI-DSS segment isolation for cardholder data environments (CDE)
+- Zero Trust access brokers for identity-based transaction security
+- Real-time SIEM and breach visibility via Suricata/Zeek/Wazuh
+
+### 🌐 Sovereign Cloud / Edge Computing
+- Hyperlocalized, digitally sovereign enclaves
+- Inter-cluster VXLAN overlays with GitOps-signed firewall policies
+- Federated identity and compliance drift control
+
+---
+
+## 🌐 SD-WAN Integration
+
+ZeroTrustBSD can integrate **SD-WAN** capabilities to create dynamic, secure connections across geographically distributed networks. Features include:
+- **Dynamic Path Selection** for intelligent routing based on network conditions.
+- **Traffic Encryption** for secure transmission across untrusted WAN connections.
+- **Zero Trust Security** ensuring identity-based access to SD-WAN resources.
+- **Centralized Policy Management** with ZeroTrustBSD’s unified control plane.
+
+---
+
+## 🛰️ SD-RAN (Software-Defined Radio Access Network) Integration for 4G, 5G, and Satellite Communications
+
+With **SD-RAN** support, ZeroTrustBSD enables secure, scalable, and flexible mobile network management. Key features include:
+- **Private 4G/5G networks**: Secure local deployment of mobile networks with advanced **network slicing**.
+- **Radio Resource Management (RRM)** and **dynamic spectrum allocation**.
+- **Edge Computing** for low-latency mobile services.
+- **Seamless Roaming** for mobile devices across **private** and **public networks**.
+- **Quantum-safe encryption** and **identity-based access** policies for mobile communications.
+
+---
+
+## 📍 Roadmap: What's Coming
+
+- **Live GitOps Pull Mode** with commit signature enforcement
+- **Offline Key Vault Agent** to manage private keys securely for config signing
+- **ZFS snapshot + rollback layer** for immutable state recovery
+- **Signify-based Remote Update Server** with tamper-proof policy pushes
+- **Mobile 5G cell deployment stack** via OAI + SDR integration
+- **OpenTelemetry support** for structured trace ingestion
+- **Mermaid.js architecture visualizer** embedded in command console
+- **AI-assisted anomaly scoring and drift alerts**
+
+---
+
+## 💡 Why “Autonomous Cyber Defense OS”?
+
+- Installs & secures itself in air-gapped or hostile networks
+- Operates independently with built-in detection and policy enforcement
+- Unifies firewall, router, observability, and compliance layers under one OS
+- Powered by open protocols, hardened by BSD discipline
+
+> ZeroTrustBSD is not an appliance. It is an operator-grade control system — programmable, observable, sovereign.
+
+---
+
+## 🛠 Quick Start
+
+```bash
+# Build the ISO
+./build-zerotrustbsd-masteriso.sh
+
+# PXE deploy for multiple firewalls
+./pxe-netboot-zerotrustbsd.sh
+
+# Launch the command console UI
+cd console && npm install && npm run dev
 ```
 
-- Review `/etc/pf.conf` and adjust anchors per tenant
-- Configure VMs using `/etc/vm.conf` and `vmctl`
-- Enable DynFi agent and RCDevs auth as needed
-- Isolate SCADA/PLC network in L1-L3 per Purdue segmentation
-- Logs and metrics forwarded via Filebeat/Prometheus
-
 ---
 
-## 🔐 Security Architecture
+## 🤝 Join the Mission
 
-- Default-deny firewall policy
-- MFA-protected VPN and SSH
-- Per-tenant microsegmentation using VMM + jails
-- Purdue Model L1–L5 segmentation for ICS networks
-- Encrypted telemetry and audit-ready logging
-- QKD-ready crypto stack for STANAG/NATO interop
+ZeroTrustBSD is built for:
+- National security infrastructure
+- Defense-grade software-defined perimeters
+- Edge resilience in contested terrain
 
----
+> **Deploy ZeroTrustBSD. Deploy autonomy. Deploy resilience.**
 
-## 📁 Included Files
-
-| File                           | Description |
-|--------------------------------|-------------|
-| `install.sh`                   | Bootstrap script for services and configuration |
-| `pf.conf`                      | Default deny + anchors + logging + VLAN rules |
-| `tenant-example.md`            | How-to: microsegmentation with VMM and jails |
-| `tenant-deployment.md`        | ASCII network diagram and YAML blueprint |
-| `MIL-GRADE_DEPLOYMENT_PRACTICES.md` | Best practices for defense-grade deployment |
-| `release-notes.md`             | Version release overview |
-| `CHANGELOG.md`                 | Version changes and features log |
-
----
-
-## 📜 Compliance Mapping
-
-- 🇪🇺 GDPR, NIS2, DORA
-- 📘 ISO/IEC 27001:2022
-- 🛰️ STANAG 4774/4754 (QKD-ready)
-- 🏭 IEC 62443 for OT/ICS environments
-
----
-
-## 🛰️ Designed For
-
-- Ministries and Agencies (EU, GCC, ASEAN)
-- CERT/SOC & Military Cyber Units
-- Critical Infrastructure Operators (OT/ICS)
-- Regulated Enterprises (Banking, Energy, Manufacturing)
-- Sovereign Cloud Providers
-
----
-
-## 🧠 Why ZeroTrustBSD?
-
-- Secure by design – powered by OpenBSD
-- Fully open source and BSD-licensed
-- Zero Trust, DevSecOps, and STIG-ready
-- Multi-tenant & microsegmented deployments
-- Built for digital sovereignty and industrial resilience
-
----
-
-## 📥 Downloads
-### Work in progress
-- [📦 Deployment Bundle (.zip)](./ZeroTrustBSD-Tenant-Bundle.zip)
-- [🗜️ Release Archive (.tar.gz)](./ZeroTrustBSD-Tenant-Bundle.tar.gz)
-- [📄 Release Notes](./release-notes.md)
-- [📝 Changelog](./CHANGELOG.md)
-
----
-
-## 📘 License
-
-This project is licensed under the **BSD 2-Clause License**. See [`LICENSE.md`](./LICENSE.md) for full text.
-
----
-
-🛡️ Proudly engineered for sovereign cybersecurity & critical infrastructure  
-Maintained by **Vimana Systems**
+🔗 More info:
+- GitHub: [vimanasystems/ZeroTrustBSD](https://github.com/vimanasystems/ZeroTrustBSD)
+- Docs & ISO: [ZeroTrustBSD.org](https://zerotrustbsd.org) *(coming soon)*
+- Contact: contact@zerotrustbsd.org
