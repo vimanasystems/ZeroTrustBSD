@@ -11,6 +11,8 @@ Think of **ZeroTrustBSD** as your **first line of defense** — an open-source f
 
 Get ready to step into the future of network security, where your firewall isn’t just an appliance, but the **central command layer** of a truly resilient, self-healing, and sovereign digital ecosystem.
 
+> _Built on [OpenBSD](https://www.openbsd.org/). Born for Zero Trust. Designed to be military grade, disaster recovery ready, resilient and nimble in many use cases._  
+> “You don’t buy sovereignty. You build it — with ZeroTrustBSD.”
 ---
 
 ## 🚀 Overview
