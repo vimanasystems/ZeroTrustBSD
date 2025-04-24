@@ -1,4 +1,4 @@
-# 🛡️ ZeroTrustBSD – Military-Grade OpenBSD Firewall Platform
+# 🛡️ ZeroTrustBSD – Military-Grade Firewall Platform
 
 **ZeroTrustBSD** is a next-generation, military-grade firewall and network security platform based on [OpenBSD](https://www.openbsd.org), designed for sovereign cloud deployments, national cybersecurity operations, operational technology (OT), industrial control systems (ICS), and enterprise-grade multi-tenancy. It is fully BSD-licensed and optimized for mission assurance, cyber defense, and regulatory compliance across telecom, government, energy, manufacturing, and finance sectors.
 
