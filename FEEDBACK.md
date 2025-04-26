@@ -1,5 +1,5 @@
 
-# 📈 FEEDBACK.md – Strategic Direction for ZeroTrustBSD
+# 📈 Strategic Direction for ZeroTrustBSD
 
 This document provides consolidated feedback, strategic alignment, and growth recommendations for the ongoing development and adoption of **ZeroTrustBSD**.
 
