@@ -1,4 +1,4 @@
-il# 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
+# 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
 
 ### **The Sovereign Security Operating System. Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
 
