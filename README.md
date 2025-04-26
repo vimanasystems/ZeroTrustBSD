@@ -1,4 +1,3 @@
-
 # 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
 
 ### **The Sovereign Security Operating System. Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
@@ -83,7 +82,7 @@ In today’s world, enterprises are rapidly adopting **multi-cloud** and **hybri
 - 🧱 High availability with [CARP](https://man.openbsd.org/carp)
 - 🏭 Purdue Model isolation with jails, loopbacks, and anchored rulesets
 
-Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](.MICROSEGMENTATION.md).
+Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](MICROSEGMENTATION.md).
 
 ---
 
