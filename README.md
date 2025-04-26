@@ -137,7 +137,7 @@ Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](MICROSEGMENTATIO
 | `vxlan-bgp-bootstrap.sh`          | Overlay microsegmentation and BGP peering setup |
 | `zerotrustbsd-ciso-toolkit.zip`   | Tools for audit reporting, compliance matrix generation, config diffing |
 | `console/`                         | Web-based command console for live observability and remote actions |
-| `docs/MICROSEGMENTATION.md`       | ASCII and diagram-based topology reference for segmented deployments |
+| `MICROSEGMENTATION.md`       | ASCII and diagram-based topology reference for segmented deployments |
 | `opencti-integration/`            | Threat intelligence and data correlation with OpenCTI integration |
 | `cmdb-asset-management/`          | ITIL-compliant asset management and discovery system |
 | `rspansnap/`                      | R-SPAN passive traffic mirroring and forensic capture |
