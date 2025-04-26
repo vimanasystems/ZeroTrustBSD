@@ -1,4 +1,4 @@
-# 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
+il# 🛡️ ZeroTrustBSD – Autonomous Cyber Defense OS
 
 ### **The Sovereign Security Operating System. Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
 
@@ -249,5 +249,5 @@ ZeroTrustBSD is built for:
 
 🔗 More info:
 - GitHub: [vimanasystems/ZeroTrustBSD](https://github.com/vimanasystems/ZeroTrustBSD)
-- Docs & ISO: [ZeroTrustBSD.org](https://zerotrustbsd.org) *(coming soon)*
-- Contact: contact@zerotrustbsd.org
+- Docs & ISO: [ZeroTrustBSD.com](https://zerotrustbsd.com) *(coming soon)*
+- Contact: contact@zerotrustbsd.com
