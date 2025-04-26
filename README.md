@@ -83,7 +83,7 @@ In today’s world, enterprises are rapidly adopting **multi-cloud** and **hybri
 - 🧱 High availability with [CARP](https://man.openbsd.org/carp)
 - 🏭 Purdue Model isolation with jails, loopbacks, and anchored rulesets
 
-Detailed architecture playbooks are in [`docs/MICROSEGMENTATION.md`](./docs/MICROSEGMENTATION.md).
+Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](.MICROSEGMENTATION.md).
 
 ---
 
