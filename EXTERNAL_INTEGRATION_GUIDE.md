@@ -1,4 +1,4 @@
-# 🌐 EXTERNAL_INTEGRATION_GUIDE.md – Integrating Third-Party Tools with ZeroTrustBSD
+# 🌐 Integrating Third-Party Tools with ZeroTrustBSD
 
 This guide describes how to integrate leading open-source cybersecurity tools and services with **ZeroTrustBSD**, enhancing observability, compliance, identity, and threat response capabilities.
 
