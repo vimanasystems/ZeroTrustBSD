@@ -20,8 +20,8 @@ Traditional firewalls, often built on closed platforms and proprietary firmware,
 
 | Area                     | Feature |
 |--------------------------|---------|
-| **Security Architecture**| Based on OpenBSD, with pf, VMM, relayd, unveil/pledge |
-| **Identity & Access**    | Integrated with RCDevs OpenOTP, Azure AD, LDAP |
+| **Security Architecture**| Based on OpenBSD, with pf, VMM, relayd or HaProxy, unveil/pledge |
+| **Identity & Access**    | Integrated with RCDevs OpenOTP, Azure AD, LDAP and FreeIPA|
 | **Network Segmentation** | Microsegmentation with VXLAN, MPLS, and jails |
 | **Observability**        | Native eBPF, Prometheus, YARA, Wazuh |
 | **Compliance**           | Built-in compliance templates for GDPR, NIS2, ISO 27001 |
