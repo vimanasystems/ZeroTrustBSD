@@ -8,7 +8,9 @@ In an age where cyber threats evolve faster than our ability to defend, **ZeroTr
 
 This platform was designed for those who demand absolute control, security, and scalability in the most hostile environments.
 
-Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network.
+Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. 
+
+The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network.
 
 Think of **ZeroTrustBSD** as your **first line of defense**, an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
 
