@@ -2,11 +2,15 @@
 
 ### **The Sovereign Security Operating System. Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
 
-In an age where cyber threats evolve faster than our ability to defend, **ZeroTrustBSD** stands as a beacon of digital sovereignty and tactical resilience. **ZeroTrustBSD** is more than just a firewall — it’s a fully integrated, **Autonomous Cyber Defense OS**, built from the ground up on the rock-solid foundation of **OpenBSD**. This platform was designed for those who demand absolute control, security, and scalability in the most hostile environments.
+In an age where cyber threats evolve faster than our ability to defend, **ZeroTrustBSD** stands as a beacon of digital sovereignty and tactical resilience. 
 
-Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. The heart of its design is **Zero Trust** — enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network.
+**ZeroTrustBSD** is more than just a firewall, it is a fully integrated, **Autonomous Cyber Defense OS**, built from the ground up on the rock-solid foundation of **OpenBSD**. 
 
-Think of **ZeroTrustBSD** as your **first line of defense** — an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
+This platform was designed for those who demand absolute control, security, and scalability in the most hostile environments.
+
+Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network.
+
+Think of **ZeroTrustBSD** as your **first line of defense**, an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
 
 Get ready to step into the future of network security, where your firewall isn’t just an appliance, but the **central command layer** of a truly resilient, self-healing, and sovereign digital ecosystem.
 
@@ -46,10 +50,17 @@ Ideal for:
 Here’s how **ZeroTrustBSD** with **FreeIPA** makes securing your digital ecosystem easy and effective:
 
 - **Centralized Authentication**: Manage users and devices with ease using **FreeIPA’s** LDAP, ensuring a unified identity store for your entire organization. By integrating **ZeroTrustBSD**, you can control access across all your network devices with **granular security policies**.
-- **Kerberos-Based Security**: **ZeroTrustBSD** benefits from **FreeIPA’s** **Kerberos** authentication to provide **high-assurance, single sign-on (SSO)** capabilities. Secure authentication is ensured across all devices and services in your network, reducing the risk of unauthorized access.
+
+- **Kerberos-Based Security**: **ZeroTrustBSD** benefits from **FreeIPA’s** **Kerberos** authentication to provide **high-assurance, single sign-on (SSO)** capabilities.
+
+Secure authentication is ensured across all devices and services in your network, reducing the risk of unauthorized access.
+
 - **Multi-Factor Authentication (MFA)**: With **FreeIPA**’s MFA support, you can take security to the next level by enforcing **two-factor authentication** for every user. Whether it’s **TOTP** (Time-based One-Time Password) or integrating **OpenOTP**, **ZeroTrustBSD** makes MFA easy and efficient.
+
 - **Role-Based Access Control (RBAC)**: Empower your security team with **FreeIPA’s** **RBAC**, which allows you to set strict access controls based on **user roles**. **ZeroTrustBSD** takes it further by enforcing these roles at the **network layer**, ensuring that each user’s access is in line with your security policies.
+
 - **Host-Based Access Control**: FreeIPA’s host-based access control allows **ZeroTrustBSD** to enforce device-specific security policies, ensuring that only **trusted, compliant devices** are allowed to communicate within your secure network.
+
 - **Audit Logging for Compliance**: Gain visibility into who is accessing what and when. With **FreeIPA’s** detailed **audit logging** integrated into **ZeroTrustBSD**, you can ensure full accountability and streamline compliance with regulations like **GDPR**, **HIPAA**, or **PCI-DSS**.
 
 ---
