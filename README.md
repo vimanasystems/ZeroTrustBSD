@@ -216,6 +216,34 @@ It’s not about surveillance. It’s about **resilience**, **evidence**, and **
 - Trigger lockdown, config reloads, BGP resets
 - Lightweight and deployable in both cloud and air-gapped environments
 
+# Compatible EDR and Access Control Models for OpenBSD-Based Systems
+
+## 🛡️ Open Source EDR Tools (OpenBSD-Compatible or Adaptable)
+
+| Tool        | Capabilities                                                | OpenBSD Compatibility                      |
+|-------------|-------------------------------------------------------------|--------------------------------------------|
+| **Wazuh**   | File integrity monitoring, rootkit detection, syslog audit  | Compatible via syslog agent; BSD packaging |
+| **OSSEC**   | Host intrusion detection, log monitoring                    | Compatible; native BSD support             |
+| **Velociraptor** | Endpoint DFIR, live queries, YARA support            | Can be containerized or used remotely      |
+| **R-SYSLOG + YARA** | Log aggregation + rule-based matching             | Fully supported on OpenBSD                 |
+| **Snort/Suricata** | Network-based detection (IDS/IPS)                   | Runs well on OpenBSD for network EDR       |
+
+> Note: Full endpoint telemetry like kernel module introspection is limited on OpenBSD for stability and security reasons. However, agentless and syscall-level logging via `syslogd`, `ktrace`, and `eBPF` (future scope) are supported.
+
+---
+
+## 🔐 Access Control Models Beyond RBAC (OpenBSD-Aware)
+
+| Model         | Description                                                                 | OpenBSD Compatibility |
+|---------------|-----------------------------------------------------------------------------|------------------------|
+| **MAC (Securelevel + Pledge/Unveil)** | OpenBSD-native. Controls access to kernel features and syscall scopes.  | Native                |
+| **ABAC (via LDAP + PF + Certs)**      | Attribute-based rules using FreeIPA/OpenLDAP with PF tagging/logging    | Supported             |
+| **PBAC (Policy-Based using pf.conf + anchors)** | Define behavior declaratively through anchored firewall rules         | Native                |
+| **Certificate/Key-based ACLs**        | Use `signify`, SSH certs, or TLS client auth to gate service access     | Fully supported       |
+| **Capability-based IPC (pledge/capsicum)** | Control inter-process behavior using syscall limits and IPC boundaries | Supported (pledge)    |
+
+> OpenBSD emphasizes **deterministic**, **auditable**, and **minimal-privilege** access. Models like ABAC and PBAC are best implemented at the network/policy layer rather than complex middleware.
+
 ---
 # Work in progress :) 
 ## 📦 What's Inside the OS Distribution
