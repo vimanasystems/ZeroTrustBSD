@@ -145,11 +145,9 @@ Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](MICROSEGMENTATIO
 - Aggregates and correlates CTI data from multiple sources (OSINT, commercial, and internal)
 - Allows sharing, collaboration, and alerting on actionable threats
 
-### 🔍 **Passive R-SPAN Monitoring**
+# 🔍 **Passive R-SPAN Monitoring**
 
-# SPAN and RSPAN – A Non-Technical Overview
-
-## 🕵️‍♂️ What Is SPAN and RSPAN?
+## SPAN and RSPAN – A Non-Technical Overview
 
 ### 🔍 Think of it like surveillance in a building:
 
@@ -161,7 +159,7 @@ That’s what **SPAN** and **RSPAN** are for. They’re **digital security camer
 
 ---
 
-## 📡 SPAN (Switched Port Analyzer)
+### 📡 SPAN (Switched Port Analyzer)
 
 - **What it does**: Makes a copy of all the digital traffic (like emails, files, apps) going in and out of a certain port (or “room”).
 - **Where it sends it**: To a monitoring system like a cybersecurity tool (SIEM, IDS, etc.).
@@ -170,7 +168,7 @@ That’s what **SPAN** and **RSPAN** are for. They’re **digital security camer
 
 ---
 
-## 🌐 RSPAN (Remote SPAN)
+### 🌐 RSPAN (Remote SPAN)
 
 - **What it does**: Same as SPAN—but it lets you watch traffic happening in another building (or another part of your network).
 - **Where it sends it**: The copied traffic is sent **across the network** to a remote location for analysis.
@@ -179,7 +177,7 @@ That’s what **SPAN** and **RSPAN** are for. They’re **digital security camer
 
 ---
 
-## 🤝 Why SPAN & RSPAN Matter
+### 🤝 Why SPAN & RSPAN Matter
 
 | Benefit                      | Explanation |
 |-----------------------------|-------------|
@@ -190,7 +188,7 @@ That’s what **SPAN** and **RSPAN** are for. They’re **digital security camer
 
 ---
 
-## 🔐 SPAN in ZeroTrustBSD
+### 🔐 SPAN in ZeroTrustBSD
 
 In the context of ZeroTrustBSD, **SPAN** is tightly integrated with **microsegmentation** and **threat detection**. Each “camera” is placed with precision—only watching what’s necessary, and always under cryptographic policy.
 
