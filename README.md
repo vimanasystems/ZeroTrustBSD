@@ -248,23 +248,6 @@ It’s not about surveillance. It’s about **resilience**, **evidence**, and **
 > OpenBSD emphasizes **deterministic**, **auditable**, and **minimal-privilege** access. Models like ABAC and PBAC are best implemented at the network/policy layer rather than complex middleware.
 
 ---
-# Work in progress :) 
-## 📦 What's Inside the OS Distribution
-
-| Component                          | Purpose |
-|-----------------------------------|---------|
-| `build-zerotrustbsd-masteriso.sh` | Builds unattended installable image of the OS |
-| `autoinstall.conf`                | Defines role-based, headless provisioning via PXE/USB |
-| `rc.firstboot`                    | First-boot logic for provisioning, security bootstrap, config signing |
-| `vxlan-bgp-bootstrap.sh`          | Overlay microsegmentation and BGP peering setup |
-| `zerotrustbsd-ciso-toolkit.zip`   | Tools for audit reporting, compliance matrix generation, config diffing |
-| `console/`                         | Web-based command console for live observability and remote actions |
-| `MICROSEGMENTATION.md`       | ASCII and diagram-based topology reference for segmented deployments |
-| `opencti-integration/`            | Threat intelligence and data correlation with OpenCTI integration |
-| `cmdb-asset-management/`          | ITIL-compliant asset management and discovery system |
-| `rspansnap/`                      | R-SPAN passive traffic mirroring and forensic capture |
-
----
 
 ## 🏢 Enterprise & Sector Use Cases
 
