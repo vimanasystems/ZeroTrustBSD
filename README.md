@@ -1,3 +1,4 @@
+![Alt text](ZeroTrustBSD_logo.png)
 # 🛡️ ZeroTrustBSD Autonomous Cyber Defense OS
 
 ## The Sovereign Security Operating System. 
