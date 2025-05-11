@@ -299,6 +299,87 @@ With **SD-RAN** support, ZeroTrustBSD enables secure, scalable, and flexible mob
 - **Seamless Roaming** for mobile devices across **private** and **public networks**.
 - **Quantum-safe encryption** and **identity-based access** policies for mobile communications.
 
+# 🔐 Quantum Key Distribution (QKD) vs Post-Quantum Cryptography (PQC)
+
+## 🧬 What is Quantum Key Distribution (QKD)?
+
+Quantum Key Distribution (QKD) is a method of distributing encryption keys using quantum particles—typically photons. Its security is based on the laws of quantum mechanics.
+
+### 📡 How It Works:
+1. Photons are transmitted with quantum states (e.g., polarization).
+2. The receiver randomly measures the photons.
+3. Both parties compare results and keep only matching basis values.
+4. Any eavesdropping attempt introduces detectable anomalies.
+
+### ✅ Pros:
+- Based on physics, not math
+- Eavesdropping is detectable (via Quantum Bit Error Rate)
+- Immune to quantum computer attacks
+
+### ❌ Cons:
+- Requires expensive specialized equipment
+- Works best over fiber or line-of-sight paths (≤100 km)
+- Not practical for large-scale global deployment
+
+📚 **References**:
+- [QKD Overview – ID Quantique](https://www.idquantique.com/quantum-safe-security/quantum-key-distribution/)
+- [BB84 Protocol – Springer](https://link.springer.com/article/10.1007/BF00191318)
+- [ESA QKD Milestone](https://connectivity.esa.int/news/esa-project-achieves-spaceenabled-quantum-key-distribution-link-milestone)
+
+---
+
+## 🔐 What is Post-Quantum Cryptography (PQC)?
+
+Post-Quantum Cryptography (PQC) consists of cryptographic algorithms that are secure against both classical and quantum computers, but do not require quantum technology.
+
+### ⚙️ How It Works:
+PQC algorithms rely on mathematically hard problems like lattice reduction, multivariate equations, and hash functions.
+
+### 📊 Key Algorithms:
+- **Kyber** (encryption)
+- **Dilithium**, **FALCON**, **SPHINCS+** (signatures)
+- **Classic McEliece**, **NTRU** (encryption)
+- Standardized by **NIST** in 2022.
+
+### ✅ Pros:
+- Runs on classical hardware
+- Internet-scalable and backward compatible
+- Already in pilot deployment stages
+
+### ❌ Cons:
+- Larger key sizes and signature overhead
+- Still under active evaluation
+- May be slower in embedded environments
+
+📚 **References**:
+- [NIST PQC Project](https://csrc.nist.gov/projects/post-quantum-cryptography)
+- [Kyber/Dilithium – CRYSTALS Project](https://pq-crystals.org/)
+- [Cloudflare PQC Blog](https://blog.cloudflare.com/post-quantum-for-all/)
+
+---
+
+## ⚖️ QKD vs. PQC Comparison Table
+
+| Feature               | QKD                          | PQC                           |
+|-----------------------|------------------------------|--------------------------------|
+| Based on Physics      | ✅ Yes                        | ❌ No (math-based)             |
+| Needs Special Hardware| ✅ Yes (QKD devices)          | ❌ No                          |
+| Internet-Scalable     | ❌ No                         | ✅ Yes                         |
+| Immune to Quantum     | ✅ Yes                        | ✅ Yes                         |
+| Detects Eavesdropping | ✅ Yes                        | ❌ No                          |
+| Used in TLS           | ❌ Not yet                    | ✅ Kyber & Dilithium (in trials) |
+
+---
+
+## 🧠 Thoughts?
+
+Both QKD and PQC aim to secure communications against the threat of quantum computing, but approach it differently:
+
+- QKD = Use light and quantum states to share keys securely.
+- PQC = Use post-quantum algorithms to replace RSA/ECC across digital systems.
+
+A **hybrid model** may offer the best defense; QKD for high-assurance key distribution, and PQC for global digital infrastructure.
+
 ---
 
 ## 📍 Roadmap: What’s Coming
