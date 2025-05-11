@@ -1,4 +1,4 @@
-# Microsegmentation for Strategic Decision-Makers
+# 🧱 Microsegmentation for Strategic Decision-Makers
 
 ## What Is Microsegmentation and Why Does It Matter?
 
@@ -20,7 +20,7 @@ ZeroTrustBSD turns this into a core principle. Every packet, service, and system
 This isn’t just security. It’s operational clarity, risk reduction, and strategic assurance for infrastructure that can’t afford to fail.
 
 ---
-# 🧱 ZeroTrustBSD Deployment Topologies
+# ZeroTrustBSD Deployment Topologies
 
 This document outlines key deployment topologies for ZeroTrustBSD across enterprise, telecom, and critical infrastructure (OT/ICS/IIoT) environments, including support for VXLAN and microsegmentation. This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. It includes ASCII topology diagrams for:
 
