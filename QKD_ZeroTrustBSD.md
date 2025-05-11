@@ -2,7 +2,7 @@
 
 Welcome, sovereign tech builders, cyber commandos, and those who encrypt their lunch orders. 
 
-This is your upgraded and elaborated document for deploying **Quantum Key Distribution (QKD)** with **ZeroTrustBSD**, fortified by **open source philosophy**, **low-cost hardware**, and inspiration from real-world missions like **Starion Group's INT-UQKD project**.
+This is your upgraded and elaborated document for deploying **Quantum Key Distribution (QKD)** with **ZeroTrustBSD**, fortified by **open source philosophy**, **low-cost hardware**, and inspiration from real-world missions.
 
 ---
 
