@@ -4,7 +4,12 @@
 
 **Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience.**
 
-In an age where cyber threats evolve faster than our ability to defend, **ZeroTrustBSD** stands as a beacon of digital sovereignty and tactical resilience. 
+In an age where cyber threats evolve faster than our ability to defend, **ZeroTrustBSD** stands as a beacon of digital sovereignty and tactical resilience.
+Built on hardened OpenBSD and engineered for defense, critical infrastructure, and regulated industry.
+
+ZeroTrustBSD is a sovereign cybersecurity operating system delivering native Zero Trust Architecture (ZTA) capabilities. Built upon OpenBSD, it integrates post-quantum encryption, policy automation, and military-grade networking to ensure security at every layer.
+
+It is designed to meet the highest levels of regulatory and operational compliance across Europe and NATO-aligned organizations.
 
 **ZeroTrustBSD** is more than just a firewall, it is a fully integrated, **Autonomous Cyber Defense OS**, built from the ground up on the rock-solid foundation of **OpenBSD**. 
 
@@ -39,6 +44,16 @@ Ideal for:
 - Embassy, field, and disaster-resilient deployments
 - Secure sovereign edge and cloud zones
 
+## 🌍 Global Deployment Readiness
+
+ZeroTrustBSD is engineered not only for resilience—but also for international interoperability, regulatory alignment, and sovereign-scale adoption. It is suitable for deployment in:
+
+- 🇪🇺 European NIS2-compliant networks
+- 🇦🇪 UAE smart infrastructure and OT systems
+- 🌍 African Union sovereign data programs (AfCFTA-aligned)
+- 🇮🇳 Indo-Pacific Zero Trust edge deployments
+- 🛰 Defense enclaves under NATO STANAG and ISO 27001
+
 ---
 
 ## 🔐 Core Security Architecture
@@ -49,6 +64,18 @@ Ideal for:
 - 📜 GitOps & file integrity via `rc.firstboot`, `sha256`, and git-tracked `/etc`
 
 ---
+
+## 🧩 Key Features
+
+- Zero Trust Microsegmentation – Identity-aware access control across VLANs, VXLANs, MPLS domains
+- Post-Quantum Ready – Integration with QKD, PQC algorithms, and fiber WDM support
+- CISO Assistant – AI-driven compliance, audit readiness, and risk telemetry
+- OpenCTI Integration – Live threat intel enrichment and adversary mapping
+- SATCOM & SD-RAN – Tactical network mobility support with defense compatibility
+- Regulatory Compliance Built-In – Automates controls for GDPR, NIS2, DORA, ISO27001
+- Military-Grade Encryption – Hardened cryptographic stack and full-stack observability
+
+--- 
 
 ## 🛡 FreeIPA Integration for Advanced Identity & Access Management
 
@@ -238,6 +265,18 @@ With **SD-RAN** support, ZeroTrustBSD enables secure, scalable, and flexible mob
 - Powered by open protocols, hardened by BSD discipline
 
 > ZeroTrustBSD is not an appliance. It is an operator-grade control system — programmable, observable, sovereign.
+
+---
+
+## 🧭 Strategic Alignment & Thought Leadership
+
+ZeroTrustBSD participates in international cybersecurity dialogues and publishes research through:
+
+- NATO CCDCOE (Cooperative Cyber Defence Centre of Excellence)
+- ENISA (EU Agency for Cybersecurity)
+- IEEE SecureSys, GovTech World Summit, and Open Source Security Foundation
+
+It is positioned as the “Digital Non-Alignment Stack”, trusted across democratic and sovereign-neutral nations.
 
 ---
 
