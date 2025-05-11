@@ -43,7 +43,13 @@ This document deconstructs the rationale, the topology, and the policy enforceme
 
 Microsegmentation is a security technique that divides a network into fine-grained, isolated zones, allowing strict access controls and limiting lateral movement of threats. In **ZeroTrustBSD**, microsegmentation is enforced at the kernel and virtualization layers using **OpenBSD VMM**, **jails**, **pf(4)**, and Role Based Access Control (RBAC) policies.
 
-In most traditional infrastructures, the network is a promise: a flat, shared medium where workloads coexist and trust is implied. In ZeroTrustBSD, the network is a contract: each packet is interrogated, every interface is isolated by default, and lateral movement is forbidden unless proven and permitted.
+### In most traditional infrastructures, the network is a promise ###
+
+A flat, shared medium where workloads coexist and trust is implied. 
+
+### In ZeroTrustBSD, the network is a contract ###
+
+Each packet is interrogated, every interface is isolated by default, and lateral movement is forbidden unless proven and permitted.
 
 **This is not merely hardening. It is judgment rendered in code.**
 
