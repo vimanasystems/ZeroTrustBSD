@@ -101,7 +101,9 @@ Secure authentication is ensured across all devices and services in your network
 
 ## ☁️ Multi-Cloud & Private Cloud Integration
 
-In today’s world, enterprises are rapidly adopting **multi-cloud** and **hybrid-cloud** strategies to take advantage of the best features of both public and private clouds. **ZeroTrustBSD** is built to thrive in these environments, ensuring **consistent security**, **identity management**, and **access control** across all cloud platforms. Whether you’re leveraging **VMware** for your private cloud infrastructure or deploying **OpenStack** in a multi-cloud configuration, **ZeroTrustBSD** provides seamless integration:
+In today’s world, enterprises are rapidly adopting **multi-cloud** and **hybrid-cloud** strategies to take advantage of the best features of both public and private clouds. **ZeroTrustBSD** is built to thrive in these environments, ensuring **consistent security**, **identity management**, and **access control** across all cloud platforms. 
+
+Whether you’re leveraging **VMware** for your private cloud infrastructure or deploying **OpenStack** in a multi-cloud configuration, **ZeroTrustBSD** provides seamless integration:
 
 ### **VMware Integration**
 - **Microsegmentation** with **VMware NSX** for full network isolation.
@@ -144,9 +146,55 @@ Detailed architecture playbooks are in [`MICROSEGMENTATION.md`](MICROSEGMENTATIO
 - Allows sharing, collaboration, and alerting on actionable threats
 
 ### 🔍 **Passive R-SPAN Monitoring**
-- Leverage passive [R-SPAN](https://www.networksorcery.com/enp/r-span/) for network traffic mirroring
-- Use this mode for non-intrusive packet capture without any disruption to live traffic
-- Ideal for forensic traffic analysis and real-time passive monitoring
+
+# SPAN and RSPAN – A Non-Technical Overview
+
+## 🕵️‍♂️ What Is SPAN and RSPAN?
+
+### 🔍 Think of it like surveillance in a building:
+
+You have a secure building with many rooms (your network). Each room represents a device or a user. Most of the time, what’s happening inside each room is hidden.
+
+But what if you want to **monitor** what’s going on—without disturbing or exposing anything?
+
+That’s what **SPAN** and **RSPAN** are for. They’re **digital security cameras** for your network.
+
+---
+
+## 📡 SPAN (Switched Port Analyzer)
+
+- **What it does**: Makes a copy of all the digital traffic (like emails, files, apps) going in and out of a certain port (or “room”).
+- **Where it sends it**: To a monitoring system like a cybersecurity tool (SIEM, IDS, etc.).
+
+🧠 *Think of it as placing a camera right at the door of a room to watch who goes in or out—without blocking them.*
+
+---
+
+## 🌐 RSPAN (Remote SPAN)
+
+- **What it does**: Same as SPAN—but it lets you watch traffic happening in another building (or another part of your network).
+- **Where it sends it**: The copied traffic is sent **across the network** to a remote location for analysis.
+
+🧠 *It’s like sending a live camera feed to a command center in another city.*
+
+---
+
+## 🤝 Why SPAN & RSPAN Matter
+
+| Benefit                      | Explanation |
+|-----------------------------|-------------|
+| **Incident Response**       | Security teams can “see” what happened during or after a breach. |
+| **Compliance & Auditing**   | Regulators often require activity logging—SPAN helps create this trail. |
+| **Threat Detection**        | SPAN lets AI or human analysts catch suspicious patterns in real time. |
+| **Zero Trust Forensics**    | In systems like ZeroTrustBSD, SPAN helps prove policy enforcement is working. |
+
+---
+
+## 🔐 SPAN in ZeroTrustBSD
+
+In the context of ZeroTrustBSD, **SPAN** is tightly integrated with **microsegmentation** and **threat detection**. Each “camera” is placed with precision—only watching what’s necessary, and always under cryptographic policy.
+
+It’s not about surveillance. It’s about **resilience**, **evidence**, and **control**.
 
 ### 📊 **CMDB + Asset Management**
 - **Optional ITIL-based CMDB** integrated with ZeroTrustBSD for IT asset management and lifecycle tracking
