@@ -325,7 +325,7 @@ ZeroTrustBSD participates in international cybersecurity dialogues and publishes
 It is positioned as the “Digital Non-Alignment Stack”, trusted across democratic and sovereign-neutral nations.
 
 ---
-
+# Work in progress :) 
 ## 🛠 Quick Start
 
 ```bash
