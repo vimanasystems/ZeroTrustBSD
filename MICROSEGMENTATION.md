@@ -5,11 +5,37 @@ This document outlines key deployment topologies for ZeroTrustBSD across enterpr
 - Core Microsegmentation
 - VXLAN-based Overlay Networks
 - Multi-Tenant Segmentation with VMM + Jails
-- Secure Internet Edge with DynFi & RCDevs
+- Secure Internet Edge with Central Manager & IAM integration
+
+## Abstract
+
+Microsegmentation within ZeroTrustBSD is not merely a network practice—it is a philosophical stance embedded into the operating system's very fabric. Leveraging the secure-by-default design of OpenBSD, **ZeroTrustBSD** enforces granular control over east-west traffic, policy-governed enclaving, and privilege-separated service architecture.
+
+This document deconstructs the rationale, the topology, and the policy enforcement model behind ZeroTrustBSD’s microsegmentation framework—demonstrating how the operating system operates.
 
 ## 🧱 What Is Microsegmentation?
 
-Microsegmentation is a security technique that divides a network into fine-grained, isolated zones, allowing strict access controls and limiting lateral movement of threats. In **ZeroTrustBSD**, microsegmentation is enforced at the kernel and virtualization layers using **OpenBSD VMM**, **jails**, **pf(4)**, and RBAC policies.
+Microsegmentation is a security technique that divides a network into fine-grained, isolated zones, allowing strict access controls and limiting lateral movement of threats. In **ZeroTrustBSD**, microsegmentation is enforced at the kernel and virtualization layers using **OpenBSD VMM**, **jails**, **pf(4)**, and Role Based Access Control (RBAC) policies.
+
+In most traditional infrastructures, the network is a promise: a flat, shared medium where workloads coexist and trust is implied. In ZeroTrustBSD, the network is a contract: each packet is interrogated, every interface is isolated by default, and lateral movement is forbidden unless proven and permitted.
+
+**This is not merely hardening. It is judgment rendered in code.**
+
+---
+
+## Observability, Threat Containment, and Assurance
+
+Observability is not a passive mirror. It is the light through which segmentation becomes assurance.
+
+ZeroTrustBSD couples its microsegmentation with:
+
+- eBPF probes attached to VXLAN and MPLS ingress events
+- YARA-based rule triggers tied to suspicious syslog behaviors
+- Journald-bound telemetry that feeds both on-host and off-host SIEM integrations
+
+If a breach is attempted—or simulated—the system knows where, when, and which boundary was tested.
+
+This transforms ZeroTrustBSD from a configuration to a choreography. Every packet dances with intent.
 
 ---
 
@@ -39,7 +65,7 @@ Microsegmentation is a security technique that divides a network into fine-grain
 
 ```ascii
                         +------------------------+
-                        |   DynFi Manager        |
+                        |        Manager         |
                         |  (Central Mgmt Plane)  |
                         +-----------+------------+
                                     |
@@ -66,9 +92,24 @@ Microsegmentation is a security technique that divides a network into fine-grain
 |---------------------------|-------------|
 | 🔐 Limit Attack Surface    | Each VM or jail is isolated, minimizing breach impact. |
 | 🧠 Enforce Zero Trust      | Every connection is explicitly authenticated and filtered. |
-| 🧩 Multi-Tenant Ready      | Perfect for ministries, agencies, and SOCs under one appliance. |
+| 🧩 Multi-Tenant Ready      | Perfect for ministries, agencies, and MSSPs under one appliance. |
 | 🛰 OT/ICS Protection       | Isolate critical SCADA or control systems via L1–L3 boundaries. |
 | 🧾 Compliance Mapping      | Aligns with NIS2, ISO27001, IEC 62443, and STANAG. |
+
+ZeroTrustBSD does not presume a single topology. It supports:
+
+- Traditional layer 2 VLAN segmentation with tagged trunks
+- VXLAN overlays for software-defined cloud zones
+- MPLS tunnels for deterministic, high-speed east-west flows
+- CARP high availability pairs for resilient service tiers
+
+Each deployment mode retains policy fidelity—because the segmentation logic is not the network’s responsibility, but the operating system’s mandate.
+
+The vision of microsegmentation in ZeroTrustBSD is neither abstract nor enforced post-facto. It is part of the system’s *raison d’être*.
+
+A sovereign OS must not only isolate and report. It must predict, restrict, and remember. It must allow security teams to ask the questions that only architecture can answer.
+
+And when it renders its verdict—packet by packet, rule by rule—it must do so with precision, poetry, and proof.
 
 ---
 
@@ -140,6 +181,7 @@ Microsegmentation is the practice of breaking a network into secure zones to app
 ## 🧠 Why Microsegmentation in ZeroTrustBSD?
 
 ZeroTrustBSD uses OpenBSD’s native `pf` firewall combined with **VMM** and **jails** to create strong, tenant-isolated environments. Through **overlay technologies** like **VXLAN** or **GENEVE**, ZeroTrustBSD enables microsegmentation in:
+
 - Sovereign Cloud environments
 - OT/ICS zones (e.g. Purdue Model L2–L4)
 - Smart cities, ministries, and telecom networks
@@ -244,7 +286,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 
     Legend:
     ──────────────────────────────────────────────────────────────────────────────────────
-    • All sites run OpenBSD-based ZeroTrustBSD firewall with centralized DynFi control.
+    • All sites run OpenBSD-based ZeroTrustBSD firewall with centralized control.
     • Communication via BGP/MPLS core or SD-WAN (encrypted tunnels).
     • Identity control by RCDevs OpenOTP, authentication integrated with LDAP/AD.
     • Threat detection (Suricata/Zeek), observability (eBPF, Prometheus).
@@ -315,7 +357,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 
 ```ascii
                     ┌────────────────────┐
-                    │   DynFi Manager    │
+                    |      Manager       │
                     │ (Central Control)  │
                     └────────┬───────────┘
                              │
@@ -397,7 +439,7 @@ Use **VXLAN** for compatibility, performance, and simplicity. Use **GENEVE** onl
 ## 🧱 VXLAN + Microsegmentation Deployment
 ```ascii
                         +---------------------------+
-                        |  DynFi Manager (Control)  |
+                        |   Manager (Control)       |
                         +------------+--------------+
                                      |
                          VXLAN/GENEVE Overlay Fabric
@@ -436,12 +478,15 @@ VXLAN is used to build scalable, isolated L2 segments over L3 infrastructure. Ea
 
 ---
 
-## 📘 Learn More
+## References
 
-- [PF User Guide (OpenBSD)](https://man.openbsd.org/pf)
-- [VXLAN RFC 7348](https://tools.ietf.org/html/rfc7348)
-- [GENEVE RFC 8926](https://datatracker.ietf.org/doc/html/rfc8926)
-- [RCDevs OpenOTP](https://www.rcdevs.com/products/openotp/)
+- OpenBSD Packet Filter (PF): https://man.openbsd.org/pf.conf
+- RFC 7348: VXLAN - Virtual eXtensible Local Area Network
+- MPLS Architecture: https://datatracker.ietf.org/doc/html/rfc3031
+- OpenCTI: https://www.opencti.io/
+- ISO/IEC 27001: https://www.iso.org/isoiec-27001-information-security.html
+- NIS2 Directive: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+- DORA Regulation: https://finance.ec.europa.eu/dora_en
 
 ---
 
