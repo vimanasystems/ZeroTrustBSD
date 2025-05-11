@@ -4,7 +4,7 @@
 
 Imagine your digital infrastructure is a large government building. Traditionally, every room has an unlocked door, and anyone inside can walk freely. That’s the old way simple, but dangerous.
 
-**Microsegmentation** means giving every room its own lock—and each person only the keys they need to do their job. In cybersecurity terms, this prevents attackers from moving freely inside your systems, even if they manage to get in.
+**Microsegmentation** means giving every room its own lock, and each person only the keys they need to do their job. In cybersecurity terms, this prevents attackers from moving freely inside your systems, even if they manage to get in.
 
 ZeroTrustBSD turns this into a core principle. Every packet, service, and system interaction must be proven, permitted, and logged. This makes microsegmentation not just a network strategy, but a national defense mechanism.
 
