@@ -110,8 +110,8 @@ It is more than a firewall. It is the sovereign OS for tomorrow’s digital batt
 | **Cyber Sovereignty** | Build national infrastructure without foreign dependencies |
 | **Cost Efficiency**    | Avoid vendor lock-in and license fees |
 | **Audit & Compliance** | Proven alignment with modern regulations |
-| **National Defense**   | Export-free, tactical-ready, secure boot +
- hardware flexibility |
+| **National Defense**   | Export-free, tactical-ready and secure boot |
+ hardware flexibility | RISC-V, Intel, AMD and ARM Ready |
 
 ---
 
