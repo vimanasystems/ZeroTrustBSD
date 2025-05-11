@@ -22,7 +22,9 @@ This isn’t just security. It’s operational clarity, risk reduction, and stra
 ---
 # ZeroTrustBSD Deployment Topologies
 
-This document outlines key deployment topologies for ZeroTrustBSD across enterprise, telecom, and critical infrastructure (OT/ICS/IIoT) environments, including support for VXLAN and microsegmentation. This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. It includes ASCII topology diagrams for:
+This document outlines key deployment topologies for ZeroTrustBSD across enterprise, telecom, and critical infrastructure (OT/ICS/IIoT) environments, including support for VXLAN and microsegmentation. This document presents real-world deployment examples of **ZeroTrustBSD**, using OpenBSD’s secure architecture. 
+
+It includes ASCII topology diagrams for:
 
 - Core Microsegmentation
 - VXLAN-based Overlay Networks
@@ -33,7 +35,7 @@ This document outlines key deployment topologies for ZeroTrustBSD across enterpr
 
 Microsegmentation within ZeroTrustBSD is not merely a network practice—it is a philosophical stance embedded into the operating system's very fabric. Leveraging the secure-by-default design of OpenBSD, **ZeroTrustBSD** enforces granular control over east-west traffic, policy-governed enclaving, and privilege-separated service architecture.
 
-This document deconstructs the rationale, the topology, and the policy enforcement model behind ZeroTrustBSD’s microsegmentation framework—demonstrating how the operating system operates.
+This document deconstructs the rationale, the topology, and the policy enforcement model behind ZeroTrustBSD’s microsegmentation framework, demonstrating how the operating system operates.
 
 ## 🧱 What Is Microsegmentation?
 
