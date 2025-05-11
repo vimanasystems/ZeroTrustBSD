@@ -33,7 +33,9 @@ It includes ASCII topology diagrams for:
 
 ## Abstract
 
-Microsegmentation within ZeroTrustBSD is not merely a network practice—it is a philosophical stance embedded into the operating system's very fabric. Leveraging the secure-by-default design of OpenBSD, **ZeroTrustBSD** enforces granular control over east-west traffic, policy-governed enclaving, and privilege-separated service architecture.
+Microsegmentation within ZeroTrustBSD is not merely a network practice, it is a philosophical stance embedded into the operating system's very fabric. 
+
+Leveraging the secure-by-default design of OpenBSD, **ZeroTrustBSD** enforces granular control over east-west traffic, policy-governed enclaving, and privilege-separated service architecture.
 
 This document deconstructs the rationale, the topology, and the policy enforcement model behind ZeroTrustBSD’s microsegmentation framework, demonstrating how the operating system operates.
 
