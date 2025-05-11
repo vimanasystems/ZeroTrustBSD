@@ -87,7 +87,7 @@ It is more than a firewall. It is the sovereign OS for tomorrow’s digital batt
 | **Zero Trust Built-In**   | Microsegmentation, RBAC, MFA |
 | **Multi-Tenant Ready**    | VMM, jails, VXLAN, RBAC policies |
 | **Modern Threat Intel**   | Suricata, Wazuh, OpenCTI, MISP |
-| **DynFi + RCDevs Support**| Centralized UI + IAM (SSO, PKI, RADIUS) |
+| **Manager + IAM Support**| Centralized UI + IAM (SSO, PKI, RADIUS) |
 | **Field Proven Agility**  | Works in datacenter, tactical, edge, or satcom scenarios |
 
 ---
