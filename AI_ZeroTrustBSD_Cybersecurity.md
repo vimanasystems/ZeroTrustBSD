@@ -21,9 +21,9 @@ This guide explores how Articficial Intelligence can elevate the security operat
 
 ## 🛠 How to Integrate OpenAI Securely
 
-1. **Use OpenAI API behind a secure gateway** (VPN, bastion host).
+1. **Use AI API behind a secure gateway** (VPN, bastion host).
 2. **Filter input/output**: Never send raw secrets, PII, or full logs. Preprocess for context.
-3. **Local inference** (if needed): Use OSS-compatible models (e.g., GPT-J, LLaMA) with transformers for air-gapped systems.
+3. **Local inference** (if needed): Use OSS-compatible models (e.g., OpenAI, LLaMA including open source models) with transformers for air-gapped systems.
 4. **Audit trails**: Log AI prompts/responses for compliance and traceability.
 
 ---
