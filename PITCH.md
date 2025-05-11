@@ -1,12 +1,8 @@
-# 🚀 Vision & Value of ZeroTrustBSD
-
-> A modern, modular, and military-grade firewall operating system — built for digital sovereignty, resilience, and compliance.
-
----
-
 # 🚀 ZeroTrustBSD – Global Strategy Pitch
 
 > A sovereign, modular, and post-quantum operating system – built for digital autonomy, cyber resilience, and multi-regulatory compliance.
+
+> A modern, modular, and military-grade firewall operating system — built for digital sovereignty, resilience, and compliance.
 
 ---
 
