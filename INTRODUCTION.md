@@ -2,7 +2,7 @@
 
 **ZeroTrustBSD** is a security-hardened, open-source firewall and operating system built upon **OpenBSD**, engineered to meet the needs of modern digital sovereignty, regulatory compliance, and resilient infrastructure in high-risk or mission-critical environments.
 
-In a world of increasing cyber threats, geopolitical instability, and chip supply fragility, ZeroTrustBSD offers an open, auditable, and sovereign alternative to commercial firewall appliances — empowering governments, enterprises, and critical sectors to maintain full control over their security perimeter.
+In a world of increasing cyber threats, geopolitical instability, and chip supply fragility, ZeroTrustBSD offers an open, auditable, and sovereign alternative to commercial firewall appliances, empowering governments, enterprises, and critical sectors to maintain full control over their security perimeter.
 
 ---
 
@@ -27,7 +27,7 @@ Traditional firewalls, often built on closed platforms and proprietary firmware,
 | **Compliance**           | Built-in compliance templates for GDPR, NIS2, ISO 27001 |
 | **Deployment Agility**   | Supports air-gapped USB install, cloud VMs, PXE boot |
 | **Quantum Ready**        | Supports post-quantum encryption and QKD integration |
-| **DynFi Centralized Control** | Web GUI for managing multiple firewall instances |
+| **Centralized Control** | Web GUI for managing multiple firewall instances |
 
 ---
 
@@ -65,6 +65,3 @@ For architecture, deployment guides, and hardware details, please explore our fu
 
 - [README.md](./README.md)
 - [Hardware Guide](./HARDWARE_GUIDE.md)
-- [Installation Guide](./installation-guide.md)
-- [DynFi Integration](./dynfi.md)
-- [External Integration Guide](./EXTERNAL_INTEGRATION_GUIDE.md)
