@@ -33,7 +33,8 @@ His blade was drawn not once for pride;
 But only when the winds had lied.
 
 Beside this general moved the wind; 
-Not of war, but truth within.  
+Not of war, but truth within.
+ 
 The shinobi of Iga, clothed in dusk; 
 With hearts of stillness, eyes of trust.
 
