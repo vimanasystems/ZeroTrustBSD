@@ -9,17 +9,25 @@ In an age where cyber threats evolve faster than our ability to defend, **ZeroTr
 
 Built on hardened OpenBSD and engineered for defense, critical infrastructure, and regulated industry.
 
-ZeroTrustBSD is a sovereign cybersecurity operating system delivering native Zero Trust Architecture (ZTA) capabilities. Built upon OpenBSD, it integrates post-quantum encryption, policy automation, and military-grade networking to ensure security at every layer.
+ZeroTrustBSD is a sovereign cybersecurity operating system delivering native Zero Trust Architecture (ZTA) capabilities. 
+
+Built upon OpenBSD, it integrates post-quantum encryption, policy automation, and military-grade networking to ensure security at every layer.
 
 It is designed to meet the highest levels of regulatory and operational compliance across Europe and NATO-aligned organizations.
 
-**ZeroTrustBSD** is more than just a firewall, it is a fully integrated, **Autonomous Cyber Defense OS**, built from the ground up on the rock-solid foundation of **OpenBSD**. 
+**ZeroTrustBSD** is more than just a firewall, it is a fully integrated, 
+
+**Autonomous Cyber Defense OS**
+
+Built from the ground up on the rock-solid foundation of **OpenBSD**. 
 
 This platform was designed for those who demand absolute control, security, and scalability in the most hostile environments.
 
-Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. 
+Whether you’re securing the borders of a sovereign nation, protecting critical industrial infrastructure, or operating in the unforgiving fields of modern warfare, 
 
-The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network.
+**ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. 
+
+The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network. Not without attribute role based access control.
 
 Think of **ZeroTrustBSD** as your **first line of defense**, an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
 
