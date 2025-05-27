@@ -27,7 +27,7 @@ Whether you’re securing the borders of a sovereign nation, protecting critical
 
 **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. 
 
-The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, and Atrbute BAC rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network. Not without attribute role based access control.
+The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, and Atrbuted baccked distribution ident; rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network. Not without attribute role based access control.
 
 Think of **ZeroTrustBSD** as your **first line of defense**, an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
 
