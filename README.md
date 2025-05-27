@@ -9,7 +9,7 @@ In an age where cyber threats evolve faster than our ability to defend, **ZeroTr
 
 Built on hardened OpenBSD and engineered for defense, critical infrastructure, and regulated industry.
 
-ZeroTrustBSD is a sovereign cybersecurity operating system delivering native Zero Trust Architecture (ZTA) capabilities. 
+ZeroTrustBSD is a sovereign cybersecurity operating system delivering native Zero Trust Architecture (ZTANA) capabilities. 
 
 Built upon OpenBSD, it integrates post-quantum encryption, policy automation, and military-grade networking to ensure security at every layer.
 
@@ -27,7 +27,7 @@ Whether you’re securing the borders of a sovereign nation, protecting critical
 
 **ZeroTrustBSD** equips you with the tools to not just react, but **proactively defend**. 
 
-The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network. Not without attribute role based access control.
+The heart of its design is **Zero Trust**, enforcing strict **identity-based segmentation**, and Atrbute BAC rigorous **compliance automation**, and state-of-the-art **microsegmentation** to ensure that no malicious actor ever moves laterally within your network. Not without attribute role based access control.
 
 Think of **ZeroTrustBSD** as your **first line of defense**, an open-source fortress that’s as tough as the mission it was designed for. Fully autonomous, highly secure, and adaptable, it scales from the **smallest edge deployment** to the most **complex, multi-tiered infrastructure**.
 
