@@ -3,7 +3,7 @@
 > **Engineered for Nation-Scale Defense, Tactical Autonomy, and Critical Infrastructure Resilience**  
 > _“You don’t buy sovereignty. You build it — with **ZeroTrustBSD**.”_
 
-In an age where cyber threats evolve faster than patches are deployed, **ZeroTrustBSD** stands as a sovereign, open-source fortress — built on **OpenBSD**, hardened by **real-world war zones**, and designed for **those who defend what matters most**.
+In an age where cyber threats evolve faster than patches are deployed, **ZeroTrustBSD** stands as a sovereign, open-source fortress — built on **OpenBSD**, hardened by `pledge(2)`, `unveil(2)`, W^X, and securelevel — because **trust is a vulnerability**.
 
 This is not a firewall.  
 It is an **Autonomous Cyber Defense Operating System** — purpose-built for:
@@ -11,15 +11,13 @@ It is an **Autonomous Cyber Defense Operating System** — purpose-built for:
 - 💳 **Central banks & SWIFT networks**
 - ⚙️ **OT/ICS/SCADA systems**
 - 🛰 **Tactical edge & SATCOM deployments**
-- 🌍 **Sovereign cloud & disaster recovery**
+- ☁️ **Sovereign cloud & disaster recovery**
 
 Born from the mind of **Uday Moorjani** — former RSSI of Sint Maarten, cybersecurity architect for BNP Paribas, Airbus, Orange Cyberdefense, and the Cour de Justice de l’UE — this is **battle-tested expertise**, open-sourced for the world.
 
 Built on **OpenBSD**, hardened with `pledge(2)`, `unveil(2)`, W^X, and securelevel — because **trust is a vulnerability**.
 
 > ZeroTrustBSD: Where **sovereignty**, **resilience**, and **open-source truth** converge.
-
-For a full introduction, see [INTRODUCTION.md](INTRODUCTION.md).
 
 ---
 
@@ -87,23 +85,26 @@ ZeroTrustBSD integrates **FreeIPA** — because you shouldn’t have to choose b
 ---
 
 ## ☁️ Multi-Cloud & Private Cloud Integration
-ZeroTrustBSD works where you work.
 
-### **VMware NSX**
-- Microsegmentation at scale
-- Policy enforcement without vCenter tantrums
+ZeroTrustBSD operates as a sovereign enforcement boundary within heterogeneous cloud environments, ensuring that policy, identity, and cryptographic integrity remain under operator control regardless of the underlying infrastructure. It functions not as a passive appliance, but as an active, programmable node in the security control plane, capable of enforcing zero trust at the edge of any virtualized or cloud-native domain. The system integrates with both open and proprietary cloud platforms through standardized network, identity, and telemetry interfaces, ensuring interoperability without dependency. This is not integration for convenience — it is integration for control.
 
-### **OpenStack**
-- VXLAN via Neutron
-- Keystone + MFA = secure identity
+At the network layer, ZeroTrustBSD terminates overlay encapsulation protocols such as VXLAN and GENEVE, enabling seamless integration with software-defined networking fabrics. These overlays are used to extend Layer 2 segments across IP transport networks, allowing for consistent microsegmentation policies to be applied at the virtual machine or container interface level. The enforcement of access control is performed through anchored packet filter rulesets, where each tenant, service, or zone is assigned a dedicated rule context, preventing lateral movement and ensuring strict inter-segment isolation. These rules are dynamically updated based on infrastructure state changes, sourced from configuration management systems or orchestration APIs.
 
-### **AWS / Azure / GCP**
-- BGP-driven overlays
-- Identity federation
-- Observability with Prometheus + Grafana
+The control plane is designed for GitOps-compliant operations, where all firewall and routing configurations are version-controlled, cryptographically signed using `signify`, and audited through immutable logs. Configuration drift is actively monitored, and rollback mechanisms are implemented via ZFS snapshots, enabling deterministic recovery to a known-good state in the event of misconfiguration or compromise. Policy updates are ingested through webhook-driven event systems, allowing ZeroTrustBSD to react in real time to infrastructure provisioning, scaling, or decommissioning events. This ensures that security policy remains synchronized with operational state, even in highly dynamic environments.
 
-It doesn’t matter if your cloud is private, public, or a dream in someone’s PowerPoint.  
-ZeroTrustBSD secures it.
+Identity integration is achieved through standardized directory services and authentication protocols. The system interfaces with LDAPv3-compliant directory servers and supports Kerberos 5 for single sign-on and service ticket validation. Attribute-based access control (ABAC) is enforced at the network layer by mapping directory attributes — such as group membership, role, or clearance level — to firewall anchors and routing policies. Multi-factor authentication is supported through TOTP and challenge-response backends, ensuring that administrative access is protected against credential compromise. Certificate-based authentication is used for machine identities, with X.509 client certificates validated against a local trust store, enabling mutual TLS for service-to-service communication.
+
+For hybrid and multi-cloud connectivity, ZeroTrustBSD acts as a customer-edge (CE) function, establishing secure tunnels to cloud provider virtual private clouds. These tunnels are implemented using WireGuard, IPsec/IKEv2, or L2TPv3, ensuring confidentiality and integrity across untrusted transport networks. BGP peering is established with cloud provider route reflectors or transit gateways, enabling dynamic exchange of reachability information. Prefix filtering, route maps, and community-based policies are applied to control the propagation of routing information, preventing route hijacking and ensuring proper traffic engineering. Health-based path selection is implemented through active probing of next-hop availability using ICMP, TCP, or BFD, enabling automatic failover across redundant uplinks.
+
+Telemetry and observability are achieved through structured data export in JSON and protobuf formats. Logs, flow records, and metrics are forwarded via Syslog, gRPC, or HTTP streams to centralized analysis platforms. IPFIX is used to export network flow data for traffic analysis, anomaly detection, and capacity planning. Threat intelligence is integrated through OpenCTI, where indicators of compromise are correlated with network events to generate actionable alerts. Passive network telemetry is collected using Zeek, providing deep protocol analysis and behavioral baselining. Intrusion detection is performed inline using Suricata, with rulesets updated from open threat feeds or internal intelligence sources.
+
+In private cloud environments, ZeroTrustBSD integrates directly with hypervisor-level virtual switches such as Open vSwitch or native vswitch instances. It attaches to virtual network interfaces through passthrough or SR-IOV-capable NICs, enabling enforcement at the vNIC level. SDN controller interaction is achieved through RESTful APIs, where topology and policy directives are consumed and translated into local `pf.conf` anchors and state tracking rules. Tenant isolation is enforced through VLAN, VXLAN, or VRF-like constructs, with strict inter-zone access controls applied via stateful packet inspection.
+
+Compliance automation is embedded within the system, where regulatory requirements from NIS2, DORA, ISO 27001, and LPM are translated into technical controls. These include mandatory logging thresholds, encryption mandates, access review cycles, and configuration baselines. Controls are implemented as code, versioned, and signed, ensuring auditability and reproducibility. The system generates compliance reports based on real-time configuration and event data, reducing the burden of manual audits.
+
+Sovereignty is preserved by ensuring that all critical functions — policy enforcement, key management, identity validation, and logging — remain under operator control. The system does not rely on cloud provider security services for core functions. Instead, it subordinates the cloud infrastructure to its own security model, ensuring that even in a vendor-managed environment, the operator retains full authority over access, encryption, and monitoring.
+
+This architectural approach ensures that ZeroTrustBSD functions not as a siloed security appliance, but as a first-class participant in modern cloud ecosystems — enforcing zero trust, cryptographic integrity, and regulatory compliance across dynamic, distributed, and hybrid environments. It is, in essence, a protocol-compliant, standards-based, sovereign enforcement node — deployable anywhere from the edge to the core, from private data centers to public cloud VPCs.
 
 ---
 
