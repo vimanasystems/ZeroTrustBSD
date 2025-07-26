@@ -142,6 +142,16 @@ ZeroTrustBSD is the culmination of a career spent defending what matters.
 Now, it’s open for the world. What's up Q?
 
 ---
+## 🏆 Built by Uday Moorjani  
+> **Cybersecurity Architect | Former RSSI, Sint Maarten | SWIFT, NIS2, DORA, PQC Expert**
+
+This is not theory.  
+It is **battle-tested expertise** — from securing central banks to teaching Zero Trust at École Hexagone.
+
+ZeroTrustBSD is the culmination of a career spent defending what matters.
+
+Now, it’s open for the world.
+---
 
 ## 📜 License  
 ZeroTrustBSD is released under the **BSD 3-Clause License** — free to use, modify, and deploy — even commercially.
