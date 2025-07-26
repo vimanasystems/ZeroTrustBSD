@@ -1,67 +1,151 @@
-# 📘 Introduction to ZeroTrustBSD
+# 🛡️ ZeroTrustBSD: The Sovereign Cyber Defense OS  
+> _"You don’t buy sovereignty. You build it — with **ZeroTrustBSD**."_
 
-**ZeroTrustBSD** is a security-hardened, open-source firewall and operating system built upon **OpenBSD**, engineered to meet the needs of modern digital sovereignty, regulatory compliance, and resilient infrastructure in high-risk or mission-critical environments.
+## 🌍 A New Era of Digital Sovereignty
 
-In a world of increasing cyber threats, geopolitical instability, and chip supply fragility, ZeroTrustBSD offers an open, auditable, and sovereign alternative to commercial firewall appliances, empowering governments, enterprises, and critical sectors to maintain full control over their security perimeter.
+In an age of quantum threats, cyber warfare, and vendor lock-in, **ZeroTrustBSD** emerges as a sovereign, open-source fortress — built not for convenience, but for survival.
 
----
+This is not another firewall distro.  
+It is an **Autonomous Cyber Defense Operating System** — engineered for:
+- **National governments**
+- **Central banks**
+- **OT/ICS/SCADA systems**
+- **Tactical edge deployments**
+- **Critical infrastructure under NIS2, DORA, and LPM**
 
-## 🌐 Why ZeroTrustBSD?
+Born from real-world battles — securing the **Central Bank of Sint Maarten**, **SWIFT networks at BNP Paribas**, and **industrial systems under ANSSI compliance** — this is **battle-tested expertise**, open-sourced for the world.
 
-Traditional firewalls, often built on closed platforms and proprietary firmware, present systemic risk and lack transparency. ZeroTrustBSD redefines trust at the hardware and software level through:
+Built on **OpenBSD**, hardened by `pledge(2)`, `unveil(2)`, and W^X, ZeroTrustBSD enforces **Zero Trust by design**, **microsegmentation by default**, and **regulatory compliance by automation**.
 
-- Open-source software only — BSD-licensed and verifiable
-- Hardware-agnostic deployments — from data centers to tactical radios
-- Secure-by-default posture — no hidden services, no trust assumptions
-
----
-
-## 🧠 What Sets It Apart
-
-| Area                     | Feature |
-|--------------------------|---------|
-| **Security Architecture**| Based on OpenBSD, with pf, VMM, relayd or HaProxy, unveil/pledge |
-| **Identity & Access**    | Integrated with RCDevs OpenOTP, Azure AD, LDAP and FreeIPA|
-| **Network Segmentation** | Microsegmentation with VXLAN, MPLS, and jails |
-| **Observability**        | Native eBPF, Prometheus, YARA, Wazuh |
-| **Compliance**           | Built-in compliance templates for GDPR, NIS2, ISO 27001 |
-| **Deployment Agility**   | Supports air-gapped USB install, cloud VMs, PXE boot |
-| **Quantum Ready**        | Supports post-quantum encryption and QKD integration |
-| **Centralized Control** | Web GUI for managing multiple firewall instances |
+It is not just secure.  
+It is **uncompromising**.
 
 ---
 
-## 🚀 Designed For
+## ⚔️ Why ZeroTrustBSD Exists
 
-ZeroTrustBSD serves as a trusted perimeter and internal segmentation solution for:
+Because sovereignty cannot be outsourced.
 
-- **Government Agencies**
-- **Defense & Tactical Environments**
-- **Financial Services & FinTech**
-- **Industrial Systems (OT, SCADA)**
-- **Telco & Satellite Edge Nodes**
-- **Secure Cloud & On-Prem Deployments**
+Because a bank in Luxembourg, a grid in the Caribbean, or a command post in a war zone should not depend on a vendor’s promise.
 
----
+Because when the quantum storm hits, we must already be secure.
 
-## 📦 Build Philosophy
+Because too many “secure” systems are built on bloated Linux kernels, opaque binaries, and backdoored firmware.
 
-- **Minimal Attack Surface**: Only essential services included by default
-- **Isolation First**: VMM and jails isolate tenants, users, and risk zones
-- **Audit Friendly**: Logs are structured, exportable, and verifiable
-- **Zero Trust Compliant**: Every user, device, and flow is authenticated
+ZeroTrustBSD exists because:
+- **RSA-2048 will fall to quantum computers by 2030**
+- **Legacy firewalls cannot enforce true Zero Trust**
+- **NIS2 and DORA demand real compliance — not checkbox exercises**
+- **Satellite internet (Starlink), private 5G (srsRAN), and tactical mobility require sovereign stacks**
+
+And because one man — **Uday Moorjani** — decided to build the future, not wait for it.
 
 ---
 
-## 🌍 Vision
+## 🧱 Core Principles
 
-> "In the age of digital sovereignty, ZeroTrustBSD is more than a firewall — it's a foundation for secure, sovereign infrastructure."
+ZeroTrustBSD is built on five unbreakable pillars:
 
-We believe every nation, enterprise, and operator should have access to **transparent, inspectable, and trustworthy** cybersecurity systems — free from vendor lock-in or foreign interference.
+### 1. **Sovereignty First**
+No cloud dependency. No vendor lock-in. No opaque binaries.  
+Only open-source, auditable, reproducible code — because **your security cannot be controlled by a third party**.
+
+### 2. **Zero Trust by Design**
+No implicit trust. No flat networks.  
+Every service runs in **jails, VMs, or VXLANs**, with **identity-based access control** enforced by `pf.conf` anchors.
+
+### 3. **Post-Quantum Ready**
+Integrated with **OQS-OpenSSL** (Kyber, Dilithium) — because **PQC migration starts now**, not when NIST finalizes standards.
+
+### 4. **Regulatory Compliance Built-In**
+Automated controls for:
+- **NIS2** (Article 21, risk management)
+- **DORA** (ICT risk, incident reporting)
+- **ISO 27001** (A.13, A.14)
+- **LPM** (French military-grade segmentation)
+
+No more audit panic.  
+Compliance is code.
+
+### 5. **Tactical Resilience**
+Runs on:
+- **Starlink** (SATCOM)
+- **srsRAN** (private 4G/5G)
+- **Raspberry Pi** (edge)
+- **NUC** (data center)
+
+Deployable in **embassies, disaster zones, or air-gapped bunkers** — with or without internet.
 
 ---
 
-For architecture, deployment guides, and hardware details, please explore our full documentation:
+## 🚀 Who Needs ZeroTrustBSD?
 
-- [README.md](./README.md)
-- [Hardware Guide](./HARDWARE_GUIDE.md)
+### 🏛️ **Governments & National Defense**
+- Secure diplomatic enclaves
+- Air-gapped command centers
+- Cyber defense for critical infrastructure
+- NIS2-compliant firewalls
+
+### 💳 **Financial Institutions**
+- SWIFT, SEPA, Target2, PCI-DSS
+- Zero Trust transaction security
+- PQC migration for core banking
+
+### ⚙️ **OT/ICS/SCADA Operators**
+- Purdue Model enforcement
+- IEC 62443, NIS2, ISO 27001 compliance
+- Secure remote access for plant technicians
+
+### 🌐 **Sovereign Cloud & Edge**
+- GitOps-signed firewall policies
+- Federated identity
+- ZFS rollback for immutable states
+
+### 🛰 **Tactical & Remote Deployments**
+- SATCOM + 5G integration
+- Mobile command posts
+- Disaster recovery & humanitarian ops
+
+---
+
+## 🔮 The Future Is Autonomous
+
+ZeroTrustBSD is not just a firewall.  
+It is an **Autonomous Cyber Defense OS** — capable of:
+- Self-securing in hostile environments
+- Enforcing policy without human intervention
+- Detecting threats with Wazuh, Suricata, Zeek
+- Generating AI-powered incident reports
+
+It unifies:
+- **Firewall**
+- **Router**
+- **SIEM**
+- **Compliance Engine**
+- **Identity Manager**
+
+All on a single, hardened OpenBSD base.
+
+> This is not the future.  
+> This is the **only way forward**.
+
+---
+
+## 🏆 Built by Uday Moorjani  
+> **Cybersecurity Architect | Former RSSI, Sint Maarten | SWIFT, NIS2, DORA, PQC Expert**
+
+This is not theory.  
+It is **battle-tested expertise** — from securing central banks to teaching Zero Trust at École Hexagone.
+
+ZeroTrustBSD is the culmination of a career spent defending what matters.
+
+Now, it’s open for the world. What's up Q?
+
+---
+
+## 📜 License  
+ZeroTrustBSD is released under the **BSD 3-Clause License** — free to use, modify, and deploy — even commercially.
+
+> **Sovereignty is not a feature. It’s a duty.**  
+This project is free to use, but intended for national defense, critical infrastructure, and ethical cybersecurity.  
+We do not support misuse, surveillance, or authoritarian control.
