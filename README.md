@@ -19,6 +19,8 @@ Built on **OpenBSD**, hardened with `pledge(2)`, `unveil(2)`, W^X, and securelev
 
 > ZeroTrustBSD: Where **sovereignty**, **resilience**, and **open-source truth** converge.
 
+For a full introduction, see [INTRODUCTION.md](INTRODUCTION.md).
+
 ---
 
 ## 🚀 Quick Start
