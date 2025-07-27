@@ -304,7 +304,22 @@ We trust **attributes, certificates, and policy**.
 | **SBAC**<br>*(Service-Based Access Control)* | Access is granted to services, not users. | Microservices in jails/VMMs authenticate via mTLS or Keycloak service accounts. | `service.name=swift-gateway`, `service.env=prod`, `service.auth=mtls` |
 
 ---
-### 🛡 How Attributes Drive Enforcement
+
+### 🔑 Why Keycloak > Kerberos
+
+**Kerberos is legacy** — a 1980s protocol with no native API support, no attribute richness, and no integration with modern cloud or Zero Trust stacks.
+
+**Keycloak is sovereign-ready**:
+- ✅ **Attribute-Rich**: Every token carries context (device, location, role, compliance)
+- ✅ **Modern Protocols**: OpenID Connect, OAuth2, UMA
+- ✅ **Adaptive Authentication**: Enforce MFA based on risk
+- ✅ **Identity Brokering**: Integrate LDAP, AD, or social providers
+- ✅ **API-First**: Secures microservices, SPAs, and CLI tools
+
+In ZeroTrustBSD, Keycloak is not just for login.  
+It is the **policy engine** — where attributes become firewall rules.
+
+---
 
 ZeroTrustBSD uses **attribute-to-policy translation** to enforce real Zero Trust:
 
