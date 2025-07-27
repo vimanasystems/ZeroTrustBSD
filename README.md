@@ -39,9 +39,9 @@ Just **code, will, and freedom**.
 | Sector | Why ZeroTrustBSD |
 |--------|------------------|
 | 🏛️ **Government & Defense** | Secured Sint Maarten’s central bank, prosecutor, airport, SCADA. Now open for all. |
-| 💳 **Financial Institutions** | SWIFT, SEPA, Target2, PCI-DSS — secured with PQC-ready Zero Trust. |
-| ⚙️ **OT/ICS/SCADA** | Purdue Model, IEC 62443, microsegmentation — no lateral movement. Ever. |
-| 🛰 **Tactical & Remote** | Runs on Starlink, srsRAN, Raspberry Pi — ideal for embassies, disaster zones, military ops. |
+| 💳 **Financial Institutions** | SWIFT, SEPA, Target2, PCI-DSS | secured with PQC-ready Zero Trust. |
+| ⚙️ **OT/ICS/SCADA** | Purdue Model, IEC 62443, microsegmentation | no lateral movement. Ever. |
+| 🛰 **Tactical & Remote** | Runs on Starlink, srsRAN, Raspberry Pi | ideal for embassies, disaster zones, military ops. |
 | ☁️ **Sovereign Cloud** | GitOps-signed policies, ZFS rollback, air-gapped deployable. |
 
 ---
