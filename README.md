@@ -73,12 +73,14 @@ Just **code, will, and freedom**.
 ## 🛡 FreeIPA: Because Identity Is Power
 ZeroTrustBSD integrates **FreeIPA** — because you shouldn’t have to choose between security and sanity.
 
-- **Centralized Auth** via LDAP
-- **Kerberos SSO** — because passwords are for peasants
-- **MFA Enforcement** — TOTP, OpenOTP, whatever you trust
-- **RBAC** — because not everyone should access the nuclear codes
-- **Host-Based Access Control** — only trusted devices get in
-- **Audit Logging** — for when the auditors come knocking
+| Feature | Description |
+|--------|-------------|
+| **Centralized Auth** | via LDAP |
+| **Kerberos SSO** | because passwords are for peasants |
+| **MFA Enforcement** | TOTP, OpenOTP, whatever you trust |
+| **RBAC** | because not everyone should access the nuclear codes |
+| **Host-Based Access Control** | only trusted devices get in |
+| **Audit Logging** | for when the auditors come knocking |
 
 👉 Think of it as **identity with teeth**.
 
