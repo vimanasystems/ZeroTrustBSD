@@ -278,19 +278,57 @@ You need **control**.
 
 ---
 
-## 🔐 Access Control Models (OpenBSD-Aware)
+## 🔐 Access Control Models (ZeroTrustBSD-Aware)
 
-| Model | OpenBSD Support |
-|------|-----------------|
-| **MAC (Securelevel, Pledge, Unveil)** | Native — the OS is its own bouncer |
-| **ABAC (LDAP + PF + Certs)** | Supported — attribute-based, not guess-based |
-| **PBAC (Policy-Based via pf.conf)** | Native — your firewall rules are law |
-| **Certificate/Key-Based ACLs** | Fully Supported — no passwords, just trust |
-| **Capability-Based IPC (pledge/capsicum)** | Supported — because even processes need limits |
+ZeroTrustBSD enforces a **multi-layered, attribute-rich access control architecture** — not reliant on legacy protocols, but built for **sovereign, zero-trust environments** where every decision must be **verifiable, auditable, and cryptographically enforced**.
 
-> OpenBSD believes in **deterministic, auditable, minimal-privilege** access.  
-> No magic. No mystery. Just control.
+This is not compliance theater.  
+It is **operational truth** — forged in deployments across Sint Maarten, BNP Paribas, Cour de Justice de l’UE, and OT/ICS networks under ANSSI and NIS2.
 
+We do not trust Kerberos.  
+We trust **attributes, certificates, and policy**.
+
+---
+
+### 🧩 The Access Control Matrix
+
+| Model | Principle | Enforcement in ZeroTrustBSD | Attributes Used |
+|------|----------|-------------------------------|----------------|
+| **ABAC**<br>*(Attribute-Based Access Control)* | Access is granted based on dynamic attributes — not static roles. | Keycloak/OIDC provides user/device/session attributes → mapped to `pf.conf` anchors, jail contexts, or VMM policies via CISO Assistant AI. | `user.role=finance-admin`, `device.os=OpenBSD`, `device.fim=clean`, `location=HQ`, `time=09:00-17:00`, `network.trusted=true`, `cert.valid=true` |
+| **PBAC**<br>*(Policy-Based Access Control)* | The firewall decides — not identity. Immutable rules enforce zero trust. | Signed `pf.conf` anchors (via `signify`) define per-tenant, per-VXLAN rules. No override possible. | `policy.zone=SWIFT-CDE`, `policy.class=air-gapped`, `policy.signed=yes` |
+| **HBAC**<br>*(Host-Based Access Control)* | It’s not who you are — it’s what device you’re on. | Hosts enrolled in FreeIPA or Keycloak with X.509 certs. Only compliant, signed, patched devices gain access. | `host.type=NUC`, `host.enrolled=true`, `host.fim_status=clean`, `host.cert_status=valid` |
+| **RBAC**<br>*(Role-Based Access Control)* | Your job title determines your access. | FreeIPA/Keycloak groups → POSIX groups → enforced via SSSD/PAM and `pf` rules. | `group=soc-analyst`, `role=ot-engineer` |
+| **CBAC**<br>*(Capability-Based Access Control)* | You can only do what your process is allowed to do. | Enforced via `pledge(2)`, `unveil(2)`, and future `capsicum`. No privilege escalation. | `syscall.scope=inet+stdio`, `file.path=/var/www`, `ipc.capability=limited` |
+| **TBAC**<br>*(Time-Based Access Control)* | Even if you’re allowed — not today, not now. | Keycloak policies or cron-driven `pf` reloads enforce access windows. | `access.start=08:00`, `access.end=18:00`, `access.day=mon-fri` |
+| **IBAC**<br>*(Identity-Based Access Control)* | You are your cryptographic identity — not your password. | SSH certificates, mTLS, `signify`-signed identities. No passwords. | `identity.type=cert`, `identity.issuer=ztb-ca`, `identity.expires=2026-01-01` |
+| **SBAC**<br>*(Service-Based Access Control)* | Access is granted to services, not users. | Microservices in jails/VMMs authenticate via mTLS or Keycloak service accounts. | `service.name=swift-gateway`, `service.env=prod`, `service.auth=mtls` |
+
+---
+### 🛡 How Attributes Drive Enforcement
+
+ZeroTrustBSD uses **attribute-to-policy translation** to enforce real Zero Trust:
+
+```yaml
+# Example: Keycloak JWT → ZeroTrustBSD Policy
+{
+  "sub": "u.moorjani@zerotrustbsd.com",
+  "role": "security-architect",
+  "device": {
+    "os": "OpenBSD",
+    "fim": "clean",
+    "cert_valid": true,
+    "enrolled": true
+  },
+  "session": {
+    "location": "HQ",
+    "network": "trusted",
+    "time": "14:30"
+  },
+  "access": {
+    "allowed_zones": ["SOC", "SWIFT-CDE"],
+    "valid_until": "2025-12-31T23:59:59Z"
+  }
+}
 ---
 
 ## 🏢 Enterprise & Sector Use Cases
