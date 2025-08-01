@@ -133,16 +133,21 @@ The foundation of this architecture is **VXLAN (Virtual Extensible LAN)**, used 
 
 Routing within this environment is managed through **BGP (Border Gateway Protocol)**, specifically `openbgpd`, the OpenBSD implementation of the protocol. BGP is not used here for internet peering, but as a **dynamic control plane for private, secure overlays**. It enables **autonomous route convergence** in multi-homed or meshed topologies, allowing for rapid failover when a primary link fails. The system maintains multiple paths to critical destinations, with **health-based path selection** using active probing (ICMP, TCP, BFD) to detect link degradation before packet loss occurs. This is not static routing with failover scripts. It is **self-healing networking**, where the system reacts to environmental changes in real time, without human intervention.
 
-High availability is enforced through **CARP (Common Address Redundancy Protocol)**, OpenBSD’s native implementation of a fault-tolerant virtual IP mechanism. CARP allows two or more ZeroTrustBSD nodes to share a virtual IP address, with one acting as master and the others in backup mode. State synchronization is minimal — only the virtual IP and its associated MAC address are shared — ensuring that the system remains lightweight and secure. In the event of a node failure, the backup assumes the virtual IP within seconds, maintaining connectivity without requiring client reconfiguration. This is not a load balancer. It is a **survivable perimeter**, capable of withstanding hardware failure, power loss, or physical destruction.
+High availability is enforced through **CARP (Common Address Redundancy Protocol)**, OpenBSD’s native implementation of a fault-tolerant virtual IP mechanism. CARP allows two or more ZeroTrustBSD nodes to share a virtual IP address, with one acting as master and the others in backup mode. 
 
-To ensure that attacks can be detected and analyzed, ZeroTrustBSD integrates **R-SPAN (Remote Switched Port Analyzer)** for passive network monitoring. R-SPAN allows traffic from one or more source ports to be mirrored across an IP network to a remote analyzer, enabling centralized visibility in distributed environments. In tactical deployments, this is used to feed traffic into **Suricata** for inline IDS/IPS, **Zeek** for passive telemetry, and **Wazuh** for log correlation and compliance mapping. The mirrored traffic is encrypted using IPsec or WireGuard, ensuring that the monitoring channel itself cannot be exploited. This is not surveillance. It is **forensic readiness** — the ability to reconstruct events after a breach, even in air-gapped or disconnected environments.
+State synchronization is minimal, only the virtual IP and its associated MAC address are shared, ensuring that the system remains lightweight and secure. In the event of a node failure, the backup assumes the virtual IP within seconds, maintaining connectivity without requiring client reconfiguration. 
+This is not a load balancer. It is a **survivable perimeter**, capable of withstanding hardware failure, power loss, or physical destruction.
 
-The integration of **SATCOM (Satellite Communications)** and **SD-RAN (Software-Defined Radio Access Network)** further extends the reach of this architecture. **Starlink** is used as a high-throughput, low-latency WAN link, capable of delivering gigabit-class connectivity to remote or mobile command posts. The system handles Starlink’s **Carrier-Grade NAT (CGNAT)** through **Tailscale** or **OpenVPN**, enabling inbound connections without requiring public IP allocation. **srsRAN**, an open-source 4G/5G stack, is deployed within FreeBSD jails or OpenBSD VMM instances to create private mobile networks for tactical units. These networks support **network slicing**, **edge computing**, and **quantum-safe encryption**, ensuring that mobile communications remain secure and sovereign.
+To ensure that attacks can be detected and analyzed, ZeroTrustBSD integrates **R-SPAN (Remote Switched Port Analyzer)** for passive network monitoring. R-SPAN allows traffic from one or more source ports to be mirrored across an IP network to a remote analyzer, enabling centralized visibility in distributed environments. In tactical deployments, this is used to feed traffic into **Suricata** for inline IDS/IPS, **Zeek** for passive telemetry, and **Wazuh** for log correlation and compliance mapping. The mirrored traffic is encrypted using IPsec or WireGuard, ensuring that the monitoring channel itself cannot be exploited. 
+This is not surveillance. It is **forensic readiness** — the ability to reconstruct events after a breach, even in air-gapped or disconnected environments.
+
+The integration of **SATCOM (Satellite Communications)** and **SD-RAN (Software-Defined Radio Access Network)** further extends the reach of this architecture. **Starlink** is used as a high-throughput, low-latency WAN link, capable of delivering gigabit-class connectivity to remote or mobile command posts. The system handles Starlink’s **Carrier-Grade NAT (CGNAT)** through **Tailscale** or **OpenVPN**, enabling inbound connections without requiring public IP allocation. **srsRAN**, an open-source 4G/5G stack, is deployed within FreeBSD jails or OpenBSD VMM instances to create private mobile networks for tactical units.
+These networks support **network slicing**, **edge computing**, and **quantum-safe encryption**, ensuring that mobile communications remain secure and sovereign.
 
 All configuration changes are **cryptographically signed** using `signify`, OpenBSD’s digital signature tool. This ensures that only authorized administrators can modify firewall rules, routing tables, or system settings. The entire `/etc` directory is version-controlled and monitored for integrity using `unveil(2)` and `pledge(2)`, preventing unauthorized modifications even if an attacker gains root access. This is not configuration management. It is **policy sovereignty** — the ability to prove, at any moment, that the system is running exactly what it should be running.
 
 In operational terms, this architecture has been deployed in real-world scenarios:
-- Securing the **Central Bank of Sint Maarten** after Hurricane Irma, using satellite and radio links to restore core banking functions.
+- Securing the **Central Bank** after Hurricane, using satellite and radio links to restore core banking functions.
 - Connecting **remote government offices** in the Caribbean via fiber and microwave, with VXLAN overlays enforcing compliance with ISO 27001.
 - Deploying **mobile command posts** for disaster response, where ZeroTrustBSD ran on NUCs powered by solar generators, connected via Starlink and srsRAN.
 
@@ -161,30 +166,36 @@ The design of ZeroTrustBSD’s tactical networking is not theoretical. It is der
   
 - In **Anguilla**, a cross-border interconnection project used **BGP over dark fiber** to link government sites, with ZeroTrustBSD acting as the CE function, enforcing **CARP failover** and **VXLAN segmentation** between departments. The system survived a fiber cut due to coastal erosion, with **automatic failover to a microwave backup**.
 
-- For **Digicel’s Smart Grid** in Sint Maarten, ZeroTrustBSD was deployed to secure **SCADA communications** between power substations and the control center. The system used **jails for service isolation**, **Suricata for anomaly detection**, and **Wazuh for FIM on critical OT binaries**. All traffic was encrypted with **WireGuard**, and logs were signed and stored on ZFS snapshots.
+- For **Mobile Telecom Company’s Smart Grid** in Sint Maarten, ZeroTrustBSD was deployed to secure **SCADA communications** between power substations and the control center. The system used **jails for service isolation**, **Suricata for anomaly detection**, and **Wazuh for FIM on critical OT binaries**.
+All traffic was encrypted with **WireGuard**, and logs were signed and stored on ZFS snapshots.
 
-- During a **disaster recovery exercise** in the French Caribbean, ZeroTrustBSD was deployed on **Raspberry Pi 4 units** inside waterproof enclosures, powered by solar panels, and connected via **srsRAN + Starlink**. The nodes formed a **BGP mesh**, with **CARP for HA**, and enforced **zero-trust access** to emergency services. The entire stack was **signed, version-controlled, and auditable**.
+- During a **disaster recovery exercise** in the French Caribbean, ZeroTrustBSD was deployed on **Raspberry Pi 4 units** inside waterproof enclosures, powered by solar panels, and connected via **srsRAN + SATCOM and Sub-terrestrial Fiber optics.**. The nodes formed a **BGP mesh**, with **CARP for HA**, and enforced **zero-trust access** to emergency services. The entire stack was **signed, version-controlled, and auditable**.
 
 These deployments prove that **sovereignty is not a feature of the cloud**.  
 It is a function of **design, discipline, and open-source truth**.
 
 ## 🛰️ Tactical Networking: Built for War, Not Meetings
 
-Tactical networking, within the ZeroTrustBSD framework, is not a convenience layer for remote access. It is a **survivable communications architecture** engineered for environments where infrastructure is degraded, contested, or absent. It assumes failure at every level — from physical links to cryptographic trust — and enforces resilience through protocol-level redundancy, cryptographic integrity, and autonomous policy enforcement. This is not enterprise networking scaled down. It is **military-grade networking scaled out**, designed for sovereignty, mobility, and survival in the most hostile conditions.
+Tactical networking, within the ZeroTrustBSD framework, is not a convenience layer for remote access. It is a **survivable communications architecture** engineered for environments where infrastructure is degraded, contested, or absent. It assumes failure at every level, from physical links to cryptographic trust and enforces resilience through protocol-level redundancy, cryptographic integrity, and autonomous policy enforcement. 
+This is not enterprise networking scaled down. It is **military-grade networking scaled out**, designed for sovereignty, mobility, and survival in the most hostile conditions.
 
-At its core, ZeroTrustBSD treats the network as a **dynamic, hostile, and ephemeral medium** — not a trusted transport. Every link is assumed to be monitored, every node potentially compromised, and every route subject to disruption. The system responds not with fragility, but with **adaptive resilience**, leveraging a combination of **VXLAN-based microsegmentation**, **BGP-driven topology convergence**, **CARP-based high availability**, and **R-SPAN for passive forensic visibility**. These are not features. They are **tactical primitives** — the building blocks of a sovereign edge.
+At its core, ZeroTrustBSD treats the network as a **dynamic, hostile, and ephemeral medium**, not a trusted transport. Every link is assumed to be monitored, every node potentially compromised, and every route subject to disruption. The system responds not with fragility, but with **adaptive resilience**, leveraging a combination of **VXLAN-based microsegmentation**, **BGP-driven topology convergence**, **CARP-based high availability**, and **R-SPAN for passive forensic visibility**. 
+These are not features. They are **tactical primitives** — the building blocks of a sovereign edge.
 
-The foundation of this architecture is **VXLAN (Virtual Extensible LAN)**, used to extend Layer 2 segments across IP transport networks. Unlike traditional VLANs, which are constrained by physical topology, VXLAN enables **logical segmentation** across geographically dispersed sites, allowing for consistent policy enforcement regardless of physical location. In ZeroTrustBSD, VXLAN overlays are terminated at the edge of each enclave, with **anchored `pf.conf` rulesets** enforcing strict inter-segment access control. Each segment is treated as a **zero-trust zone**, where identity, not IP address, determines access. This model aligns with the **Purdue Enterprise Reference Architecture (PERA)** for industrial control systems, ensuring that OT/ICS environments are isolated from IT and DMZ segments, even when traversing shared underlay networks.
+The foundation of this architecture is **VXLAN (Virtual Extensible LAN)**, used to extend Layer 2 segments across IP transport networks. Unlike traditional VLANs, which are constrained by physical topology, VXLAN enables **logical segmentation** across geographically dispersed sites, allowing for consistent policy enforcement regardless of physical location. In ZeroTrustBSD, VXLAN overlays are terminated at the edge of each enclave, with **anchored `pf.conf` rulesets** enforcing strict inter-segment access control. Each segment is treated as a **zero-trust zone**, where identity, not IP address, determines access. 
+This model aligns with the **Purdue Enterprise Reference Architecture (PERA)** for industrial control systems, ensuring that OT/ICS environments are isolated from IT and DMZ segments, even when traversing shared underlay networks.
 
 Routing within this environment is managed through **BGP (Border Gateway Protocol)**, specifically `openbgpd`, the OpenBSD implementation of the protocol. BGP is not used here for internet peering, but as a **dynamic control plane for private, secure overlays**. It enables **autonomous route convergence** in multi-homed or meshed topologies, allowing for rapid failover when a primary link fails. The system maintains multiple paths to critical destinations, with **health-based path selection** using active probing (ICMP, TCP, BFD) to detect link degradation before packet loss occurs. This is not static routing with failover scripts. It is **self-healing networking**, where the system reacts to environmental changes in real time, without human intervention.
 
 High availability is enforced through **CARP (Common Address Redundancy Protocol)**, OpenBSD’s native implementation of a fault-tolerant virtual IP mechanism. CARP allows two or more ZeroTrustBSD nodes to share a virtual IP address, with one acting as master and the others in backup mode. State synchronization is minimal — only the virtual IP and its associated MAC address are shared — ensuring that the system remains lightweight and secure. In the event of a node failure, the backup assumes the virtual IP within seconds, maintaining connectivity without requiring client reconfiguration. This is not a load balancer. It is a **survivable perimeter**, capable of withstanding hardware failure, power loss, or physical destruction.
 
-To ensure that attacks can be detected and analyzed, ZeroTrustBSD integrates **R-SPAN (Remote Switched Port Analyzer)** for passive network monitoring. R-SPAN allows traffic from one or more source ports to be mirrored across an IP network to a remote analyzer, enabling centralized visibility in distributed environments. In tactical deployments, this is used to feed traffic into **Suricata** for inline IDS/IPS, **Zeek** for passive telemetry, and **Wazuh** for log correlation and compliance mapping. The mirrored traffic is encrypted using IPsec or WireGuard, ensuring that the monitoring channel itself cannot be exploited. This is not surveillance. It is **forensic readiness** — the ability to reconstruct events after a breach, even in air-gapped or disconnected environments.
+To ensure that attacks can be detected and analyzed, ZeroTrustBSD integrates **R-SPAN (Remote Switched Port Analyzer)** for passive network monitoring. R-SPAN allows traffic from one or more source ports to be mirrored across an IP network to a remote analyzer, enabling centralized visibility in distributed environments. In tactical deployments, this is used to feed traffic into **Suricata** for inline IDS/IPS, **Zeek** for passive telemetry, and **Wazuh** for log correlation and compliance mapping. The mirrored traffic is encrypted using IPsec or WireGuard, ensuring that the monitoring channel itself cannot be exploited. This is not surveillance. 
+It is **forensic readiness** — the ability to reconstruct events after a breach, even in air-gapped or disconnected environments.
 
 The integration of **SATCOM (Satellite Communications)** and **SD-RAN (Software-Defined Radio Access Network)** further extends the reach of this architecture. **Starlink** is used as a high-throughput, low-latency WAN link, capable of delivering gigabit-class connectivity to remote or mobile command posts. The system handles Starlink’s **Carrier-Grade NAT (CGNAT)** through **Tailscale** or **OpenVPN**, enabling inbound connections without requiring public IP allocation. **srsRAN**, an open-source 4G/5G stack, is deployed within FreeBSD jails or OpenBSD VMM instances to create private mobile networks for tactical units. These networks support **network slicing**, **edge computing**, and **quantum-safe encryption**, ensuring that mobile communications remain secure and sovereign.
 
-All configuration changes are **cryptographically signed** using `signify`, OpenBSD’s digital signature tool. This ensures that only authorized administrators can modify firewall rules, routing tables, or system settings. The entire `/etc` directory is version-controlled and monitored for integrity using `unveil(2)` and `pledge(2)`, preventing unauthorized modifications even if an attacker gains root access. This is not configuration management. It is **policy sovereignty** — the ability to prove, at any moment, that the system is running exactly what it should be running.
+All configuration changes are **cryptographically signed** using `signify`, OpenBSD’s digital signature tool. This ensures that only authorized administrators can modify firewall rules, routing tables, or system settings. The entire `/etc` directory is version-controlled and monitored for integrity using `unveil(2)` and `pledge(2)`, preventing unauthorized modifications even if an attacker gains root access. This is not configuration management. 
+It is **policy sovereignty** — the ability to prove, at any moment, that the system is running exactly what it should be running.
 
 In operational terms, this architecture has been deployed in real-world scenarios:
 - Securing the **Central Bank of Sint Maarten** after Hurricane Irma, using satellite and radio links to restore core banking functions.
@@ -211,12 +222,12 @@ The design of ZeroTrustBSD’s tactical networking is not theoretical. It is der
 - During a **disaster recovery exercise** in the French Caribbean, ZeroTrustBSD was deployed on **Raspberry Pi 4 units** inside waterproof enclosures, powered by solar panels, and connected via **srsRAN + Starlink**. The nodes formed a **BGP mesh**, with **CARP for HA**, and enforced **zero-trust access** to emergency services. The entire stack was **signed, version-controlled, and auditable**.
 
 These deployments prove that **sovereignty is not a feature of the cloud**.  
-It is a function of **design, discipline, and open-source truth**.
+It is a function of **design, discipline, and open-sourced truth**.
 
 ### 🔮 Future-Proofing Tactical Edge Deployments
 
 ZeroTrustBSD is evolving to support next-generation tactical needs:
-- **AI-Driven Anomaly Scoring**: Local LLMs will analyze Zeek and Suricata logs to detect subtle drift in network behavior, even in disconnected environments.
+- **AI-Driven Anomaly Scoring**: Local LLMs will analyze SPAN/RSPAN Layer 2 packet captue, Zeek and Suricata logs to detect subtle drift in network behavior, even in disconnected environments.
 - **ZFS Rollback for Incident Recovery**: In the event of a breach, operators can revert to a known-good state with a single command.
 - **Quantum-Safe Mobile Backhaul**: Integration of **CRYSTALS-Kyber** into srsRAN’s transport layer for 5G backhaul encryption.
 - **Mesh Networking with B.A.T.M.A.N. or OLSR**: For peer-to-peer connectivity in urban or forested areas where line-of-sight is limited.
@@ -246,6 +257,7 @@ It assumes **war**.
 And it is built to **win**.
 - **Wazuh**: SIEM, FIM, log analysis — free, open, powerful
 - **Suricata**: IDS/IPS with real threat feeds
+- **SPAN/RSPAN**: For RAW correlation of alerts and forensic analysis
 - **Zeek**: Passive telemetry — see what *shouldn’t* be happening
 - **OpenCTI**: Aggregate, correlate, and act on threat intel
 - **Prometheus + Grafana**: Full-stack visibility — no blind spots
@@ -274,7 +286,8 @@ We’re **already ahead**.
 - Lightweight, air-gapped, and deployable on a Raspberry Pi
 
 Because in a crisis, you don’t need a GUI.  
-You need **control**.
+You need **control**. 
+Just kidding, I'm working on it, thinking of something simple,sick and cool.
 
 ---
 
@@ -303,9 +316,10 @@ We trust **attributes, certificates, and policy**.
 | **IBAC**<br>*(Identity-Based Access Control)* | You are your cryptographic identity — not your password. | SSH certificates, mTLS, `signify`-signed identities. No passwords. | `identity.type=cert`, `identity.issuer=ztb-ca`, `identity.expires=2026-01-01` |
 | **SBAC**<br>*(Service-Based Access Control)* | Access is granted to services, not users. | Microservices in jails/VMMs authenticate via mTLS or Keycloak service accounts. | `service.name=swift-gateway`, `service.env=prod`, `service.auth=mtls` |
 
+So many ways to control. :)
 ---
 
-### 🔑 Why Keycloak > Kerberos
+### 🔑 Why Keycloak vs. Kerberos
 
 **Kerberos is legacy** — a 1980s protocol with no native API support, no attribute richness, and no integration with modern cloud or Zero Trust stacks.
 
@@ -317,7 +331,7 @@ We trust **attributes, certificates, and policy**.
 - ✅ **API-First**: Secures microservices, SPAs, and CLI tools
 
 In ZeroTrustBSD, Keycloak is not just for login.  
-It is the **policy engine** — where attributes become firewall rules.
+It is the **policy engine**, where attributes become firewall rules.
 
 ---
 
