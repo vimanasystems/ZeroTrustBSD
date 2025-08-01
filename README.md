@@ -335,37 +335,12 @@ It is the **policy engine**, where attributes become firewall rules.
 
 ---
 
-ZeroTrustBSD uses **attribute-to-policy translation** to enforce real Zero Trust:
-
-```yaml
-# Example: Keycloak JWT → ZeroTrustBSD Policy
-{
-  "sub": "u.moorjani@zerotrustbsd.com",
-  "role": "security-architect",
-  "device": {
-    "os": "OpenBSD",
-    "fim": "clean",
-    "cert_valid": true,
-    "enrolled": true
-  },
-  "session": {
-    "location": "HQ",
-    "network": "trusted",
-    "time": "14:30"
-  },
-  "access": {
-    "allowed_zones": ["SOC", "SWIFT-CDE"],
-    "valid_until": "2025-12-31T23:59:59Z"
-  }
-}
----
-
-## 🏢 Enterprise & Sector Use Cases
+###  🏢 Enterprise & Sector Use Cases
 
 ### 🛡 Government / Military
 - National firewall infrastructure
 - Tactical BGP mesh + CARP failover
-- Air-gapped embassy zones
+- Air-gapped Secured Zones
 - Intelligence compartmentalization
 
 ### ⚙️ Industrial (OT / ICS)
