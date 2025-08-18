@@ -36,10 +36,10 @@ Just **code, will, and freedom**.
 
 | Sector | Why ZeroTrustBSD |
 |--------|------------------|
-| 🏛️ **Government & Defense** | Secured Sint Maarten’s central bank, prosecutor, airport, SCADA. Now open for all. |
+| 🏛️ **Government & Defense** | Secured Central bank, prosecutor's office, airports, SCADA. Now open for all. |
 | 💳 **Financial Institutions** | SWIFT, SEPA, Target2, PCI-DSS | secured with PQC-ready Zero Trust. |
 | ⚙️ **OT/ICS/SCADA** | Purdue Model, IEC 62443, microsegmentation | no lateral movement. Ever. |
-| 🛰 **Tactical & Remote** | Runs on Starlink, srsRAN, Raspberry Pi | ideal for embassies, disaster zones, military ops. |
+| 🛰 **Tactical & Remote** | Runs on SATCOM, srsRAN, Raspberry Pi | ideal for embassies, disaster zones, military ops. |
 | ☁️ **Sovereign Cloud** | GitOps-signed policies, ZFS rollback, air-gapped deployable. |
 
 ---
@@ -62,14 +62,14 @@ Just **code, will, and freedom**.
 | **Post-Quantum Ready** | Kyber, Dilithium, SPHINCS+ — because RSA-2048 won’t survive 2030 |
 | **CISO Assistant** | AI-driven compliance, audit prep, and “why is port 8443 blocked?” |
 | **OpenCTI Integration** | Threat intel, not just alerts — knowledge is power |
-| **SATCOM & SD-RAN** | Starlink + srsRAN = sovereign 5G in the middle of nowhere |
+| **SATCOM & SD-RAN** | SATCOM + srsRAN = sovereign 5G in the middle of nowhere |
 | **Regulatory Compliance Built-In** | NIS2, DORA, GDPR, PCI-DSS — automated, not guessed |
 | **Military-Grade Encryption** | Not “military-grade” like a marketing brochure. Actual military-grade. |
 
 ---
 
 ## 🛡 FreeIPA: Because Identity Is Power
-ZeroTrustBSD integrates **FreeIPA** — because you shouldn’t have to choose between security and sanity.
+ZeroTrustBSD integrates **FreeIPA**; because you shouldn’t have to choose between security and sanity.
 
 | Feature | Description |
 |--------|-------------|
@@ -77,8 +77,8 @@ ZeroTrustBSD integrates **FreeIPA** — because you shouldn’t have to choose b
 | **Kerberos SSO** | because passwords are for peasants |
 | **MFA Enforcement** | TOTP, OpenOTP, whatever you trust |
 | **RBAC** | because not everyone should access the nuclear codes |
-| **Host-Based Access Control** | only trusted devices get in |
-| **Audit Logging** | for when the auditors come knocking |
+| **Host-Based Access Control** | Only trusted devices get in |
+| **Audit Logging** | For when the auditors come knocking |
 
 👉 Think of it as **identity with teeth**.
 
