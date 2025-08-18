@@ -13,8 +13,6 @@ It is an **Autonomous Cyber Defense Operating System**  Purpose-built for:
 - 🛰 **Tactical edge & SATCOM deployments**
 - ☁️ **Sovereign cloud & disaster recovery**
 
-Born from the mind of **Uday Moorjani**, former CISO, cybersecurity architect for BNP Paribas, Airbus, Orange Cyberdefense, and the Cour de Justice de l’UE, this is **battle-tested expertise**, open-sourced for the world.
-
 Built on **OpenBSD**, hardened with `pledge(2)`, `unveil(2)`, W^X, and securelevel, because **trust is a vulnerability**.
 
 > ZeroTrustBSD: Where **sovereignty**, **resilience**, and **open-source truth** converge.
